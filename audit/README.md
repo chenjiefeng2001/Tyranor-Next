@@ -19,6 +19,9 @@
 | [03-engine-module-audit.md](./03-engine-module-audit.md) | engine 模块（五条引擎运行链路 / 原生桥 / 插件协议）审计 |
 | [04-feature-code-map.md](./04-feature-code-map.md) | 功能 ↔ 代码位置完整映射表（跨模块契约） |
 | [05-findings-and-remediation.md](./05-findings-and-remediation.md) | 发现问题清单（编号 F-xx）、严重级别与整改建议 |
+| [06-code-trace-report.md](./06-code-trace-report.md) | 全量静态 trace：九条核心链路调用追踪、热点排行与解读 |
+| [07-hotspot-map.svg](./07-hotspot-map.svg) | 代码热点图（文件级热力网格，悬停查看度量） |
+| [tools/hotspot_trace.py](./tools/hotspot_trace.py) | 热点度量与 SVG 生成脚本（可复现，含 hotspot-data.json 数据） |
 
 ## 总体结论
 

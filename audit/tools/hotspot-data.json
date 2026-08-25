@@ -1,0 +1,2901 @@
+{
+ "generated_for_commit": "47dc6d8",
+ "weights": {
+  "fan_in": 0.35,
+  "churn": 0.25,
+  "sloc": 0.25,
+  "fan_out": 0.15
+ },
+ "files": [
+  {
+   "path": "app/src/main/java/com/tyranor/next/MainActivity.kt",
+   "module": "app",
+   "package": "com.tyranor.next",
+   "sloc": 51,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [
+    "MainActivity"
+   ],
+   "imports": 15,
+   "fan_in": 0,
+   "fan_out": 2,
+   "churn": 4,
+   "heat": 4.2
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/Navigation.kt",
+   "module": "app",
+   "package": "com.tyranor.next",
+   "sloc": 8,
+   "functions": 1,
+   "branches": 0,
+   "symbols": [],
+   "imports": 3,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.1
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/NavigationKeys.kt",
+   "module": "app",
+   "package": "com.tyranor.next",
+   "sloc": 4,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [],
+   "imports": 2,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.0
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/ArtemisPfsUnpacker.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 243,
+   "functions": 2,
+   "branches": 40,
+   "symbols": [
+    "ArtemisPfsUnpacker"
+   ],
+   "imports": 7,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 611,
+   "functions": 5,
+   "branches": 85,
+   "symbols": [
+    "ArtemisPatchChoice",
+    "EngineLauncher"
+   ],
+   "imports": 23,
+   "fan_in": 4,
+   "fan_out": 19,
+   "churn": 23,
+   "heat": 43.4
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/EnginePluginBootstrap.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 160,
+   "functions": 2,
+   "branches": 15,
+   "symbols": [
+    "EnginePluginBootstrap",
+    "EngineSpec"
+   ],
+   "imports": 8,
+   "fan_in": 2,
+   "fan_out": 6,
+   "churn": 4,
+   "heat": 11.4
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/EngineScanner.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 633,
+   "functions": 28,
+   "branches": 82,
+   "symbols": [
+    "EngineScanner"
+   ],
+   "imports": 10,
+   "fan_in": 6,
+   "fan_out": 2,
+   "churn": 21,
+   "heat": 33.6
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/EngineType.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 13,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "EngineType"
+   ],
+   "imports": 0,
+   "fan_in": 9,
+   "fan_out": 1,
+   "churn": 2,
+   "heat": 15.2
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/GameSaveManager.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 328,
+   "functions": 6,
+   "branches": 44,
+   "symbols": [
+    "GameSaveManager"
+   ],
+   "imports": 12,
+   "fan_in": 2,
+   "fan_out": 4,
+   "churn": 6,
+   "heat": 13.6
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/KrkrOnlinePatchService.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 153,
+   "functions": 3,
+   "branches": 8,
+   "symbols": [
+    "KrkrOnlinePatchService"
+   ],
+   "imports": 10,
+   "fan_in": 1,
+   "fan_out": 2,
+   "churn": 2,
+   "heat": 5.5
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/ScanGame.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 57,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "ScanGameIntents"
+   ],
+   "imports": 2,
+   "fan_in": 3,
+   "fan_out": 1,
+   "churn": 4,
+   "heat": 8.2
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/scanner/VndbCoverService.kt",
+   "module": "app",
+   "package": "com.tyranor.next.scanner",
+   "sloc": 210,
+   "functions": 4,
+   "branches": 29,
+   "symbols": [
+    "VndbCoverService"
+   ],
+   "imports": 11,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 5,
+   "heat": 7.1
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/settings/AppSettingsStore.kt",
+   "module": "app",
+   "package": "com.tyranor.next.settings",
+   "sloc": 98,
+   "functions": 16,
+   "branches": 3,
+   "symbols": [
+    "AppSettingsStore"
+   ],
+   "imports": 4,
+   "fan_in": 10,
+   "fan_out": 0,
+   "churn": 7,
+   "heat": 20.9
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/settings/EngineSettingsStore.kt",
+   "module": "app",
+   "package": "com.tyranor.next.settings",
+   "sloc": 177,
+   "functions": 41,
+   "branches": 16,
+   "symbols": [
+    "EngineSettingsStore"
+   ],
+   "imports": 2,
+   "fan_in": 4,
+   "fan_out": 2,
+   "churn": 4,
+   "heat": 11.9
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/settings/PerGameSettingsStore.kt",
+   "module": "app",
+   "package": "com.tyranor.next.settings",
+   "sloc": 93,
+   "functions": 9,
+   "branches": 13,
+   "symbols": [
+    "PerGameSettingsStore"
+   ],
+   "imports": 2,
+   "fan_in": 4,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 7.2
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/theme/AppThemeColors.kt",
+   "module": "app",
+   "package": "com.tyranor.next.theme",
+   "sloc": 42,
+   "functions": 3,
+   "branches": 3,
+   "symbols": [
+    "AppThemeColors"
+   ],
+   "imports": 6,
+   "fan_in": 7,
+   "fan_out": 1,
+   "churn": 4,
+   "heat": 14.1
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/theme/Color.kt",
+   "module": "app",
+   "package": "com.tyranor.next.theme",
+   "sloc": 36,
+   "functions": 0,
+   "branches": 4,
+   "symbols": [],
+   "imports": 1,
+   "fan_in": 0,
+   "fan_out": 1,
+   "churn": 4,
+   "heat": 3.4
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/theme/MiuixSettingsTheme.kt",
+   "module": "app",
+   "package": "com.tyranor.next.theme",
+   "sloc": 67,
+   "functions": 1,
+   "branches": 1,
+   "symbols": [],
+   "imports": 11,
+   "fan_in": 0,
+   "fan_out": 1,
+   "churn": 7,
+   "heat": 6.0
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/theme/Theme.kt",
+   "module": "app",
+   "package": "com.tyranor.next.theme",
+   "sloc": 49,
+   "functions": 1,
+   "branches": 1,
+   "symbols": [],
+   "imports": 7,
+   "fan_in": 0,
+   "fan_out": 1,
+   "churn": 5,
+   "heat": 4.3
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/theme/Type.kt",
+   "module": "app",
+   "package": "com.tyranor.next.theme",
+   "sloc": 34,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [],
+   "imports": 5,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.4
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/common/AppSearchField.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.common",
+   "sloc": 70,
+   "functions": 1,
+   "branches": 0,
+   "symbols": [],
+   "imports": 15,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.8
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/common/LiquidGlassNavigation.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.common",
+   "sloc": 294,
+   "functions": 5,
+   "branches": 11,
+   "symbols": [],
+   "imports": 59,
+   "fan_in": 0,
+   "fan_out": 2,
+   "churn": 3,
+   "heat": 6.5
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/common/PressIndication.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.common",
+   "sloc": 26,
+   "functions": 1,
+   "branches": 0,
+   "symbols": [
+    "NoPressIndication",
+    "NoPressIndicationNode"
+   ],
+   "imports": 9,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.3
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/common/TimeFormats.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.common",
+   "sloc": 21,
+   "functions": 2,
+   "branches": 2,
+   "symbols": [
+    "TimeFormats"
+   ],
+   "imports": 3,
+   "fan_in": 2,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 3.3
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/common/TopBarIcon.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.common",
+   "sloc": 40,
+   "functions": 1,
+   "branches": 0,
+   "symbols": [],
+   "imports": 12,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 2,
+   "heat": 1.2
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/main/MainScreen.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.main",
+   "sloc": 149,
+   "functions": 2,
+   "branches": 6,
+   "symbols": [],
+   "imports": 41,
+   "fan_in": 0,
+   "fan_out": 1,
+   "churn": 7,
+   "heat": 7.1
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/AppAlertDialog.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 131,
+   "functions": 1,
+   "branches": 1,
+   "symbols": [],
+   "imports": 42,
+   "fan_in": 0,
+   "fan_out": 1,
+   "churn": 3,
+   "heat": 3.8
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/AppSettingsActivity.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 424,
+   "functions": 1,
+   "branches": 12,
+   "symbols": [
+    "AppSettingsActivity"
+   ],
+   "imports": 65,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 13,
+   "heat": 18.0
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/EngineScreen.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 119,
+   "functions": 1,
+   "branches": 1,
+   "symbols": [],
+   "imports": 35,
+   "fan_in": 0,
+   "fan_out": 3,
+   "churn": 4,
+   "heat": 5.8
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/EngineSettingsActivity.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 64,
+   "functions": 1,
+   "branches": 3,
+   "symbols": [
+    "EngineSettingsActivity"
+   ],
+   "imports": 15,
+   "fan_in": 1,
+   "fan_out": 2,
+   "churn": 5,
+   "heat": 6.7
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/GameScreen.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 998,
+   "functions": 7,
+   "branches": 48,
+   "symbols": [
+    "CoverBitmapCache"
+   ],
+   "imports": 91,
+   "fan_in": 0,
+   "fan_out": 12,
+   "churn": 34,
+   "heat": 45.7
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/HomeScreen.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 375,
+   "functions": 5,
+   "branches": 12,
+   "symbols": [],
+   "imports": 64,
+   "fan_in": 0,
+   "fan_out": 4,
+   "churn": 15,
+   "heat": 18.0
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/KrkrOnlinePatchActivity.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 300,
+   "functions": 2,
+   "branches": 7,
+   "symbols": [
+    "KrkrOnlinePatchActivity"
+   ],
+   "imports": 66,
+   "fan_in": 1,
+   "fan_out": 4,
+   "churn": 12,
+   "heat": 16.3
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsActivity.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 56,
+   "functions": 1,
+   "branches": 3,
+   "symbols": [
+    "PerGameSettingsActivity"
+   ],
+   "imports": 17,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 8,
+   "heat": 10.4
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsScreen.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 364,
+   "functions": 2,
+   "branches": 27,
+   "symbols": [],
+   "imports": 45,
+   "fan_in": 0,
+   "fan_out": 3,
+   "churn": 6,
+   "heat": 10.4
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/PlaceholderPage.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 55,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [],
+   "imports": 14,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.6
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/SaveManagementActivity.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 245,
+   "functions": 3,
+   "branches": 7,
+   "symbols": [
+    "SaveManagementActivity"
+   ],
+   "imports": 58,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 8,
+   "heat": 11.9
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/ui/pages/SettingsScreen.kt",
+   "module": "app",
+   "package": "com.tyranor.next.ui.pages",
+   "sloc": 653,
+   "functions": 3,
+   "branches": 25,
+   "symbols": [
+    "EngineSettingsKind"
+   ],
+   "imports": 68,
+   "fan_in": 1,
+   "fan_out": 4,
+   "churn": 19,
+   "heat": 26.1
+  },
+  {
+   "path": "app/src/main/java/com/tyranor/next/updater/GitHubUpdateChecker.kt",
+   "module": "app",
+   "package": "com.tyranor.next.updater",
+   "sloc": 122,
+   "functions": 1,
+   "branches": 7,
+   "symbols": [
+    "GitHubUpdateChecker",
+    "UpdateCheckResult"
+   ],
+   "imports": 8,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 2,
+   "heat": 3.8
+  },
+  {
+   "path": "engine/src/main/java/bridge/KrPathUtils.kt",
+   "module": "engine",
+   "package": "bridge",
+   "sloc": 104,
+   "functions": 5,
+   "branches": 35,
+   "symbols": [
+    "KrPathUtils"
+   ],
+   "imports": 6,
+   "fan_in": 5,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 9.6
+  },
+  {
+   "path": "engine/src/main/java/bridge/NativeBridge.kt",
+   "module": "engine",
+   "package": "bridge",
+   "sloc": 311,
+   "functions": 8,
+   "branches": 73,
+   "symbols": [
+    "NativeBridge"
+   ],
+   "imports": 12,
+   "fan_in": 3,
+   "fan_out": 2,
+   "churn": 2,
+   "heat": 10.6
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV1.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 13,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [
+    "ArtemisActivityV1"
+   ],
+   "imports": 2,
+   "fan_in": 3,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 6.7
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV2.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 11,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [
+    "ArtemisActivityV2"
+   ],
+   "imports": 2,
+   "fan_in": 2,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 5.9
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV3.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 11,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [
+    "ArtemisActivityV3"
+   ],
+   "imports": 2,
+   "fan_in": 2,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 5.9
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 117,
+   "functions": 9,
+   "branches": 9,
+   "symbols": [
+    "ArtemisLauncherBaseActivity"
+   ],
+   "imports": 7,
+   "fan_in": 3,
+   "fan_out": 5,
+   "churn": 3,
+   "heat": 10.9
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid126.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 32,
+   "functions": 2,
+   "branches": 4,
+   "symbols": [
+    "Kirikiroid126"
+   ],
+   "imports": 2,
+   "fan_in": 2,
+   "fan_out": 4,
+   "churn": 2,
+   "heat": 6.9
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid134.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 20,
+   "functions": 2,
+   "branches": 2,
+   "symbols": [
+    "Kirikiroid134"
+   ],
+   "imports": 2,
+   "fan_in": 4,
+   "fan_out": 2,
+   "churn": 2,
+   "heat": 8.4
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid139.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 20,
+   "functions": 2,
+   "branches": 2,
+   "symbols": [
+    "Kirikiroid139"
+   ],
+   "imports": 2,
+   "fan_in": 1,
+   "fan_out": 2,
+   "churn": 2,
+   "heat": 3.8
+  },
+  {
+   "path": "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java",
+   "module": "engine",
+   "package": "com.akira.tyranoemu.remote",
+   "sloc": 806,
+   "functions": 40,
+   "branches": 138,
+   "symbols": [
+    "KirikiroidLauncherBaseActivity"
+   ],
+   "imports": 39,
+   "fan_in": 4,
+   "fan_out": 7,
+   "churn": 5,
+   "heat": 24.0
+  },
+  {
+   "path": "engine/src/main/java/com/bytedance/android/bytehook/ByteHook.java",
+   "module": "engine",
+   "package": "com.bytedance.android.bytehook",
+   "sloc": 37,
+   "functions": 6,
+   "branches": 1,
+   "symbols": [
+    "ByteHook",
+    "Config"
+   ],
+   "imports": 0,
+   "fan_in": 4,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 7.2
+  },
+  {
+   "path": "engine/src/main/java/com/bytedance/shadowhook/ShadowHook.java",
+   "module": "engine",
+   "package": "com.bytedance.shadowhook",
+   "sloc": 36,
+   "functions": 6,
+   "branches": 2,
+   "symbols": [
+    "Config",
+    "ShadowHook"
+   ],
+   "imports": 0,
+   "fan_in": 4,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 7.2
+  },
+  {
+   "path": "engine/src/main/java/com/core/engine/DoubleBackExit.java",
+   "module": "engine",
+   "package": "com.core.engine",
+   "sloc": 65,
+   "functions": 7,
+   "branches": 10,
+   "symbols": [
+    "DoubleBackExit",
+    "ExitAction"
+   ],
+   "imports": 8,
+   "fan_in": 7,
+   "fan_out": 0,
+   "churn": 2,
+   "heat": 12.2
+  },
+  {
+   "path": "engine/src/main/java/com/core/engine/EnginePrefs.kt",
+   "module": "engine",
+   "package": "com.core.engine",
+   "sloc": 40,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "EnginePrefs"
+   ],
+   "imports": 0,
+   "fan_in": 5,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 8.1
+  },
+  {
+   "path": "engine/src/main/java/com/core/engine/EngineThemeColors.kt",
+   "module": "engine",
+   "package": "com.core.engine",
+   "sloc": 45,
+   "functions": 1,
+   "branches": 5,
+   "symbols": [
+    "EngineThemeColors"
+   ],
+   "imports": 1,
+   "fan_in": 5,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 8.1
+  },
+  {
+   "path": "engine/src/main/java/com/core/engine/EngineUiText.kt",
+   "module": "engine",
+   "package": "com.core.engine",
+   "sloc": 45,
+   "functions": 2,
+   "branches": 8,
+   "symbols": [
+    "EngineUiText"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 2.0
+  },
+  {
+   "path": "engine/src/main/java/com/core/krkrsdl3/Krkrsdl3Activity.kt",
+   "module": "engine",
+   "package": "com.core.krkrsdl3",
+   "sloc": 206,
+   "functions": 0,
+   "branches": 15,
+   "symbols": [
+    "Krkrsdl3Activity"
+   ],
+   "imports": 14,
+   "fan_in": 1,
+   "fan_out": 7,
+   "churn": 2,
+   "heat": 9.6
+  },
+  {
+   "path": "engine/src/main/java/com/core/nativeplugin/NativeLibraryLoader.kt",
+   "module": "engine",
+   "package": "com.core.nativeplugin",
+   "sloc": 54,
+   "functions": 4,
+   "branches": 1,
+   "symbols": [
+    "NativeLibraryLoader"
+   ],
+   "imports": 1,
+   "fan_in": 6,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 11.8
+  },
+  {
+   "path": "engine/src/main/java/com/core/nativeplugin/NativePluginConstants.kt",
+   "module": "engine",
+   "package": "com.core.nativeplugin",
+   "sloc": 60,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [
+    "NativePluginConstants"
+   ],
+   "imports": 1,
+   "fan_in": 8,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 13.6
+  },
+  {
+   "path": "engine/src/main/java/com/core/nativeplugin/NativePluginInstaller.kt",
+   "module": "engine",
+   "package": "com.core.nativeplugin",
+   "sloc": 237,
+   "functions": 3,
+   "branches": 39,
+   "symbols": [
+    "NativePluginInstaller",
+    "ZipRejectedException"
+   ],
+   "imports": 9,
+   "fan_in": 0,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.3
+  },
+  {
+   "path": "engine/src/main/java/com/core/nativeplugin/NativePluginManager.kt",
+   "module": "engine",
+   "package": "com.core.nativeplugin",
+   "sloc": 455,
+   "functions": 30,
+   "branches": 62,
+   "symbols": [
+    "NativePluginInstallState",
+    "NativePluginManager"
+   ],
+   "imports": 10,
+   "fan_in": 7,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 17.7
+  },
+  {
+   "path": "engine/src/main/java/com/core/ons/OnsLibLoader.kt",
+   "module": "engine",
+   "package": "com.core.ons",
+   "sloc": 66,
+   "functions": 2,
+   "branches": 11,
+   "symbols": [
+    "OnsLibLoader"
+   ],
+   "imports": 9,
+   "fan_in": 2,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 5.9
+  },
+  {
+   "path": "engine/src/main/java/com/core/ons/OnsSettings.kt",
+   "module": "engine",
+   "package": "com.core.ons",
+   "sloc": 146,
+   "functions": 9,
+   "branches": 32,
+   "symbols": [
+    "OnsSettings"
+   ],
+   "imports": 5,
+   "fan_in": 4,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 7.9
+  },
+  {
+   "path": "engine/src/main/java/com/core/ons/OnsVideoActivity.kt",
+   "module": "engine",
+   "package": "com.core.ons",
+   "sloc": 58,
+   "functions": 0,
+   "branches": 4,
+   "symbols": [
+    "OnsVideoActivity"
+   ],
+   "imports": 12,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 2.2
+  },
+  {
+   "path": "engine/src/main/java/com/core/tyrano/AsarArchive.kt",
+   "module": "engine",
+   "package": "com.core.tyrano",
+   "sloc": 173,
+   "functions": 4,
+   "branches": 32,
+   "symbols": [
+    "AsarArchive"
+   ],
+   "imports": 8,
+   "fan_in": 2,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 5.2
+  },
+  {
+   "path": "engine/src/main/java/com/core/tyrano/TyranoActivity.kt",
+   "module": "engine",
+   "package": "com.core.tyrano",
+   "sloc": 739,
+   "functions": 11,
+   "branches": 67,
+   "symbols": [
+    "TyranoActivity",
+    "TyranoEntry",
+    "WebGameType"
+   ],
+   "imports": 38,
+   "fan_in": 2,
+   "fan_out": 7,
+   "churn": 5,
+   "heat": 20.1
+  },
+  {
+   "path": "engine/src/main/java/com/core/tyrano/TyranoLocalHttpServer.kt",
+   "module": "engine",
+   "package": "com.core.tyrano",
+   "sloc": 385,
+   "functions": 2,
+   "branches": 113,
+   "symbols": [
+    "ResolvedFile",
+    "TyranoLocalHttpServer"
+   ],
+   "imports": 20,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 2,
+   "heat": 7.8
+  },
+  {
+   "path": "engine/src/main/java/com/core/tyrano/TyranoStorage.kt",
+   "module": "engine",
+   "package": "com.core.tyrano",
+   "sloc": 90,
+   "functions": 7,
+   "branches": 18,
+   "symbols": [
+    "TyranoStorage"
+   ],
+   "imports": 4,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 2,
+   "heat": 3.4
+  },
+  {
+   "path": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt",
+   "module": "engine",
+   "package": "com.ies_net.artemis",
+   "sloc": 101,
+   "functions": 4,
+   "branches": 6,
+   "symbols": [
+    "ArtemisActivity"
+   ],
+   "imports": 6,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 3.4
+  },
+  {
+   "path": "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt",
+   "module": "engine",
+   "package": "com.ies_net.artemis",
+   "sloc": 154,
+   "functions": 0,
+   "branches": 24,
+   "symbols": [
+    "VideoViewActivity"
+   ],
+   "imports": 15,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 6.3
+  },
+  {
+   "path": "engine/src/main/java/com/yuri/onscripter/ONScripter.java",
+   "module": "engine",
+   "package": "com.yuri.onscripter",
+   "sloc": 551,
+   "functions": 31,
+   "branches": 106,
+   "symbols": [
+    "ONScripter"
+   ],
+   "imports": 34,
+   "fan_in": 3,
+   "fan_out": 6,
+   "churn": 3,
+   "heat": 17.1
+  },
+  {
+   "path": "engine/src/main/java/moe/artemis/gui/Dialog.kt",
+   "module": "engine",
+   "package": "moe.artemis.gui",
+   "sloc": 63,
+   "functions": 2,
+   "branches": 10,
+   "symbols": [
+    "Dialog"
+   ],
+   "imports": 4,
+   "fan_in": 4,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 7.5
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxAccelerometer.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 4,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "Cocos2dxAccelerometer"
+   ],
+   "imports": 0,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 1.5
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxActivity.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 264,
+   "functions": 26,
+   "branches": 24,
+   "symbols": [
+    "Cocos2dxActivity",
+    "Cocos2dxEGLConfigChooser",
+    "ConfigValue"
+   ],
+   "imports": 18,
+   "fan_in": 4,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 13.5
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxBitmap.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 14,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "Cocos2dxBitmap"
+   ],
+   "imports": 2,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 1.6
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxDownloader.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 5,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "Cocos2dxDownloader"
+   ],
+   "imports": 0,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.0
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxEditBox.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 11,
+   "functions": 3,
+   "branches": 0,
+   "symbols": [
+    "Cocos2dxEditBox"
+   ],
+   "imports": 4,
+   "fan_in": 2,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 3.1
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxGLSurfaceView.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 268,
+   "functions": 25,
+   "branches": 41,
+   "symbols": [
+    "Cocos2dxGLSurfaceView",
+    "ImeHandler"
+   ],
+   "imports": 12,
+   "fan_in": 6,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 15.2
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxHandler.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 44,
+   "functions": 5,
+   "branches": 2,
+   "symbols": [
+    "Cocos2dxHandler",
+    "DialogMessage"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.7
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxHelper.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 201,
+   "functions": 68,
+   "branches": 40,
+   "symbols": [
+    "Cocos2dxHelper",
+    "Cocos2dxHelperListener"
+   ],
+   "imports": 19,
+   "fan_in": 3,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 9.8
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxHttpURLConnection.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 287,
+   "functions": 18,
+   "branches": 53,
+   "symbols": [
+    "Cocos2dxHttpURLConnection"
+   ],
+   "imports": 26,
+   "fan_in": 0,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 4.2
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxMusic.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 146,
+   "functions": 15,
+   "branches": 24,
+   "symbols": [
+    "Cocos2dxMusic"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 3.3
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 163,
+   "functions": 18,
+   "branches": 17,
+   "symbols": [
+    "Cocos2dxRenderer",
+    "RendererListener"
+   ],
+   "imports": 6,
+   "fan_in": 2,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 5.7
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxSound.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 172,
+   "functions": 23,
+   "branches": 29,
+   "symbols": [
+    "Cocos2dxSound",
+    "OnLoadCompletedListener",
+    "SoundInfoForLoadedCompleted"
+   ],
+   "imports": 8,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 3.6
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxTextInputWraper.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 29,
+   "functions": 2,
+   "branches": 3,
+   "symbols": [
+    "Cocos2dxTextInputWraper"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.5
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxTypefaces.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 17,
+   "functions": 1,
+   "branches": 3,
+   "symbols": [
+    "Cocos2dxTypefaces"
+   ],
+   "imports": 3,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.2
+  },
+  {
+   "path": "engine/src/main/java/org/cocos2dx/lib/ResizeLayout.java",
+   "module": "engine",
+   "package": "org.cocos2dx.lib",
+   "sloc": 41,
+   "functions": 6,
+   "branches": 1,
+   "symbols": [
+    "ResizeLayout"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 2.0
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/AudioRouteWatcher.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 218,
+   "functions": 12,
+   "branches": 36,
+   "symbols": [
+    "AudioRouteWatcher"
+   ],
+   "imports": 11,
+   "fan_in": 3,
+   "fan_out": 4,
+   "churn": 2,
+   "heat": 10.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/DummyEdit.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 41,
+   "functions": 5,
+   "branches": 1,
+   "symbols": [
+    "DummyEdit"
+   ],
+   "imports": 6,
+   "fan_in": 1,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 4.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/HIDDevice.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 20,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "HIDDevice"
+   ],
+   "imports": 1,
+   "fan_in": 7,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 11.5
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 490,
+   "functions": 49,
+   "branches": 55,
+   "symbols": [
+    "GattOperation",
+    "HIDDeviceBLESteamController"
+   ],
+   "imports": 17,
+   "fan_in": 3,
+   "fan_out": 5,
+   "churn": 1,
+   "heat": 14.1
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 475,
+   "functions": 37,
+   "branches": 82,
+   "symbols": [
+    "HIDDeviceManager"
+   ],
+   "imports": 23,
+   "fan_in": 7,
+   "fan_out": 7,
+   "churn": 1,
+   "heat": 21.4
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/HIDDeviceUSB.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 231,
+   "functions": 19,
+   "branches": 26,
+   "symbols": [
+    "HIDDeviceUSB",
+    "InputThread"
+   ],
+   "imports": 7,
+   "fan_in": 3,
+   "fan_out": 5,
+   "churn": 1,
+   "heat": 10.8
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDL.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 40,
+   "functions": 5,
+   "branches": 3,
+   "symbols": [
+    "SDL"
+   ],
+   "imports": 2,
+   "fan_in": 0,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLActivity.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 1135,
+   "functions": 80,
+   "branches": 155,
+   "symbols": [
+    "SDLActivity",
+    "SDLCommandHandler",
+    "ShowTextInputTask"
+   ],
+   "imports": 39,
+   "fan_in": 23,
+   "fan_out": 19,
+   "churn": 3,
+   "heat": 63.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLAudioManager.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 303,
+   "functions": 14,
+   "branches": 45,
+   "symbols": [
+    "SDLAudioManager"
+   ],
+   "imports": 8,
+   "fan_in": 6,
+   "fan_out": 2,
+   "churn": 3,
+   "heat": 15.8
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLClipboardHandler.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 34,
+   "functions": 5,
+   "branches": 1,
+   "symbols": [
+    "SDLClipboardHandler"
+   ],
+   "imports": 3,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.8
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 50,
+   "functions": 7,
+   "branches": 3,
+   "symbols": [
+    "SDLControllerManager"
+   ],
+   "imports": 3,
+   "fan_in": 9,
+   "fan_out": 5,
+   "churn": 1,
+   "heat": 17.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API12.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 41,
+   "functions": 6,
+   "branches": 4,
+   "symbols": [
+    "SDLGenericMotionListener_API12"
+   ],
+   "imports": 2,
+   "fan_in": 4,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 9.3
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API24.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 37,
+   "functions": 6,
+   "branches": 1,
+   "symbols": [
+    "SDLGenericMotionListener_API24"
+   ],
+   "imports": 2,
+   "fan_in": 4,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 9.2
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API26.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 72,
+   "functions": 7,
+   "branches": 10,
+   "symbols": [
+    "SDLGenericMotionListener_API26"
+   ],
+   "imports": 3,
+   "fan_in": 3,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 9.5
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLHapticHandler.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 107,
+   "functions": 4,
+   "branches": 20,
+   "symbols": [
+    "SDLHaptic",
+    "SDLHapticHandler"
+   ],
+   "imports": 5,
+   "fan_in": 3,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 7.2
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLHapticHandler_API26.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 31,
+   "functions": 1,
+   "branches": 7,
+   "symbols": [
+    "SDLHapticHandler_API26"
+   ],
+   "imports": 3,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLInputConnection.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 92,
+   "functions": 7,
+   "branches": 12,
+   "symbols": [
+    "SDLInputConnection"
+   ],
+   "imports": 5,
+   "fan_in": 5,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 10.8
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLJoystickHandler.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 10,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "SDLJoystickHandler"
+   ],
+   "imports": 1,
+   "fan_in": 3,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 5.3
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLJoystickHandler_API16.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 135,
+   "functions": 8,
+   "branches": 23,
+   "symbols": [
+    "RangeComparator",
+    "SDLJoystick",
+    "SDLJoystickHandler_API16"
+   ],
+   "imports": 7,
+   "fan_in": 2,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 6.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLJoystickHandler_API19.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 26,
+   "functions": 3,
+   "branches": 2,
+   "symbols": [
+    "SDLJoystickHandler_API19"
+   ],
+   "imports": 1,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.5
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLMain.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 26,
+   "functions": 1,
+   "branches": 3,
+   "symbols": [
+    "SDLMain"
+   ],
+   "imports": 2,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl/app/SDLSurface.java",
+   "module": "engine",
+   "package": "org.libsdl.app",
+   "sloc": 247,
+   "functions": 14,
+   "branches": 37,
+   "symbols": [
+    "SDLSurface"
+   ],
+   "imports": 18,
+   "fan_in": 3,
+   "fan_out": 5,
+   "churn": 1,
+   "heat": 11.0
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/HIDDevice.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 19,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "HIDDevice"
+   ],
+   "imports": 1,
+   "fan_in": 7,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 11.5
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/HIDDeviceBLESteamController.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 705,
+   "functions": 52,
+   "branches": 78,
+   "symbols": [
+    "GattOperation",
+    "HIDDeviceBLESteamController"
+   ],
+   "imports": 21,
+   "fan_in": 3,
+   "fan_out": 7,
+   "churn": 1,
+   "heat": 18.2
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 608,
+   "functions": 23,
+   "branches": 89,
+   "symbols": [
+    "HIDDeviceManager"
+   ],
+   "imports": 23,
+   "fan_in": 7,
+   "fan_out": 9,
+   "churn": 1,
+   "heat": 24.4
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/HIDDeviceUSB.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 312,
+   "functions": 16,
+   "branches": 49,
+   "symbols": [
+    "HIDDeviceUSB",
+    "InputThread"
+   ],
+   "imports": 5,
+   "fan_in": 3,
+   "fan_out": 5,
+   "churn": 1,
+   "heat": 11.9
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDL.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 75,
+   "functions": 6,
+   "branches": 10,
+   "symbols": [
+    "SDL"
+   ],
+   "imports": 3,
+   "fan_in": 0,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 5.0
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLActivity.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 1988,
+   "functions": 94,
+   "branches": 286,
+   "symbols": [
+    "OneShotTask",
+    "SDLActivity",
+    "SDLClipboardHandler",
+    "SDLCommandHandler",
+    "SDLFileDialogState",
+    "SDLMain",
+    "ShowTextInputTask"
+   ],
+   "imports": 56,
+   "fan_in": 23,
+   "fan_out": 22,
+   "churn": 5,
+   "heat": 78.0
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLAudioManager.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 103,
+   "functions": 9,
+   "branches": 17,
+   "symbols": [
+    "SDLAudioManager"
+   ],
+   "imports": 8,
+   "fan_in": 6,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 11.1
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 887,
+   "functions": 19,
+   "branches": 135,
+   "symbols": [
+    "RangeComparator",
+    "SDLControllerManager",
+    "SDLGenericMotionListener_API14",
+    "SDLGenericMotionListener_API24",
+    "SDLGenericMotionListener_API26",
+    "SDLGenericMotionListener_API29",
+    "SDLHaptic",
+    "SDLHapticHandler",
+    "SDLHapticHandler_API26",
+    "SDLHapticHandler_API31",
+    "SDLJoySensorListener",
+    "SDLJoystick",
+    "SDLJoystickHandler"
+   ],
+   "imports": 23,
+   "fan_in": 13,
+   "fan_out": 10,
+   "churn": 1,
+   "heat": 37.7
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLDummyEdit.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 55,
+   "functions": 4,
+   "branches": 4,
+   "symbols": [
+    "SDLDummyEdit"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 4.9
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLInputConnection.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 117,
+   "functions": 6,
+   "branches": 17,
+   "symbols": [
+    "SDLInputConnection"
+   ],
+   "imports": 6,
+   "fan_in": 5,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 11.1
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLSensorManager.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 64,
+   "functions": 4,
+   "branches": 16,
+   "symbols": [
+    "SDLSensorManager"
+   ],
+   "imports": 4,
+   "fan_in": 2,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 3.8
+  },
+  {
+   "path": "engine/src/main/java/org/libsdl3/app/SDLSurface.java",
+   "module": "engine",
+   "package": "org.libsdl3.app",
+   "sloc": 385,
+   "functions": 20,
+   "branches": 44,
+   "symbols": [
+    "SDLSurface"
+   ],
+   "imports": 22,
+   "fan_in": 3,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 13.5
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 517,
+   "functions": 39,
+   "branches": 133,
+   "symbols": [
+    "KR2Activity"
+   ],
+   "imports": 28,
+   "fan_in": 12,
+   "fan_out": 15,
+   "churn": 6,
+   "heat": 38.7
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/KrDialogModel.kt",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 10,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "KrDialogModel"
+   ],
+   "imports": 0,
+   "fan_in": 3,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 6.0
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 302,
+   "functions": 14,
+   "branches": 21,
+   "symbols": [
+    "ButtonClickCallback",
+    "Callback",
+    "Colors",
+    "KrDialogStyle"
+   ],
+   "imports": 16,
+   "fan_in": 11,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 23.2
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/KrGLSurfaceView.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 124,
+   "functions": 2,
+   "branches": 21,
+   "symbols": [
+    "KrGLSurfaceView"
+   ],
+   "imports": 6,
+   "fan_in": 1,
+   "fan_out": 6,
+   "churn": 2,
+   "heat": 7.9
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/KrInputConnection.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 33,
+   "functions": 1,
+   "branches": 5,
+   "symbols": [
+    "KrInputConnection"
+   ],
+   "imports": 3,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.6
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/KrTextInputView.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 27,
+   "functions": 1,
+   "branches": 3,
+   "symbols": [
+    "KrTextInputView"
+   ],
+   "imports": 5,
+   "fan_in": 1,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 3.2
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/ShowInputBoxRunnable.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 23,
+   "functions": 1,
+   "branches": 6,
+   "symbols": [
+    "ShowInputBoxRunnable"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 6.0
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/ShowMessageBoxRunnable.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 21,
+   "functions": 0,
+   "branches": 6,
+   "symbols": [
+    "ShowMessageBoxRunnable"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 6.0
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/kirikiri2/ShowTextInputRunnable.java",
+   "module": "engine",
+   "package": "org.tvp.kirikiri2",
+   "sloc": 30,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [
+    "ShowTextInputRunnable"
+   ],
+   "imports": 4,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 3.9
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java",
+   "module": "engine",
+   "package": "org.tvp.krkrsdl3",
+   "sloc": 87,
+   "functions": 8,
+   "branches": 10,
+   "symbols": [
+    "KRKRActivity"
+   ],
+   "imports": 9,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 2,
+   "heat": 5.4
+  },
+  {
+   "path": "engine/src/main/java/org/tvp/krkrsdl3/KRKRCall.java",
+   "module": "engine",
+   "package": "org.tvp.krkrsdl3",
+   "sloc": 378,
+   "functions": 22,
+   "branches": 24,
+   "symbols": [
+    "KRKRCall",
+    "MenuItemData"
+   ],
+   "imports": 19,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 8.3
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/AbstractMediaPlayer.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 104,
+   "functions": 18,
+   "branches": 6,
+   "symbols": [
+    "AbstractMediaPlayer"
+   ],
+   "imports": 2,
+   "fan_in": 2,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 6.3
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaDataSourceProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 22,
+   "functions": 4,
+   "branches": 0,
+   "symbols": [
+    "AndroidMediaDataSourceProxy"
+   ],
+   "imports": 2,
+   "fan_in": 2,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 4.0
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaPlayer.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 247,
+   "functions": 37,
+   "branches": 16,
+   "symbols": [
+    "AndroidMediaPlayer"
+   ],
+   "imports": 14,
+   "fan_in": 2,
+   "fan_out": 9,
+   "churn": 1,
+   "heat": 12.2
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaPlayerListenerAdapter.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 63,
+   "functions": 9,
+   "branches": 6,
+   "symbols": [
+    "AndroidMediaPlayerListenerAdapter"
+   ],
+   "imports": 3,
+   "fan_in": 2,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 5.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/BufferingUpdateListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "BufferingUpdateListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/CompletionListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "CompletionListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/ErrorListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "ErrorListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IMediaPlayer.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 113,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IMediaPlayer",
+    "OnBufferingUpdateListener",
+    "OnCompletionListener",
+    "OnErrorListener",
+    "OnInfoListener",
+    "OnPreparedListener",
+    "OnSeekCompleteListener",
+    "OnTimedTextListener",
+    "OnVideoSizeChangedListener"
+   ],
+   "imports": 9,
+   "fan_in": 19,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 33.0
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/ISurfaceTextureHolder.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 8,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "ISurfaceTextureHolder"
+   ],
+   "imports": 1,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.3
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/ISurfaceTextureHost.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 6,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "ISurfaceTextureHost"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 3.1
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkLibLoader.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 5,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IjkLibLoader"
+   ],
+   "imports": 0,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 1.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaCodecInfo.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 190,
+   "functions": 6,
+   "branches": 19,
+   "symbols": [
+    "IjkMediaCodecInfo"
+   ],
+   "imports": 6,
+   "fan_in": 1,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 5.2
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaMeta.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 303,
+   "functions": 21,
+   "branches": 26,
+   "symbols": [
+    "IjkMediaMeta",
+    "IjkStreamMeta"
+   ],
+   "imports": 4,
+   "fan_in": 8,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 15.9
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 812,
+   "functions": 77,
+   "branches": 87,
+   "symbols": [
+    "DefaultMediaCodecSelector",
+    "IjkMediaPlayer",
+    "OnControlMessageListener",
+    "OnMediaCodecSelectListener",
+    "OnNativeInvokeListener"
+   ],
+   "imports": 28,
+   "fan_in": 4,
+   "fan_out": 11,
+   "churn": 1,
+   "heat": 23.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayerEventHandler.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 89,
+   "functions": 2,
+   "branches": 16,
+   "symbols": [
+    "IjkMediaPlayerEventHandler"
+   ],
+   "imports": 6,
+   "fan_in": 2,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 6.2
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkTimedText.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 17,
+   "functions": 3,
+   "branches": 0,
+   "symbols": [
+    "IjkTimedText"
+   ],
+   "imports": 1,
+   "fan_in": 5,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 7.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/InfoListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "InfoListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/MediaInfo.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 10,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "MediaInfo"
+   ],
+   "imports": 0,
+   "fan_in": 5,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 8.4
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/MediaPlayerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 220,
+   "functions": 43,
+   "branches": 8,
+   "symbols": [
+    "MediaPlayerProxy"
+   ],
+   "imports": 10,
+   "fan_in": 10,
+   "fan_out": 12,
+   "churn": 1,
+   "heat": 26.1
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/PreparedListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "PreparedListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/SeekCompleteListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "SeekCompleteListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/TextureMediaPlayer.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 67,
+   "functions": 9,
+   "branches": 6,
+   "symbols": [
+    "TextureMediaPlayer"
+   ],
+   "imports": 3,
+   "fan_in": 0,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 3.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/TimedTextListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "TimedTextListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 5.2
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/VideoSizeChangedListenerProxy.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 15,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "VideoSizeChangedListenerProxy"
+   ],
+   "imports": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/annotations/AccessedByNative.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.annotations",
+   "sloc": 10,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [],
+   "imports": 4,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.1
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/annotations/CalledByNative.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.annotations",
+   "sloc": 11,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [],
+   "imports": 4,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.1
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/exceptions/IjkMediaException.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.exceptions",
+   "sloc": 5,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IjkMediaException"
+   ],
+   "imports": 0,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.0
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/ffmpeg/FFmpegApi.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.ffmpeg",
+   "sloc": 5,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "FFmpegApi"
+   ],
+   "imports": 0,
+   "fan_in": 0,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 0.0
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/AndroidMediaFormat.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 38,
+   "functions": 4,
+   "branches": 3,
+   "symbols": [
+    "AndroidMediaFormat"
+   ],
+   "imports": 1,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.6
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/AndroidTrackInfo.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 63,
+   "functions": 8,
+   "branches": 5,
+   "symbols": [
+    "AndroidTrackInfo"
+   ],
+   "imports": 2,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 4.3
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/CodecLongNameFormatter.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 13,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "CodecLongNameFormatter"
+   ],
+   "imports": 1,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 3.7
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/CodecNameFormatter.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 13,
+   "functions": 2,
+   "branches": 0,
+   "symbols": [
+    "CodecNameFormatter"
+   ],
+   "imports": 1,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 3.7
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/CompositeMediaFormatter.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 126,
+   "functions": 2,
+   "branches": 12,
+   "symbols": [
+    "CompositeMediaFormatter"
+   ],
+   "imports": 3,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 5.1
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/IAndroidIO.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 8,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IAndroidIO"
+   ],
+   "imports": 0,
+   "fan_in": 1,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 1.6
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/IMediaDataSource.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 7,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IMediaDataSource"
+   ],
+   "imports": 0,
+   "fan_in": 7,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 10.7
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/IMediaFormat.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 9,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IMediaFormat"
+   ],
+   "imports": 0,
+   "fan_in": 5,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 7.7
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/ITrackInfo.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 14,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "ITrackInfo"
+   ],
+   "imports": 0,
+   "fan_in": 5,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 8.4
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkMediaFormat.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 53,
+   "functions": 3,
+   "branches": 3,
+   "symbols": [
+    "IjkMediaFormat"
+   ],
+   "imports": 4,
+   "fan_in": 6,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 13.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkStringFormatter.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 5,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "IjkStringFormatter"
+   ],
+   "imports": 0,
+   "fan_in": 4,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 6.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkTrackInfo.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.misc",
+   "sloc": 61,
+   "functions": 8,
+   "branches": 4,
+   "symbols": [
+    "IjkTrackInfo"
+   ],
+   "imports": 2,
+   "fan_in": 1,
+   "fan_out": 4,
+   "churn": 1,
+   "heat": 5.0
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/package-info.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player",
+   "sloc": 20,
+   "functions": 0,
+   "branches": 3,
+   "symbols": [],
+   "imports": 0,
+   "fan_in": 0,
+   "fan_out": 17,
+   "churn": 1,
+   "heat": 11.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/pragma/DebugLog.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.pragma",
+   "sloc": 66,
+   "functions": 17,
+   "branches": 1,
+   "symbols": [
+    "DebugLog"
+   ],
+   "imports": 2,
+   "fan_in": 3,
+   "fan_out": 0,
+   "churn": 1,
+   "heat": 5.3
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/pragma/Pragma.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.pragma",
+   "sloc": 5,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "Pragma"
+   ],
+   "imports": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.2
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoView.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.widget",
+   "sloc": 292,
+   "functions": 26,
+   "branches": 26,
+   "symbols": [
+    "IjkVideoView"
+   ],
+   "imports": 14,
+   "fan_in": 4,
+   "fan_out": 6,
+   "churn": 1,
+   "heat": 13.8
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoViewListener.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.widget",
+   "sloc": 69,
+   "functions": 6,
+   "branches": 14,
+   "symbols": [
+    "IjkVideoViewListener"
+   ],
+   "imports": 3,
+   "fan_in": 1,
+   "fan_out": 2,
+   "churn": 1,
+   "heat": 3.7
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoViewSurfaceCallback.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.widget",
+   "sloc": 79,
+   "functions": 4,
+   "branches": 11,
+   "symbols": [
+    "IjkVideoViewSurfaceCallback"
+   ],
+   "imports": 3,
+   "fan_in": 1,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 4.5
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player/widget/package-info.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player.widget",
+   "sloc": 14,
+   "functions": 0,
+   "branches": 1,
+   "symbols": [],
+   "imports": 0,
+   "fan_in": 0,
+   "fan_out": 3,
+   "churn": 1,
+   "heat": 2.2
+  },
+  {
+   "path": "engine/src/main/java/tv/danmaku/ijk/media/player_arm64/Pragma.java",
+   "module": "engine",
+   "package": "tv.danmaku.ijk.media.player_arm64",
+   "sloc": 4,
+   "functions": 0,
+   "branches": 0,
+   "symbols": [
+    "Pragma"
+   ],
+   "imports": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "churn": 1,
+   "heat": 2.2
+  }
+ ]
+}

@@ -112,6 +112,27 @@ class AsarArchiveTest {
     }
 
     @Test
+    fun rejectsJsonLengthExceedingHeaderBoundary() {
+        val jsonBytes = headerJson().toByteArray(StandardCharsets.UTF_8)
+        val file = writeAsar(name = "bad-jsonlen.asar", headerSizeOverride = jsonBytes.size.toLong() + 4)
+        assertThrows(java.io.IOException::class.java) { AsarArchive(file) }
+    }
+
+    @Test
+    fun rejectsEntryRangeBeyondArchiveEnd() {
+        val json = """{"files":{"big.bin":{"size":100000,"offset":"0"}}}"""
+        val file = writeAsar(name = "bad-range.asar", json = json, data = ByteArray(8))
+        assertThrows(java.io.IOException::class.java) { AsarArchive(file) }
+    }
+
+    @Test
+    fun rejectsNegativeEntrySize() {
+        val json = """{"files":{"evil.bin":{"size":-1,"offset":"0"}}}"""
+        val file = writeAsar(name = "bad-size.asar", json = json, data = ByteArray(4))
+        assertThrows(java.io.IOException::class.java) { AsarArchive(file) }
+    }
+
+    @Test
     fun rejectsMissingArchiveFile() {
         val missing = File(temporaryFolder.root, "absent.asar")
         assertThrows(IllegalArgumentException::class.java) { AsarArchive(missing) }

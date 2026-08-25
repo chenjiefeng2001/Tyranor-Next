@@ -87,4 +87,4 @@ docs/   设计文档
 - **Tyranor 模拟器**：本项目引擎运行时与核心架构的逆向重写基础
 - **RinneMobile**：游戏扫描识别/SAF路径映射逻辑/独立存档映射/krkrsdl3 等多个功能的参考实现
 - [Miuix](https://github.com/compose-miuix-ui/miuix)：设置界面组件库
-- 各引擎运行时均基于其开源许可引入
+- 各引擎运行时均基于其开源许可引入，完整第三方组件与许可披露见 [THIRD-PARTY-NOTICES](./THIRD-PARTY-NOTICES.md)

@@ -716,8 +716,9 @@ Java_bridge_NativeBridge_write(JNIEnv* env, jclass, jstring path, jbyteArray byt
     return (written == static_cast<size_t>(length) && closeResult == 0) ? JNI_TRUE : JNI_FALSE;
 }
 
-// JNI_OnLoad is invoked when libkrkr_bridge.so is loaded via System.loadLibrary("krkr_bridge")
-// in Kirikiroid134/139 (KirikiroidLauncherBaseActivity.onLoadNativeLibraries). This must only
+// JNI_OnLoad is invoked when libkrkr_bridge_v2.so is loaded via
+// System.loadLibrary("krkr_bridge_v2") in Kirikiroid126/134/139 and KR2Activity.
+// This must only
 // happen in the :kirikiri2 process, where the engine module's classes are visible to the
 // application class loader. Loading this library from a non-application context (e.g. an
 // isolated native process) will cause FindClass("bridge/NativeBridge") to fail and JNI_OnLoad
@@ -736,7 +737,7 @@ extern "C" JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void*) {
         env->ExceptionClear();
         __android_log_print(ANDROID_LOG_ERROR, kTag,
                             "NativeBridge class unavailable for RegisterNatives; "
-                            "ensure libkrkr_bridge.so is only loaded by the :kirikiri2 process "
+                            "ensure libkrkr_bridge_v2.so is only loaded by the :kirikiri2 process "
                             "where the engine module's ClassLoader can resolve bridge/NativeBridge");
         return JNI_ERR;
     }

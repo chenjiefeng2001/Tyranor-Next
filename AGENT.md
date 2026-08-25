@@ -6,8 +6,8 @@
 
 - Android Jetpack Compose + Material 3
 - Kotlin
-- 底部导航结构：`app/src/main/java/com/example/tyranornext/ui/main/MainScreen.kt`
-- 各页面位于 `app/src/main/java/com/example/tyranornext/ui/pages/`
+- 底部导航结构：`app/src/main/java/com/tyranor/next/ui/main/MainScreen.kt`
+- 各页面位于 `app/src/main/java/com/tyranor/next/ui/pages/`
 
 ---
 

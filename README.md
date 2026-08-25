@@ -37,12 +37,34 @@
 
 ## 构建
 
+### 工具链前置要求
+
+| 工具 | 版本 | 说明 |
+| --- | --- | --- |
+| JDK | 17 | Gradle toolchain 固定版本 |
+| Android SDK Platform | android-36、android-37.0 | engine 用 36，app 因 Miuix 传递依赖需 37 |
+| Build-Tools | 36.0.0+ | AGP 默认请求 36.0.0 |
+| NDK | r28（28.0.13004108） | 编译 engine 原生桥 `krkr_bridge_v2` |
+| CMake | 3.22.1 | 与 engine `externalNativeBuild` 声明一致 |
+
+可用 sdkmanager 一键安装：
+
 ```bash
-# 编译 Debug APK
-./gradlew assembleDebug --no-daemon
+sdkmanager "platforms;android-36" "platforms;android-37.0" "build-tools;37.0.0" \
+  "build-tools;36.0.0" "ndk;28.0.13004108" "cmake;3.22.1"
 ```
 
-产物位于 `app/build/outputs/apk/debug/`。需要 Android SDK（本地平台 android-37）环境。
+### 编译
+
+```bash
+# 编译 Debug APK（仅产出 arm64-v8a）
+./gradlew assembleDebug --no-daemon
+
+# 运行单元测试（app + engine）
+./gradlew :app:testDebugUnitTest :engine:testDebugUnitTest --no-daemon
+```
+
+产物位于 `app/build/outputs/apk/debug/`。
 
 ## 目录结构
 

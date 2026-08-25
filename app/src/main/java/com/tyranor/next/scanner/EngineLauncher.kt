@@ -408,7 +408,7 @@ object EngineLauncher {
         return false
     }
 
-    private fun parseStoragePath(path: String): Pair<String, String>? {
+    internal fun parseStoragePath(path: String): Pair<String, String>? {
         return when {
             path == "/storage/emulated/0" -> "primary" to ""
             path.startsWith("/storage/emulated/0/") -> "primary" to path.substring("/storage/emulated/0/".length)
@@ -423,7 +423,7 @@ object EngineLauncher {
         }
     }
 
-    private fun normalizeKrkrsdl3Renderer(value: String): String =
+    internal fun normalizeKrkrsdl3Renderer(value: String): String =
         when (value.trim().lowercase()) {
             EngineSettingsStore.RENDERER_OPENGL, "gl", "gpu" -> EngineSettingsStore.RENDERER_OPENGL
             EngineSettingsStore.RENDERER_SOFTWARE, "sw" -> EngineSettingsStore.RENDERER_SOFTWARE
@@ -546,7 +546,7 @@ object EngineLauncher {
      * 为 KR2 挑选“启动条目”路径（让 gamedir = path 的父目录 = 游戏目录）。优先：launchTarget
      * 指定的 xp3 → 目录内 data.xp3/startup.tjs 等常见启动条目 → 任意一个 xp3 → 目录本身。
      */
-    private fun pickKrActivateEntry(path: String, game: ScanGame): String {
+    internal fun pickKrActivateEntry(path: String, game: ScanGame): String {
         val files = java.io.File(path).listFiles()
             ?.filter { it.isFile }
             .orEmpty()
@@ -604,7 +604,7 @@ object EngineLauncher {
     }
 
     /** 与 OnsSettings.safeSharpness 一致：只接受 0.1~10.0 的数字，否则回退 "2"。 */
-    private fun safeSharpnessValue(value: String): String {
+    internal fun safeSharpnessValue(value: String): String {
         val v = value.trim()
         if (v.isEmpty()) return "2"
         val parsed = v.toDoubleOrNull() ?: return "2"

@@ -46,17 +46,12 @@ import org.tvp.kirikiri2.KR2Activity;
 /**
  * Base activity for Kirikiroid134/139 KRKR engine launches.
  *
- * ARCHITECTURE NOTE:
- * This class historically used reflection to call com.apps.LauncherActivity for theme
- * colors (primary color, dark mode). This creates a reverse dependency from the engine
- * library module to the app application module, which violates Gradle module dependency
- * direction. We are migrating to passing these values via Intent extras:
+ * CONTRACT:
+ * Theme values are passed exclusively via Intent extras (single direction app → engine):
  *   - "primaryColor" (int): theme primary color
  *   - "darkMode" (boolean): whether dark mode is active
- *
- * The reflection calls are retained as deprecated fallbacks for backward compatibility
- * with com.apps callers that have not yet been updated to pass these extras. Once all
- * callers are migrated, the reflection paths will be removed.
+ * The historical com.apps.LauncherActivity reflection fallbacks were removed
+ * (target class never existed in this repository; see audit report N-01).
  */
 public abstract class KirikiroidLauncherBaseActivity extends KR2Activity {
     private static final String TAG = "Kirikiroid2";
@@ -688,16 +683,6 @@ public abstract class KirikiroidLauncherBaseActivity extends KR2Activity {
         if (intent != null && intent.hasExtra("primaryColor")) {
             return intent.getIntExtra("primaryColor", Color.rgb(24, 185, 120));
         }
-        // Deprecated reflection fallback: com.apps should pass "primaryColor" via Intent extra.
-        // TODO: remove reflection once com.apps migration is complete.
-        try {
-            Object value = Class.forName("com.apps.LauncherActivity")
-                    .getMethod("launcherPrimaryColor", Context.class)
-                    .invoke(null, this);
-            if (value instanceof Integer) return (Integer) value;
-        } catch (Throwable ignored) {
-            // 反射失败时忽略，回退 Intent extra 主色（兼容兜底）
-        }
         return launcherColor("launcher_primary_color", Color.rgb(24, 185, 120));
     }
 
@@ -709,20 +694,8 @@ public abstract class KirikiroidLauncherBaseActivity extends KR2Activity {
     }
 
     private Context launcherUiContext() {
-        // Deprecated reflection fallback: com.apps should pass "darkMode" via Intent extra.
-        // Note: this Context does NOT automatically resolve values-night resources based on
-        // the "darkMode" Intent extra; wrapLauncherUiMode in com.apps wraps the Context with
-        // a UiModeManager override to force day/night resource resolution. When the reflection
-        // fallback is removed, callers passing "darkMode" extra must also apply the night mode
-        // override via AppCompatDelegate.setDefaultNightMode() or similar before retrieving colors.
-        try {
-            Object value = Class.forName("com.apps.LauncherActivity")
-                    .getMethod("wrapLauncherUiMode", Context.class)
-                    .invoke(null, this);
-            if (value instanceof Context) return (Context) value;
-        } catch (Throwable ignored) {
-            // 反射失败时忽略，回退默认 Context（兼容兜底）
-        }
+        // Note: this Context does NOT resolve values-night resources from the "darkMode"
+        // extra; day/night resource selection follows the system uiMode configuration.
         return this;
     }
 
@@ -742,15 +715,6 @@ public abstract class KirikiroidLauncherBaseActivity extends KR2Activity {
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("darkMode")) {
             return intent.getBooleanExtra("darkMode", false);
-        }
-        // Deprecated reflection fallback: com.apps should pass "darkMode" via Intent extra.
-        try {
-            Object value = Class.forName("com.apps.LauncherActivity")
-                    .getMethod("isLauncherDarkMode", Context.class)
-                    .invoke(null, this);
-            if (value instanceof Boolean) return (Boolean) value;
-        } catch (Throwable ignored) {
-            // 反射失败时忽略，回退系统 uiMode 判断（兼容兜底）
         }
         return (getResources().getConfiguration().uiMode
                 & android.content.res.Configuration.UI_MODE_NIGHT_MASK)

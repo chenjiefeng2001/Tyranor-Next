@@ -108,6 +108,9 @@ jobs:
             echo "ANDROID_KEY_PASSWORD=${ANDROID_KEY_PASSWORD}"
           } >> "${GITHUB_ENV}"
 
+      - name: Run unit tests
+        run: ./gradlew :app:testDebugUnitTest :engine:testDebugUnitTest --no-daemon
+
       - name: Assemble release APK
         run: ./gradlew assembleRelease --no-daemon
 

@@ -17,7 +17,7 @@
 | R-06 | EngineScanner 职责分离 | P1 | M | 中 | 06 §5.3 | ✅ 已完成（4cb765d，GameStore+PathResolver） |
 | R-07 | EngineLauncher 纯函数补测 | P1 | S | 无 | 06 §5.4 | ✅ 已完成（603f6fb，13 例） |
 | R-08 | TyranoLocalHttpServer 回环集成测试 | P1 | M | 无 | F-13 延伸 | ✅ 已完成（注入/追加/Range/穿越/端口释放，6 例） |
-| R-09 | SDL2 官方源对照重整 | **P2 专项** | L | 高 | F-11 收尾 | 待办 |
+| R-09 | SDL2 官方源对照重整 | **P2 专项** | L | 高 | F-11 收尾 | ◐ 前置研究完成 → **策略改判「冻结+定向补丁」**，见 10 报告；实机五链回归清单保留 |
 | R-10 | 测试矩阵延伸（存档 zip 往返 / Asar 边界 / detectEngine 全分支） | P2 | M | 无 | F-01 延伸 | ✅ 已完成（dad55ac/1ed0abd/4daaec2，+23 例） |
 | R-11 | Gradle 10 兼容预演 | P2 | S | 低 | 工程观察 | ✅ 已随 R-04 完成主项（engine Groovy 赋值语法已迁移） |
 | R-12 | APK 体积决策框架（F-05） | P3 决策 | — | — | F-05 | 待决策 |

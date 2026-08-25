@@ -23,8 +23,11 @@
 | [07-hotspot-map.svg](./07-hotspot-map.svg) | 代码热点图（文件级热力网格，悬停查看度量） |
 | [08-deep-trace-report.md](./08-deep-trace-report.md) | 深度可追溯 trace：入口清单、隐藏依赖、Intent/prefs/JNI 契约矩阵与闭合核验 |
 | [09-improvement-recommendations.md](./09-improvement-recommendations.md) | 改进建议报告：R-01~R-14 分级行动方案、量化决策输入与负空间声明 |
+| [10-sdl2-resync-prep.md](./10-sdl2-resync-prep.md) | R-09 前置研究：内嵌 SDL2 版本测定与 Java↔so JNI 契约双向核验（策略改判为冻结+定向补丁） |
+| [07-hotspot-map.svg](./07-hotspot-map.svg) | 代码热点图（文件级热力网格，悬停查看度量；重构后已刷新） |
 | [tools/hotspot_trace.py](./tools/hotspot_trace.py) | 热点度量与 SVG 生成脚本（可复现，含 hotspot-data.json 数据） |
 | [tools/deep_trace.py](./tools/deep_trace.py) | 契约/隐藏依赖/JNI 证据提取脚本（可复现，含 deep-trace-data.json 数据） |
+| [tools/sdl2_contract_trace.py](./tools/sdl2_contract_trace.py) | SDL2 版本测定 + Java↔so A 向 JNI 契约核验脚本 |
 
 ## 总体结论
 

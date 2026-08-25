@@ -13,8 +13,8 @@
 | R-02 | 清理遗留反射 com.apps.LauncherActivity | P0 | S | 低 | N-01 | ✅ 已完成（78a2bdd） |
 | R-03 | 契约文档补注（无消费方键 / 冻结接口声明） | P0 | S | 无 | N-02 | ✅ 已完成（43492d7） |
 | R-04 | 构建弃用 API 清理 | P0 | S | 低 | 工程观察 | ✅ 已完成（aebc8f5），弃用告警归零 |
-| R-05 | GameScreen.kt 三步拆分 | **P1** | M | 中 | 06 §5.2 | 待办 |
-| R-06 | EngineScanner 职责分离 | P1 | M | 中 | 06 §5.3 | 待办 |
+| R-05 | GameScreen.kt 三步拆分 | **P1** | M | 中 | 06 §5.2 | ✅ 已完成（384a58f/f6ef4f5，998→347 行） |
+| R-06 | EngineScanner 职责分离 | P1 | M | 中 | 06 §5.3 | ✅ 已完成（4cb765d，GameStore+PathResolver） |
 | R-07 | EngineLauncher 纯函数补测 | P1 | S | 无 | 06 §5.4 | ✅ 已完成（603f6fb，13 例） |
 | R-08 | TyranoLocalHttpServer 回环集成测试 | P1 | M | 无 | F-13 延伸 | ✅ 已完成（注入/追加/Range/穿越/端口释放，6 例） |
 | R-09 | SDL2 官方源对照重整 | **P2 专项** | L | 高 | F-11 收尾 | 待办 |
@@ -26,6 +26,8 @@
 
 > 执行记录：2026-08-25 完成 P0 全部四项与 P1 的 R-07/R-08；新增测试 19 例（13+6），全仓库单测总数 57 例。
 > 执行记录：2026-08-25 完成 R-10 测试矩阵延伸，新增 23 例（detectEngine 矩阵 16 + Asar 负例 3 + 存档 zip 4），全仓库单测总数 80 例。R-05/R-06 结构重构待专项会话执行。
+> 执行记录：2026-08-25 完成 R-06（GameStore/PathResolver 抽离 + 后端调用方迁移）与 R-05 三步（GameSorter+5 例单测；弹窗→ui/dialogs；网格卡片→ui/components，GameScreen 998→347 行）。全仓库单测总数 85 例。
+> 剩余：R-09 SDL2 官方源对照重整（需实机五链回归资源）；R-12/13/14 待产品决策；GameStore 门面在 UI 层调用方的逐步直连为低优先级后续项。
 
 ---
 

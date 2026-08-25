@@ -27,7 +27,8 @@
 > 执行记录：2026-08-25 完成 P0 全部四项与 P1 的 R-07/R-08；新增测试 19 例（13+6），全仓库单测总数 57 例。
 > 执行记录：2026-08-25 完成 R-10 测试矩阵延伸，新增 23 例（detectEngine 矩阵 16 + Asar 负例 3 + 存档 zip 4），全仓库单测总数 80 例。R-05/R-06 结构重构待专项会话执行。
 > 执行记录：2026-08-25 完成 R-06（GameStore/PathResolver 抽离 + 后端调用方迁移）与 R-05 三步（GameSorter+5 例单测；弹窗→ui/dialogs；网格卡片→ui/components，GameScreen 998→347 行）。全仓库单测总数 85 例。
-> 剩余：R-09 SDL2 官方源对照重整（需实机五链回归资源）；R-12/13/14 待产品决策；GameStore 门面在 UI 层调用方的逐步直连为低优先级后续项。
+> 执行记录：2026-08-25 R-06 完全收尾：UI 层直连 GameStore/PathResolver、EngineScanner 门面委托全部裁撤（700→463 行，仅存扫描/识别/根目录/封面），持久化测试更名 GameStorePersistenceTest 直测；新增 PathResolver 直测 13 例与 detectEngine(DocumentFile) 变体矩阵。全仓库单测总数 99 例。
+> 剩余：R-09 已改判「冻结+定向补丁」（见 10 报告），无待办工程动作；R-12/13/14 待产品决策。
 
 ---
 

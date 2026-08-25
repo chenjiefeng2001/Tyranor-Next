@@ -15,8 +15,8 @@
 | F-08 | Medium | 未整改 | MANAGE_EXTERNAL_STORAGE 上架合规风险 |
 | F-09 | Low | 已整改 | UNKNOWN 引擎静默兜底 TyranoActivity |
 | F-10 | Low | 已整改 | requestLegacyExternalStorage 为无效标志 |
-| F-11 | Medium | 未整改 | vendored SDL2 Java 层含反编译产物痕迹 |
-| F-12 | Low | 未整改 | 第三方 SDK 许可披露不全 |
+| F-11 | Medium | 部分整改 | vendored SDL2 Java 层含反编译产物痕迹 |
+| F-12 | Low | 已整改 | 第三方 SDK 许可披露不全 |
 | F-13 | Medium | 已核实（无风险） | TyranoLocalHttpServer 绑定地址未显式约束 |
 
 ---
@@ -142,14 +142,23 @@ c) `README.md` 描述 compileSdk 37/minSdk 26/targetSdk 36 与代码一致，但
 **现状**：org/libsdl/app/SDLActivity.java:8 存在「JADX INFO」注释，说明该 Java 层来自 APK 反编译而非官方源码；AudioRouteWatcher(:27) 为本项目新增增强。
 **影响**：上游许可（SDL zlib 许可要求保留版权声明）合规性存疑；后续升级 SDL2 无法直接 diff 官方源。
 **建议**：以官方 SDL2 android-project Java 源为基线重新对照整理，保留 AudioRouteWatcher 补丁为显式 diff；补齐 LICENSE 注记。
-**整改记录**：（待填）
+
+### 整改记录
+- 日期：2026-08-25（部分整改）
+- 变更内容：新增 `engine/src/main/java/org/libsdl/app/README.md`——声明该目录来自上游 APK 反编译整理（zlib 许可）、标注 AudioRouteWatcher.java 为本项目新增、明确升级 SDL2 前须先与官方源对照。另经扫描确认：org/libsdl3 无 JADX 痕迹（官方基线）；tv/danmaku/ijk 有 45 处 JADX 注释（同为反编译产物），已在 THIRD-PARTY-NOTICES 第四节一并披露。
+- 待办：以 SDL2 官方 release Java 源逐文件对照重整本目录并保留显式 diff（工作量大，涉及回归验证引擎启动链路，单独立项处理）。
+- 验证方式与结果：文档变更无需构建验证；JADX 标记分布经 rg 全量扫描确认。
 
 ## F-12 [Low] 第三方组件许可披露不全
 
 **现状**：jniLibs 含 libBugly.so（腾讯 Bugly）、libmmkv.so（微信 MMKV）、ijkplayer、SDL/SDL2/ffmpeg（经 kirikiroid2 插件分发）等；README 致谢仅列 Tyranor/RinneMobile/Miuix 及 GPL-2.0 总纲。
 **影响**：GPL-2.0 项目内引入 Bugly/MMKV 等专有或宽松许可二进制，需逐一核对兼容性与声明义务。
 **建议**：建立 THIRD-PARTY-NOTICES 清单（组件/版本/来源/许可证），随发行物分发。
-**整改记录**：（待填）
+
+### 整改记录
+- 日期：2026-08-25
+- 变更内容：新增仓库根目录 `THIRD-PARTY-NOTICES.md`，六节披露——Maven 依赖（含 Miuix/Backdrop 经上游核实均为 Apache-2.0）、jniLibs 原生库（Bugly 专有条款、MMKV BSD-3、ByteHook/ShadowHook MIT、ijkplayer LGPL-2.1+、SDL3 zlib 等）、构建期引擎插件（kirikiroid2/ons/artemis 及其内嵌 FFmpeg/SDL2/bzip2/libjpeg/Lua）、vendored Java 源码（含 SDL2/ijk 反编译产物标注）、整体 GPL-2.0 合规说明与 Bugly 兼容性风险提示、致谢。README 致谢节挂接该清单。
+- 验证方式与结果：许可证信息经上游 GitHub/Maven Central 元数据核实（Miuix、Backdrop）；文档变更无需构建验证。
 
 ## F-13 [Medium] TyranoLocalHttpServer 绑定地址待核实
 
@@ -168,7 +177,7 @@ c) `README.md` 描述 compileSdk 37/minSdk 26/targetSdk 36 与代码一致，但
 
 1. **立即**（低成本高收益）：F-02 文档修正、F-10 删除无效标志、F-07 CI 工具链显式化。✅ 已完成（2026-08-25）
 2. **本迭代**：~~F-04 备份规则收紧~~ ✅、~~F-13 loopback 核实~~ ✅ 已核实无风险、~~F-09 UNKNOWN 兜底改造~~ ✅ 均已完成（2026-08-25）
-3. **规划中**：~~F-01 测试补齐~~ ✅、~~F-03 networkSecurityConfig~~ ✅ 均已完成（2026-08-25）、F-11/F-12 许可治理。
+3. **规划中**：~~F-01 测试补齐~~ ✅、~~F-03 networkSecurityConfig~~ ✅、~~F-12 许可清单~~ ✅ 均已完成；~~F-11 SDL2 反编译产物~~ ◐ 出处注记已补，官方源对照重整待办。
 4. **发布前决策**：F-05 体积方案（PAD/按需下载）、F-06 多语言范围、F-08 渠道合规材料。
 
 ## 维护约定

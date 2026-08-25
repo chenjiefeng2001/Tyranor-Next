@@ -14,7 +14,7 @@ import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [34])
-class EngineScannerPersistenceTest {
+class GameStorePersistenceTest {
 
     private lateinit var context: Context
 
@@ -49,9 +49,9 @@ class EngineScannerPersistenceTest {
             openTime = 1724572800000,
         )
 
-        EngineScanner.saveGames(context, listOf(game))
+        GameStore.saveGames(context, listOf(game))
         resetCaches()
-        val loaded = EngineScanner.loadGames(context)
+        val loaded = GameStore.loadGames(context)
 
         assertEquals(listOf(game), loaded)
     }
@@ -66,9 +66,9 @@ class EngineScannerPersistenceTest {
             metadataTitle = "meta\nvalue\u0001x",
         )
 
-        EngineScanner.saveRecentGames(context, listOf(dirty))
+        GameStore.saveRecentGames(context, listOf(dirty))
         resetCaches()
-        val loaded = EngineScanner.loadRecentGames(context)
+        val loaded = GameStore.loadRecentGames(context)
 
         assertEquals(1, loaded.size)
         assertEquals("line1 line2 col", loaded[0].title)
@@ -85,9 +85,9 @@ class EngineScannerPersistenceTest {
             launchTarget = "",
         )
 
-        EngineScanner.saveGames(context, listOf(minimal))
+        GameStore.saveGames(context, listOf(minimal))
         resetCaches()
-        val loaded = EngineScanner.loadGames(context)
+        val loaded = GameStore.loadGames(context)
 
         assertEquals(minimal.copy(coverUri = null, vndbId = null, metadataTitle = null), loaded[0])
         assertNull(loaded[0].vndbId)
@@ -103,7 +103,7 @@ class EngineScannerPersistenceTest {
         ).joinToString("\n")
         prefs().edit().putString("scan_games", raw).apply()
 
-        val loaded = EngineScanner.loadGames(context)
+        val loaded = GameStore.loadGames(context)
 
         assertEquals(2, loaded.size)
         assertEquals(EngineType.UNKNOWN, loaded[0].engine)
@@ -118,13 +118,13 @@ class EngineScannerPersistenceTest {
     fun quickLaunchPersistsIndependentlyFromLibrary() {
         val game = ScanGame(title = "q", uri = "/q", engine = EngineType.ONS, launchTarget = "default.exe")
 
-        assertTrue(EngineScanner.addQuickLaunch(context, game))
+        assertTrue(GameStore.addQuickLaunch(context, game))
         resetCaches()
-        assertEquals(listOf(game), EngineScanner.loadQuickLaunch(context))
+        assertEquals(listOf(game), GameStore.loadQuickLaunch(context))
 
-        EngineScanner.removeQuickLaunch(context, game.uri)
+        GameStore.removeQuickLaunch(context, game.uri)
         resetCaches()
-        assertTrue(EngineScanner.loadQuickLaunch(context).isEmpty())
+        assertTrue(GameStore.loadQuickLaunch(context).isEmpty())
     }
 
     @Test
@@ -132,10 +132,10 @@ class EngineScannerPersistenceTest {
         val a = ScanGame(title = "a", uri = "/a", engine = EngineType.VN, launchTarget = "")
         val b = ScanGame(title = "b", uri = "/b", engine = EngineType.VN, launchTarget = "")
 
-        EngineScanner.saveGames(context, listOf(a, b))
-        EngineScanner.removeGame(context, a.uri)
+        GameStore.saveGames(context, listOf(a, b))
+        GameStore.removeGame(context, a.uri)
         resetCaches()
 
-        assertEquals(listOf(b), EngineScanner.loadGames(context))
+        assertEquals(listOf(b), GameStore.loadGames(context))
     }
 }

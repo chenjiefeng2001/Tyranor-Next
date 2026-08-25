@@ -56,7 +56,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import com.tyranor.next.R
 import com.tyranor.next.scanner.EngineLauncher
-import com.tyranor.next.scanner.EngineScanner
+import com.tyranor.next.scanner.GameStore
 import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.theme.NavWhite
 import com.tyranor.next.ui.common.TimeFormats
@@ -73,8 +73,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
     val scope = rememberCoroutineScope()
     // 首页数据每次进入重组时重新加载，保证游戏页改动后切回立即生效；
     // 快捷启动用主库最新数据刷新，封面等修改实时同步
-    var quickLaunch by remember { mutableStateOf(EngineScanner.refreshQuickLaunch(context)) }
-    var recentGames by remember { mutableStateOf(EngineScanner.loadRecentGames(context).take(10)) }
+    var quickLaunch by remember { mutableStateOf(GameStore.refreshQuickLaunch(context)) }
+    var recentGames by remember { mutableStateOf(GameStore.loadRecentGames(context).take(10)) }
     var selectedGame by remember { mutableStateOf<ScanGame?>(null) }
     var launchError by remember { mutableStateOf<String?>(null) }
     var patchLaunchTarget by remember { mutableStateOf<ScanGame?>(null) }
@@ -84,11 +84,11 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         recentGames = recentGames.map { if (it.uri == updated.uri) updated else it }
         selectedGame = selectedGame?.let { if (it.uri == updated.uri) updated else it }
         // 同步持久化最近记录、快捷启动与主游戏库，避免修改丢失
-        EngineScanner.saveRecentGames(context, recentGames)
-        EngineScanner.saveQuickLaunch(context, quickLaunch)
-        EngineScanner.saveGames(
+        GameStore.saveRecentGames(context, recentGames)
+        GameStore.saveQuickLaunch(context, quickLaunch)
+        GameStore.saveGames(
             context,
-            EngineScanner.loadGames(context).map { if (it.uri == updated.uri) updated else it },
+            GameStore.loadGames(context).map { if (it.uri == updated.uri) updated else it },
         )
     }
 
@@ -97,10 +97,10 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         recentGames = recentGames.filterNot { it.uri == target.uri }
         selectedGame = null
         // 从持久游戏库一并移除，避免首页删了但「游戏」页仍显示（复活）
-        EngineScanner.removeGame(context, target.uri)
+        GameStore.removeGame(context, target.uri)
         // 最近记录/快捷启动同步持久化移除，避免切页取消 IO 清理协程后残留脏数据
-        EngineScanner.removeRecentGame(context, target.uri)
-        EngineScanner.removeQuickLaunch(context, target.uri)
+        GameStore.removeRecentGame(context, target.uri)
+        GameStore.removeQuickLaunch(context, target.uri)
         // 仅清理应用内数据（每游戏设置、最近记录、封面缓存、应用内存档镜像）；不触碰游戏文件
         scope.launch(Dispatchers.IO) {
             cleanupDeletedGame(context, target)
@@ -110,7 +110,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
     /** 仅删除该条最近游玩记录，不影响游戏库。 */
     fun removeRecentRecord(target: ScanGame) {
         recentGames = recentGames.filterNot { it.uri == target.uri }
-        EngineScanner.removeRecentGame(context, target.uri)
+        GameStore.removeRecentGame(context, target.uri)
     }
 
     // 点按直接启动游戏；Artemis 按既有策略弹出补丁确认（与游戏页长按启动一致）。

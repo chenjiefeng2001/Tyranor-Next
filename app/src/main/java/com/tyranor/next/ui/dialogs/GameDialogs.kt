@@ -48,8 +48,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.tyranor.next.R
 import com.tyranor.next.scanner.EngineLauncher
-import com.tyranor.next.scanner.EngineScanner
 import com.tyranor.next.scanner.EngineType
+import com.tyranor.next.scanner.GameStore
 import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.scanner.VndbCandidate
 import com.tyranor.next.scanner.VndbCoverService
@@ -148,15 +148,15 @@ internal fun GameActionsSheet(
                 }
             }
             item {
-                val quickLaunched = EngineScanner.isQuickLaunched(context, game.uri)
+                val quickLaunched = GameStore.isQuickLaunched(context, game.uri)
                 GameActionRow(
                     iconRes = R.drawable.ic_home,
                     label = if (quickLaunched) "移除快捷启动" else "添加快捷启动",
                 ) {
                     if (quickLaunched) {
-                        EngineScanner.removeQuickLaunch(context, game.uri)
+                        GameStore.removeQuickLaunch(context, game.uri)
                         onDismiss()
-                    } else if (EngineScanner.addQuickLaunch(context, game)) {
+                    } else if (GameStore.addQuickLaunch(context, game)) {
                         onDismiss()
                     } else {
                         android.widget.Toast.makeText(context, "首页快捷启动已满（最多 3 个）", android.widget.Toast.LENGTH_SHORT).show()

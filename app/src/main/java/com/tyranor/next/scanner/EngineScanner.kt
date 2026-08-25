@@ -13,78 +13,14 @@ import java.util.Locale
 /**
  * 精简版游戏扫描器，识别逻辑移植自 RinneMobile 的 EngineDetector/GameScanner。
  * 支持引擎：Kirikiri、ONS、Tyrano、RPG Maker MV/MZ、VN、WebOther、Artemis。
+ *
+ * 职责边界（R-06）：本类只负责扫描遍历、引擎识别、扫描根目录与本地封面发现；
+ * 游戏库/最近/快捷启动持久化见 [GameStore]；路径解析见 [PathResolver]。
  */
 object EngineScanner {
 
     private const val PREFS = "game_scanner"
     private const val KEY_ROOTS = "scan_roots"      // uri 按换行分隔
-    // 游戏库/最近游玩/快捷启动的持久化与缓存已收敛至 GameStore（本类保留门面委托）。
-
-    // ============ 路径解析（委托 PathResolver） ============
-
-    /** 将 SAF tree/document URI 映射为真实文件路径。详见 [PathResolver.safUriToPath]。 */
-    fun safUriToPath(uriText: String?): String? = PathResolver.safUriToPath(uriText)
-
-    fun isRemovableStoragePath(path: String): Boolean = PathResolver.isRemovableStoragePath(path)
-
-    // ============ 游戏结果持久化（委托 GameStore） ============
-
-    fun saveGames(context: Context, games: List<ScanGame>) {
-        GameStore.saveGames(context, games)
-    }
-
-    fun loadGames(context: Context): List<ScanGame> = GameStore.loadGames(context)
-
-    fun recordRecentGame(context: Context, game: ScanGame) {
-        GameStore.recordRecentGame(context, game)
-    }
-
-    fun loadRecentGames(context: Context): List<ScanGame> =
-        GameStore.loadRecentGames(context)
-
-    /** 删除游戏时从最近游戏列表中移除对应条目。 */
-    fun removeRecentGame(context: Context, uri: String) {
-        GameStore.removeRecentGame(context, uri)
-    }
-
-    /** 从持久游戏库中移除指定游戏（在游戏页或首页删除游戏时调用，保证库与最近列表一致）。 */
-    fun removeGame(context: Context, uri: String) {
-        GameStore.removeGame(context, uri)
-    }
-
-    /** 目录名 → 安全文件名（用于应用内镜像/独立存档目录）。 */
-    fun safeSaveName(rootPath: String): String = PathResolver.safeSaveName(rootPath)
-
-    internal fun saveRecentGames(context: Context, games: List<ScanGame>) {
-        GameStore.saveRecentGames(context, games)
-    }
-
-    // ============ 首页快捷启动（最多 3 个，委托 GameStore） ============
-
-    fun loadQuickLaunch(context: Context): List<ScanGame> =
-        GameStore.loadQuickLaunch(context)
-
-    fun isQuickLaunched(context: Context, uri: String): Boolean =
-        GameStore.isQuickLaunched(context, uri)
-
-    /** 加入快捷启动。已存在视为成功；槽位满 3 个返回 false。 */
-    fun addQuickLaunch(context: Context, game: ScanGame): Boolean =
-        GameStore.addQuickLaunch(context, game)
-
-    fun removeQuickLaunch(context: Context, uri: String) {
-        GameStore.removeQuickLaunch(context, uri)
-    }
-
-    /**
-     * 用主游戏库最新数据刷新快捷启动快照（游戏页修改封面等后首页实时同步），并回写存储。
-     * 已从库中删除的游戏保留原快照（不主动移除）。
-     */
-    fun refreshQuickLaunch(context: Context): List<ScanGame> =
-        GameStore.refreshQuickLaunch(context)
-
-    internal fun saveQuickLaunch(context: Context, games: List<ScanGame>) {
-        GameStore.saveQuickLaunch(context, games)
-    }
 
     // ============ 扫描根目录持久化 ============
 
@@ -123,8 +59,8 @@ object EngineScanner {
             ?: emptyList()
 
     private fun isGameUnderRoot(rootUriText: String, gameUriText: String): Boolean {
-        val rootPath = normalizePath(safUriToPath(rootUriText))
-        val gamePath = normalizePath(safUriToPath(gameUriText) ?: uriFilePath(gameUriText))
+        val rootPath = normalizePath(PathResolver.safUriToPath(rootUriText))
+        val gamePath = normalizePath(PathResolver.safUriToPath(gameUriText) ?: uriFilePath(gameUriText))
         if (rootPath != null && gamePath != null && isSameOrChildPath(rootPath, gamePath)) return true
 
         val rootDocId = documentId(rootUriText) ?: return false
@@ -165,7 +101,7 @@ object EngineScanner {
 
     /** 全量刷新游戏库：以当前扫描结果为准，移除已删除/改名路径的旧缓存条目。 */
     suspend fun rescanLibrary(context: Context): List<ScanGame> = withContext(Dispatchers.IO) {
-        val existingByUri = loadGames(context).associateBy { it.uri }
+        val existingByUri = GameStore.loadGames(context).associateBy { it.uri }
         val scanned = scanAll(context)
         val refreshed = scanned.map { current ->
             existingByUri[current.uri]?.let { previous ->
@@ -178,10 +114,10 @@ object EngineScanner {
                 )
             } ?: current
         }
-        saveGames(context, refreshed)
+        GameStore.saveGames(context, refreshed)
         val validUris = refreshed.mapTo(HashSet()) { it.uri }
-        saveRecentGames(context, loadRecentGames(context).filter { it.uri in validUris })
-        saveQuickLaunch(context, loadQuickLaunch(context).filter { it.uri in validUris })
+        GameStore.saveRecentGames(context, GameStore.loadRecentGames(context).filter { it.uri in validUris })
+        GameStore.saveQuickLaunch(context, GameStore.loadQuickLaunch(context).filter { it.uri in validUris })
         refreshed
     }
 
@@ -190,7 +126,7 @@ object EngineScanner {
      * 只发现新游戏；返回 现有游戏 + 新发现游戏（已删除游戏保留，不主动移除）。
      */
     suspend fun incrementalScan(context: Context): List<ScanGame> = withContext(Dispatchers.IO) {
-        val existing = loadGames(context)
+        val existing = GameStore.loadGames(context)
         val known = existing.mapTo(HashSet()) { it.uri }
         val seen = HashSet<String>()
         val found = mutableListOf<ScanGame>()
@@ -202,7 +138,7 @@ object EngineScanner {
             if (rootDir != null) {
                 scanRootIncremental(context.applicationContext, rootDir, 0, maxDepth, known, found)
             }
-            if (found.size == beforeCount) safUriToPath(root)?.let { path ->
+            if (found.size == beforeCount) PathResolver.safUriToPath(root)?.let { path ->
                 scanRootIncrementalFile(File(path), 0, maxDepth, known, found)
             }
         }
@@ -251,7 +187,7 @@ object EngineScanner {
             // 深度优先遍历子目录，识别每个候选游戏目录（深度由应用设置「扫描深度」控制）
             traverseDirectories(context.applicationContext, root, 0, maxDepth, results)
         }
-        if (results.isEmpty()) safUriToPath(rootUriStr)?.let { path ->
+        if (results.isEmpty()) PathResolver.safUriToPath(rootUriStr)?.let { path ->
             traverseFileDirectories(File(path), 0, maxDepth, results)
         }
         val seen = HashSet<String>()

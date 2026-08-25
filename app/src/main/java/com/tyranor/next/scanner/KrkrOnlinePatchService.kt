@@ -147,7 +147,7 @@ object KrkrOnlinePatchService {
     private fun resolveWritableGameFileDir(game: ScanGame): File? {
         val candidates = listOfNotNull(
             game.uri.takeIf { it.startsWith("/") },
-            EngineScanner.safUriToPath(game.uri),
+            PathResolver.safUriToPath(game.uri),
         ).distinct()
 
         return candidates

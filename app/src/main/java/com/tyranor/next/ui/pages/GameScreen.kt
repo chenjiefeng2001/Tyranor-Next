@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import com.tyranor.next.R
 import com.tyranor.next.scanner.EngineLauncher
 import com.tyranor.next.scanner.EngineScanner
+import com.tyranor.next.scanner.GameStore
 import com.tyranor.next.scanner.GameSaveManager
 import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.scanner.VndbCoverService
@@ -55,7 +56,7 @@ import java.io.File
 fun GameScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var games by remember { mutableStateOf(EngineScanner.loadGames(context)) }
+    var games by remember { mutableStateOf(GameStore.loadGames(context)) }
     var scanning by remember { mutableStateOf(false) }
     var selectedGame by remember { mutableStateOf<ScanGame?>(null) }
     var launchError by remember { mutableStateOf<String?>(null) }
@@ -67,17 +68,17 @@ fun GameScreen(modifier: Modifier = Modifier) {
         val nextGames = games.map { if (it.uri == updated.uri) updated else it }
         games = nextGames
         selectedGame = selectedGame?.let { if (it.uri == updated.uri) updated else it }
-        EngineScanner.saveGames(context, nextGames)
+        GameStore.saveGames(context, nextGames)
     }
 
     fun deleteGame(target: ScanGame) {
         val nextGames = games.filterNot { it.uri == target.uri }
         games = nextGames
         selectedGame = null
-        EngineScanner.saveGames(context, nextGames)
+        GameStore.saveGames(context, nextGames)
         // 最近记录/快捷启动同步持久化移除，避免切页取消 IO 清理协程后残留脏数据
-        EngineScanner.removeRecentGame(context, target.uri)
-        EngineScanner.removeQuickLaunch(context, target.uri)
+        GameStore.removeRecentGame(context, target.uri)
+        GameStore.removeQuickLaunch(context, target.uri)
         // 仅清理应用内数据（每游戏设置、最近记录、封面缓存、应用内存档镜像）；不触碰游戏文件
         scope.launch(Dispatchers.IO) {
             cleanupDeletedGame(context, target)
@@ -103,7 +104,7 @@ fun GameScreen(modifier: Modifier = Modifier) {
                 }
             }
             games = updated
-            EngineScanner.saveGames(context, updated)
+            GameStore.saveGames(context, updated)
             scanning = false
         }
     }
@@ -231,8 +232,8 @@ fun GameScreen(modifier: Modifier = Modifier) {
 /** 删除游戏后清理应用内关联数据（设置/最近记录/快捷启动/封面/存档镜像），绝不触碰游戏文件。 */
 internal fun cleanupDeletedGame(context: android.content.Context, target: ScanGame) {
     PerGameSettingsStore.clear(context, target.uri)
-    EngineScanner.removeRecentGame(context, target.uri)
-    EngineScanner.removeQuickLaunch(context, target.uri)
+    GameStore.removeRecentGame(context, target.uri)
+    GameStore.removeQuickLaunch(context, target.uri)
     deleteCoverFile(context, target.coverUri)
     GameSaveManager(context).cleanupAppData(target)
 }

@@ -77,7 +77,7 @@ object EngineLauncher {
             val intent = buildIntent(context, game.engine, path, game, patchChoice)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)
-            EngineScanner.recordRecentGame(context, game)
+            GameStore.recordRecentGame(context, game)
             null
         } catch (e: Exception) {
             e.message ?: "启动失败"

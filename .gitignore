@@ -36,3 +36,6 @@ captures/
 *.keystore
 *.p12
 *.pfx
+
+# 本地遥测大文件（报告只留 telemetry.json）
+audit/artifacts/*.pftrace

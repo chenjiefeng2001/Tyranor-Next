@@ -1,0 +1,58 @@
+{
+ "serial": "emulator-5554",
+ "apk": "app-debug.apk",
+ "firstLaunch": {
+  "WaitTime": 15004,
+  "LaunchState": "UNKNOWN"
+ },
+ "coldStarts": [
+  {
+   "TotalTime": 13191,
+   "WaitTime": 13279,
+   "LaunchState": "COLD"
+  },
+  {
+   "WaitTime": 10435,
+   "LaunchState": "UNKNOWN"
+  },
+  {
+   "WaitTime": 10618,
+   "LaunchState": "UNKNOWN"
+  },
+  {
+   "WaitTime": 10688,
+   "LaunchState": "UNKNOWN"
+  },
+  {
+   "WaitTime": 10618,
+   "LaunchState": "UNKNOWN"
+  }
+ ],
+ "coldStartSummary": {
+  "n": 1,
+  "median": 13191,
+  "min": 13191,
+  "max": 13191,
+  "stdev": 0
+ },
+ "meminfo": {
+  "totalPssKb": 120681,
+  "javaHeapKb": 11192,
+  "nativeHeapKb": 14876,
+  "codeKb": 74972,
+  "graphicsKb": 0
+ },
+ "perfetto": {
+  "file": "audit/artifacts/perfetto-coldstart.pftrace",
+  "bytes": 4244331
+ },
+ "uiTraversal": {
+  "rounds": 3,
+  "totalFrames": 370,
+  "jankyFrames": 271,
+  "jankyPct": 73.24,
+  "frameMsP50": 38,
+  "frameMsP90": 65,
+  "frameMsP95": 200
+ }
+}

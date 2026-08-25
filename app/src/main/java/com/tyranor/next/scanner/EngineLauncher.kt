@@ -51,6 +51,9 @@ object EngineLauncher {
     /** 尝试启动游戏。返回错误信息；null 表示成功发起。
      *  [patchChoice] 为 Artemis 补丁确认弹窗（见 [needsArtemisPatchConfirm]）的选择结果。 */
     fun launch(context: Context, game: ScanGame, patchChoice: ArtemisPatchChoice? = null): String? {
+        if (game.engine == EngineType.UNKNOWN) {
+            return "未能识别该游戏的引擎类型，暂不支持启动；可尝试重新扫描游戏目录"
+        }
         val path = resolveGameDirectory(context, game)
         if (path == null) {
             return "无法解析游戏目录（仅支持本地文件路径）"
@@ -200,13 +203,8 @@ object EngineLauncher {
 
             EngineType.ARTEMIS -> buildArtemisIntent(context, path, game, patchChoice)
 
-            EngineType.UNKNOWN -> Intent(context, TyranoActivity::class.java).apply {
-                putExtra("path", path)
-                putExtra("gamePath", path)
-                putExtra("rootUri", game.uri)
-                putExtra("launchTarget", game.launchTarget)
-                putExtra("type", "Tyrano")
-            }
+            // UNKNOWN 已在 launch() 入口拦截并提示用户，此处仅为 when 穷尽性兜底
+            EngineType.UNKNOWN -> error("未知引擎不应进入引擎 Intent 构建")
         }
         // 注入 App 统一主题色与深浅色：引擎壳自绘 UI（确认/输入弹窗按钮等）经
         // EngineThemeColors.fromIntent / KrDialogStyle 读取，缺失时回落默认绿，

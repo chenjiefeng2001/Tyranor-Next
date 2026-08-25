@@ -1,5 +1,5 @@
 {
- "generated_for_commit": "133667f",
+ "generated_for_commit": "8596f00",
  "weights": {
   "fan_in": 0.35,
   "churn": 0.25,
@@ -21,7 +21,7 @@
    "fan_in": 0,
    "fan_out": 2,
    "churn": 4,
-   "heat": 4.2
+   "heat": 4.1
   },
   {
    "path": "app/src/main/java/com/tyranor/next/Navigation.kt",
@@ -81,8 +81,8 @@
    "imports": 23,
    "fan_in": 5,
    "fan_out": 20,
-   "churn": 25,
-   "heat": 46.5
+   "churn": 26,
+   "heat": 46.8
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/EnginePluginBootstrap.kt",
@@ -99,23 +99,23 @@
    "fan_in": 2,
    "fan_out": 6,
    "churn": 4,
-   "heat": 11.3
+   "heat": 11.2
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/EngineScanner.kt",
    "module": "app",
    "package": "com.tyranor.next.scanner",
-   "sloc": 508,
-   "functions": 27,
+   "sloc": 463,
+   "functions": 13,
    "branches": 64,
    "symbols": [
     "EngineScanner"
    ],
    "imports": 9,
-   "fan_in": 7,
+   "fan_in": 3,
    "fan_out": 4,
-   "churn": 22,
-   "heat": 35.2
+   "churn": 23,
+   "heat": 28.8
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/EngineType.kt",
@@ -131,7 +131,7 @@
    "fan_in": 11,
    "fan_out": 1,
    "churn": 2,
-   "heat": 18.3
+   "heat": 18.2
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/GameSaveManager.kt",
@@ -147,7 +147,7 @@
    "fan_in": 2,
    "fan_out": 4,
    "churn": 7,
-   "heat": 14.3
+   "heat": 14.1
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/GameStore.kt",
@@ -160,10 +160,10 @@
     "GameStore"
    ],
    "imports": 1,
-   "fan_in": 1,
+   "fan_in": 5,
    "fan_out": 2,
    "churn": 1,
-   "heat": 4.5
+   "heat": 10.5
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/KrkrOnlinePatchService.kt",
@@ -178,8 +178,8 @@
    "imports": 10,
    "fan_in": 1,
    "fan_out": 2,
-   "churn": 2,
-   "heat": 5.5
+   "churn": 3,
+   "heat": 6.2
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/PathResolver.kt",
@@ -192,10 +192,10 @@
     "PathResolver"
    ],
    "imports": 2,
-   "fan_in": 3,
+   "fan_in": 4,
    "fan_out": 0,
    "churn": 1,
-   "heat": 5.3
+   "heat": 6.8
   },
   {
    "path": "app/src/main/java/com/tyranor/next/scanner/ScanGame.kt",
@@ -227,7 +227,7 @@
    "fan_in": 2,
    "fan_out": 0,
    "churn": 5,
-   "heat": 8.6
+   "heat": 8.5
   },
   {
    "path": "app/src/main/java/com/tyranor/next/settings/AppSettingsStore.kt",
@@ -243,7 +243,7 @@
    "fan_in": 11,
    "fan_out": 0,
    "churn": 7,
-   "heat": 22.3
+   "heat": 22.2
   },
   {
    "path": "app/src/main/java/com/tyranor/next/settings/EngineSettingsStore.kt",
@@ -305,7 +305,7 @@
    "fan_in": 0,
    "fan_out": 1,
    "churn": 4,
-   "heat": 3.3
+   "heat": 3.2
   },
   {
    "path": "app/src/main/java/com/tyranor/next/theme/MiuixSettingsTheme.kt",
@@ -319,7 +319,7 @@
    "fan_in": 0,
    "fan_out": 1,
    "churn": 7,
-   "heat": 5.9
+   "heat": 5.8
   },
   {
    "path": "app/src/main/java/com/tyranor/next/theme/Theme.kt",
@@ -333,7 +333,7 @@
    "fan_in": 0,
    "fan_out": 1,
    "churn": 5,
-   "heat": 4.2
+   "heat": 4.1
   },
   {
    "path": "app/src/main/java/com/tyranor/next/theme/Type.kt",
@@ -375,7 +375,7 @@
    "fan_in": 0,
    "fan_out": 2,
    "churn": 3,
-   "heat": 6.5
+   "heat": 6.4
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/common/PressIndication.kt",
@@ -481,8 +481,8 @@
    "imports": 63,
    "fan_in": 0,
    "fan_out": 6,
-   "churn": 1,
-   "heat": 10.7
+   "churn": 2,
+   "heat": 11.4
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/main/MainScreen.kt",
@@ -496,7 +496,7 @@
    "fan_in": 0,
    "fan_out": 1,
    "churn": 7,
-   "heat": 6.9
+   "heat": 6.8
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/AppAlertDialog.kt",
@@ -510,7 +510,7 @@
    "fan_in": 0,
    "fan_out": 1,
    "churn": 3,
-   "heat": 3.8
+   "heat": 3.7
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/AppSettingsActivity.kt",
@@ -526,7 +526,7 @@
    "fan_in": 1,
    "fan_out": 3,
    "churn": 13,
-   "heat": 17.7
+   "heat": 17.4
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/EngineScreen.kt",
@@ -540,7 +540,7 @@
    "fan_in": 0,
    "fan_out": 3,
    "churn": 4,
-   "heat": 5.7
+   "heat": 5.6
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/EngineSettingsActivity.kt",
@@ -556,21 +556,21 @@
    "fan_in": 1,
    "fan_out": 2,
    "churn": 5,
-   "heat": 6.6
+   "heat": 6.5
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/GameScreen.kt",
    "module": "app",
    "package": "com.tyranor.next.ui.pages",
-   "sloc": 347,
+   "sloc": 348,
    "functions": 5,
    "branches": 16,
    "symbols": [],
-   "imports": 50,
+   "imports": 51,
    "fan_in": 0,
-   "fan_out": 8,
-   "churn": 35,
-   "heat": 34.8
+   "fan_out": 9,
+   "churn": 36,
+   "heat": 35.5
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/HomeScreen.kt",
@@ -583,8 +583,8 @@
    "imports": 66,
    "fan_in": 0,
    "fan_out": 4,
-   "churn": 16,
-   "heat": 18.5
+   "churn": 17,
+   "heat": 18.9
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/KrkrOnlinePatchActivity.kt",
@@ -600,7 +600,7 @@
    "fan_in": 1,
    "fan_out": 4,
    "churn": 12,
-   "heat": 16.1
+   "heat": 15.8
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsActivity.kt",
@@ -616,7 +616,7 @@
    "fan_in": 2,
    "fan_out": 2,
    "churn": 8,
-   "heat": 10.2
+   "heat": 10.1
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsScreen.kt",
@@ -630,7 +630,7 @@
    "fan_in": 0,
    "fan_out": 3,
    "churn": 6,
-   "heat": 10.3
+   "heat": 10.2
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/PlaceholderPage.kt",
@@ -660,7 +660,7 @@
    "fan_in": 1,
    "fan_out": 3,
    "churn": 8,
-   "heat": 11.8
+   "heat": 11.6
   },
   {
    "path": "app/src/main/java/com/tyranor/next/ui/pages/SettingsScreen.kt",
@@ -676,7 +676,7 @@
    "fan_in": 1,
    "fan_out": 4,
    "churn": 19,
-   "heat": 25.7
+   "heat": 25.3
   },
   {
    "path": "app/src/main/java/com/tyranor/next/updater/GitHubUpdateChecker.kt",
@@ -789,7 +789,7 @@
    "fan_in": 3,
    "fan_out": 5,
    "churn": 3,
-   "heat": 10.9
+   "heat": 10.8
   },
   {
    "path": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid126.java",
@@ -805,7 +805,7 @@
    "fan_in": 2,
    "fan_out": 4,
    "churn": 2,
-   "heat": 6.9
+   "heat": 6.8
   },
   {
    "path": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid134.java",
@@ -853,7 +853,7 @@
    "fan_in": 4,
    "fan_out": 7,
    "churn": 6,
-   "heat": 24.2
+   "heat": 24.1
   },
   {
    "path": "engine/src/main/java/com/bytedance/android/bytehook/ByteHook.java",
@@ -904,7 +904,7 @@
    "fan_in": 7,
    "fan_out": 0,
    "churn": 2,
-   "heat": 12.2
+   "heat": 12.1
   },
   {
    "path": "engine/src/main/java/com/core/engine/EnginePrefs.kt",
@@ -1116,7 +1116,7 @@
    "fan_in": 2,
    "fan_out": 7,
    "churn": 5,
-   "heat": 20.0
+   "heat": 19.9
   },
   {
    "path": "engine/src/main/java/com/core/tyrano/TyranoLocalHttpServer.kt",
@@ -1593,7 +1593,7 @@
    "fan_in": 23,
    "fan_out": 19,
    "churn": 3,
-   "heat": 63.7
+   "heat": 63.6
   },
   {
    "path": "engine/src/main/java/org/libsdl/app/SDLAudioManager.java",
@@ -2048,7 +2048,7 @@
    "fan_in": 12,
    "fan_out": 15,
    "churn": 6,
-   "heat": 38.6
+   "heat": 38.5
   },
   {
    "path": "engine/src/main/java/org/tvp/kirikiri2/KrDialogModel.kt",
@@ -2099,7 +2099,7 @@
    "fan_in": 1,
    "fan_out": 6,
    "churn": 2,
-   "heat": 7.9
+   "heat": 7.8
   },
   {
    "path": "engine/src/main/java/org/tvp/kirikiri2/KrInputConnection.java",

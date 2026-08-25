@@ -203,3 +203,49 @@ UI         SettingsScreen:74 / EngineSettingsDetailScreen:227 / PerGameSettingsS
 
 - 架构健康度良好：模块单向依赖成立、进程隔离清晰、自有热点集中在 app 编排层且与开发活跃度吻合——热区即活跃区，无「无人敢动」的暗雷区（vendored SDL2 除外，已知并立项）。
 - 风险优先级：SDL 层稳定性 > GameScreen 拆分 > EngineScanner 职责分离 > EngineLauncher 纯函数补测。
+
+---
+
+## 7. 重构后刷新附录（2026-08-25，基线 `8596f00`）
+
+§5 四项建议已全部执行完毕，本节为执行后的权威快照；§1–§6 保留为重构前的历史基线。热点图与数据文件已同步重跑。
+
+### 7.1 全景统计刷新
+
+| 模块 | 文件 | SLOC | 变化 |
+|---|---|---|---|
+| app | 45 | 7,676 | +6 文件（GameStore/PathResolver/GameSorter/GameCard/GameGrid/GameDialogs） |
+| engine | 140 | 21,002 | −32 SLOC（无结构变化） |
+| 合计 | 185 | 28,678 | |
+
+### 7.2 结构落地结果（对应 §5 建议）
+
+| §5 条目 | 状态 | 落点 |
+|---|---|---|
+| 5.1 SDL 层风险放大器 | ◐ 冻结策略 | 10 号报告 JNI 双向核验后改判「冻结+定向补丁」，无需重整 |
+| 5.2 GameScreen 拆分 | ✅ | 998→348 行；弹窗→`ui/dialogs`，网格/卡片→`ui/components`，排序→`GameSorter` |
+| 5.3 EngineScanner 分离 | ✅ | 700→463 行；持久化→`GameStore`，路径解析→`PathResolver`，门面委托已全部裁撤 |
+| 5.4 EngineLauncher 补测 | ✅ | `EngineLauncherPureTest` 13 例（parseStoragePath/renderer/sharpness/pickKrActivateEntry） |
+
+### 7.3 自有热点榜刷新（Top 6）
+
+| # | 文件 | HEAT | churn | SLOC | 相对基线变化 |
+|---|---|---|---|---|---|
+| 1 | scanner/EngineLauncher.kt | 46.8 | 26 | 611 | 升为自有第一（分发枢纽地位坐实） |
+| 2 | org.tvp/kirikiri2/KR2Activity.java | 38.5 | 6 | 517 | 不变 |
+| 3 | ui/pages/GameScreen.kt | 35.5 | 36 | **348** | churn 含本轮重构提交；体量降 65% |
+| 4 | scanner/EngineScanner.kt | 28.8 | 23 | **463** | 职责分离生效，热度回落 |
+| 5 | ui/pages/SettingsScreen.kt | 25.3 | 19 | 653 | 不变（下一候选拆分对象） |
+| 6 | engine com.core/nativeplugin/NativePluginManager.kt | ~17 | 1 | 455 | 不变 |
+
+### 7.4 测试资产现状（99 例 / 12 套件）
+
+| 套件 | 例数 | 覆盖 |
+|---|---|---|
+| scanner 合计 | 71 | pfs 解包端到端 5 · detectEngine 双变体矩阵 17+5 · 分发纯函数 13 · 存档解析 8 · 存档 zip 往返与安全拒绝 4 · GameStore 持久化 6 · PathResolver 13 |
+| ui.components | 5 | GameSorter 两模式与边界 |
+| updater | 6 | compareVersions 语义 |
+| engine tyrano | 17 | AsarArchive 解析与负例 11 · 本地 HTTP 服务回环集成 6 |
+
+CI 门禁：android-ci 与 android-beta-release 两条流水线均强制 `testDebugUnitTest`。
+

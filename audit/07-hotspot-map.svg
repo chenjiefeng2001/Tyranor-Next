@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="794" height="5562" viewBox="0 0 794 5562" font-family="Consolas,monospace">
-<rect width="794" height="5562" fill="#111418"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="5664" viewBox="0 0 794 5664" font-family="Consolas,monospace">
+<rect width="794" height="5664" fill="#111418"/>
 <text x="24" y="36" fill="#e8e8e8" font-size="20" font-weight="bold">Tyranor-Next code hotspot map (static trace)</text>
 <text x="24" y="58" fill="#9aa4ad" font-size="12">cell = file, sorted left-to-right by heat within each package group; hover a cell for metrics</text>
 <rect x="24" y="64" width="14" height="12" rx="2" fill="#99cce2"/>
@@ -17,528 +17,531 @@
 heat=77.9 fan-in=23 fan-out=22 churn=5 sloc=1988 fun=94 branch=286</title><rect x="54" y="96" width="22" height="22" rx="4" fill="#f69154" stroke="#000" stroke-opacity="0.35"/><text x="56" y="111" font-size="9" fill="#101010" opacity="0.85">SDLActivi</text></g>
 <text x="24" y="155" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/SDLActivity.java
-heat=63.7 fan-in=23 fan-out=19 churn=3 sloc=1135 fun=80 branch=155</title><rect x="54" y="138" width="22" height="22" rx="4" fill="#fedc96" stroke="#000" stroke-opacity="0.35"/><text x="56" y="153" font-size="9" fill="#101010" opacity="0.85">SDLActivi</text></g>
+heat=63.6 fan-in=23 fan-out=19 churn=3 sloc=1135 fun=80 branch=155</title><rect x="54" y="138" width="22" height="22" rx="4" fill="#fedc97" stroke="#000" stroke-opacity="0.35"/><text x="56" y="153" font-size="9" fill="#101010" opacity="0.85">SDLActivi</text></g>
 <text x="24" y="197" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt
-heat=46.5 fan-in=5 fan-out=20 churn=25 sloc=611 fun=5 branch=85</title><rect x="54" y="180" width="22" height="22" rx="4" fill="#dbefd1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="195" font-size="9" fill="#101010" opacity="0.85">EngineLau</text></g>
+heat=46.8 fan-in=5 fan-out=20 churn=26 sloc=611 fun=5 branch=85</title><rect x="54" y="180" width="22" height="22" rx="4" fill="#ddefd0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="195" font-size="9" fill="#101010" opacity="0.85">EngineLau</text></g>
 <text x="24" y="239" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java
-heat=38.6 fan-in=12 fan-out=15 churn=6 sloc=517 fun=39 branch=133</title><rect x="54" y="222" width="22" height="22" rx="4" fill="#bae0e1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="237" font-size="9" fill="#101010" opacity="0.85">KR2Activi</text></g>
+heat=38.5 fan-in=12 fan-out=15 churn=6 sloc=517 fun=39 branch=133</title><rect x="54" y="222" width="22" height="22" rx="4" fill="#bae0e2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="237" font-size="9" fill="#101010" opacity="0.85">KR2Activi</text></g>
 <text x="24" y="281" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/SDLControllerManager.java
 heat=37.7 fan-in=13 fan-out=10 churn=1 sloc=887 fun=19 branch=135</title><rect x="54" y="264" width="22" height="22" rx="4" fill="#b6dee3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="279" font-size="9" fill="#101010" opacity="0.85">SDLContro</text></g>
-<text x="24" y="323" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/scanner/EngineScanner.kt
-heat=35.2 fan-in=7 fan-out=4 churn=22 sloc=508 fun=27 branch=64</title><rect x="54" y="306" width="22" height="22" rx="4" fill="#acd9e9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="321" font-size="9" fill="#101010" opacity="0.85">EngineSca</text></g>
-<text x="24" y="365" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<text x="24" y="323" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/pages/GameScreen.kt
-heat=34.8 fan-in=0 fan-out=8 churn=35 sloc=347 fun=5 branch=16</title><rect x="54" y="348" width="22" height="22" rx="4" fill="#aad8e9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="363" font-size="9" fill="#101010" opacity="0.85">GameScree</text></g>
-<text x="24" y="407" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(2)</tspan></text>
+heat=35.5 fan-in=0 fan-out=9 churn=36 sloc=348 fun=5 branch=16</title><rect x="54" y="306" width="22" height="22" rx="4" fill="#addae8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="321" font-size="9" fill="#101010" opacity="0.85">GameScree</text></g>
+<text x="24" y="365" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IMediaPlayer.java
-heat=33.0 fan-in=19 fan-out=4 churn=1 sloc=113 fun=0 branch=0</title><rect x="54" y="390" width="22" height="22" rx="4" fill="#a4d4e6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="405" font-size="9" fill="#101010" opacity="0.85">IMediaPla</text></g>
+heat=33.0 fan-in=19 fan-out=4 churn=1 sloc=113 fun=0 branch=0</title><rect x="54" y="348" width="22" height="22" rx="4" fill="#a4d4e6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="363" font-size="9" fill="#101010" opacity="0.85">IMediaPla</text></g>
+<text x="24" y="407" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/EngineScanner.kt
+heat=28.8 fan-in=3 fan-out=4 churn=23 sloc=463 fun=13 branch=64</title><rect x="54" y="390" width="22" height="22" rx="4" fill="#95c8e0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="405" font-size="9" fill="#101010" opacity="0.85">EngineSca</text></g>
+<text x="24" y="449" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/MediaPlayerProxy.java
-heat=26.1 fan-in=10 fan-out=12 churn=1 sloc=220 fun=43 branch=8</title><rect x="54" y="416" width="22" height="22" rx="4" fill="#8bc1dc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="431" font-size="9" fill="#101010" opacity="0.85">MediaPlay</text></g>
-<text x="24" y="449" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+heat=26.1 fan-in=10 fan-out=12 churn=1 sloc=220 fun=43 branch=8</title><rect x="54" y="432" width="22" height="22" rx="4" fill="#8bc1dc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="447" font-size="9" fill="#101010" opacity="0.85">MediaPlay</text></g>
+<text x="24" y="491" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/pages/SettingsScreen.kt
-heat=25.7 fan-in=1 fan-out=4 churn=19 sloc=653 fun=3 branch=25</title><rect x="54" y="432" width="22" height="22" rx="4" fill="#89c0db" stroke="#000" stroke-opacity="0.35"/><text x="56" y="447" font-size="9" fill="#101010" opacity="0.85">SettingsS</text></g>
-<text x="24" y="491" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+heat=25.3 fan-in=1 fan-out=4 churn=19 sloc=653 fun=3 branch=25</title><rect x="54" y="474" width="22" height="22" rx="4" fill="#88bfdb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="489" font-size="9" fill="#101010" opacity="0.85">SettingsS</text></g>
+<text x="24" y="533" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java
-heat=24.4 fan-in=7 fan-out=9 churn=1 sloc=608 fun=23 branch=89</title><rect x="54" y="474" width="22" height="22" rx="4" fill="#85bdda" stroke="#000" stroke-opacity="0.35"/><text x="56" y="489" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="533" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
+heat=24.4 fan-in=7 fan-out=9 churn=1 sloc=608 fun=23 branch=89</title><rect x="54" y="516" width="22" height="22" rx="4" fill="#85bdda" stroke="#000" stroke-opacity="0.35"/><text x="56" y="531" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<text x="24" y="575" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java
-heat=24.2 fan-in=4 fan-out=7 churn=6 sloc=770 fun=40 branch=127</title><rect x="54" y="516" width="22" height="22" rx="4" fill="#84bcd9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="531" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
-<text x="24" y="575" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+heat=24.1 fan-in=4 fan-out=7 churn=6 sloc=770 fun=40 branch=127</title><rect x="54" y="558" width="22" height="22" rx="4" fill="#83bcd9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="573" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
+<text x="24" y="617" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java
-heat=23.8 fan-in=4 fan-out=11 churn=1 sloc=812 fun=77 branch=87</title><rect x="54" y="558" width="22" height="22" rx="4" fill="#82bbd9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="573" font-size="9" fill="#101010" opacity="0.85">IjkMediaP</text></g>
-<text x="24" y="617" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
+heat=23.8 fan-in=4 fan-out=11 churn=1 sloc=812 fun=77 branch=87</title><rect x="54" y="600" width="22" height="22" rx="4" fill="#82bbd9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="615" font-size="9" fill="#101010" opacity="0.85">IjkMediaP</text></g>
+<text x="24" y="659" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java
-heat=23.2 fan-in=11 fan-out=4 churn=1 sloc=302 fun=14 branch=21</title><rect x="54" y="600" width="22" height="22" rx="4" fill="#80b9d8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="615" font-size="9" fill="#101010" opacity="0.85">KrDialogS</text></g>
-<text x="24" y="659" fill="#8fb4d9" font-size="13">app · …settings <tspan fill="#66707a">(1)</tspan></text>
+heat=23.2 fan-in=11 fan-out=4 churn=1 sloc=302 fun=14 branch=21</title><rect x="54" y="642" width="22" height="22" rx="4" fill="#80b9d8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="657" font-size="9" fill="#101010" opacity="0.85">KrDialogS</text></g>
+<text x="24" y="701" fill="#8fb4d9" font-size="13">app · …settings <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/settings/AppSettingsStore.kt
-heat=22.3 fan-in=11 fan-out=0 churn=7 sloc=98 fun=16 branch=3</title><rect x="54" y="642" width="22" height="22" rx="4" fill="#7db7d6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="657" font-size="9" fill="#101010" opacity="0.85">AppSettin</text></g>
-<text x="24" y="701" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+heat=22.2 fan-in=11 fan-out=0 churn=7 sloc=98 fun=16 branch=3</title><rect x="54" y="684" width="22" height="22" rx="4" fill="#7db7d6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="699" font-size="9" fill="#101010" opacity="0.85">AppSettin</text></g>
+<text x="24" y="743" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/HIDDeviceManager.java
-heat=21.4 fan-in=7 fan-out=7 churn=1 sloc=475 fun=37 branch=82</title><rect x="54" y="684" width="22" height="22" rx="4" fill="#7ab4d5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="699" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="743" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
+heat=21.4 fan-in=7 fan-out=7 churn=1 sloc=475 fun=37 branch=82</title><rect x="54" y="726" width="22" height="22" rx="4" fill="#7ab4d5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="741" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<text x="24" y="785" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/tyrano/TyranoActivity.kt
-heat=20.0 fan-in=2 fan-out=7 churn=5 sloc=739 fun=11 branch=67</title><rect x="54" y="726" width="22" height="22" rx="4" fill="#75b1d3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="741" font-size="9" fill="#101010" opacity="0.85">TyranoAct</text></g>
-<text x="24" y="785" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+heat=19.9 fan-in=2 fan-out=7 churn=5 sloc=739 fun=11 branch=67</title><rect x="54" y="768" width="22" height="22" rx="4" fill="#74b0d3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="783" font-size="9" fill="#101010" opacity="0.85">TyranoAct</text></g>
+<text x="24" y="827" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/pages/HomeScreen.kt
-heat=18.5 fan-in=0 fan-out=4 churn=16 sloc=377 fun=5 branch=12</title><rect x="54" y="768" width="22" height="22" rx="4" fill="#6fadd1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="783" font-size="9" fill="#101010" opacity="0.85">HomeScree</text></g>
-<text x="24" y="827" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+heat=18.9 fan-in=0 fan-out=4 churn=17 sloc=377 fun=5 branch=12</title><rect x="54" y="810" width="22" height="22" rx="4" fill="#71aed2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="825" font-size="9" fill="#101010" opacity="0.85">HomeScree</text></g>
+<text x="24" y="869" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/scanner/EngineType.kt
-heat=18.3 fan-in=11 fan-out=1 churn=2 sloc=13 fun=0 branch=0</title><rect x="54" y="810" width="22" height="22" rx="4" fill="#6eacd1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="825" font-size="9" fill="#101010" opacity="0.85">EngineTyp</text></g>
-<text x="24" y="869" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+heat=18.2 fan-in=11 fan-out=1 churn=2 sloc=13 fun=0 branch=0</title><rect x="54" y="852" width="22" height="22" rx="4" fill="#6eacd1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="867" font-size="9" fill="#101010" opacity="0.85">EngineTyp</text></g>
+<text x="24" y="911" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/HIDDeviceBLESteamController.java
-heat=18.2 fan-in=3 fan-out=7 churn=1 sloc=705 fun=52 branch=78</title><rect x="54" y="852" width="22" height="22" rx="4" fill="#6eacd1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="867" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="911" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/AppSettingsActivity.kt
-heat=17.7 fan-in=1 fan-out=3 churn=13 sloc=424 fun=1 branch=12</title><rect x="54" y="894" width="22" height="22" rx="4" fill="#6cabd0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="909" font-size="9" fill="#101010" opacity="0.85">AppSettin</text></g>
+heat=18.2 fan-in=3 fan-out=7 churn=1 sloc=705 fun=52 branch=78</title><rect x="54" y="894" width="22" height="22" rx="4" fill="#6eacd1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="909" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
 <text x="24" y="953" fill="#8fb4d9" font-size="13">engine · …nativeplugin <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/nativeplugin/NativePluginManager.kt
 heat=17.7 fan-in=7 fan-out=2 churn=1 sloc=455 fun=30 branch=62</title><rect x="54" y="936" width="22" height="22" rx="4" fill="#6cabd0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="951" font-size="9" fill="#101010" opacity="0.85">NativePlu</text></g>
 <text x="24" y="995" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/SDLControllerManager.java
 heat=17.7 fan-in=9 fan-out=5 churn=1 sloc=50 fun=7 branch=3</title><rect x="54" y="978" width="22" height="22" rx="4" fill="#6cabd0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="993" font-size="9" fill="#101010" opacity="0.85">SDLContro</text></g>
-<text x="24" y="1037" fill="#8fb4d9" font-size="13">engine · com.yuri.onscripter <tspan fill="#66707a">(1)</tspan></text>
+<text x="24" y="1037" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/AppSettingsActivity.kt
+heat=17.4 fan-in=1 fan-out=3 churn=13 sloc=424 fun=1 branch=12</title><rect x="54" y="1020" width="22" height="22" rx="4" fill="#6baacf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1035" font-size="9" fill="#101010" opacity="0.85">AppSettin</text></g>
+<text x="24" y="1079" fill="#8fb4d9" font-size="13">engine · com.yuri.onscripter <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/yuri/onscripter/ONScripter.java
-heat=17.0 fan-in=3 fan-out=6 churn=3 sloc=551 fun=31 branch=106</title><rect x="54" y="1020" width="22" height="22" rx="4" fill="#6aa9cf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1035" font-size="9" fill="#101010" opacity="0.85">ONScripte</text></g>
-<text x="24" y="1079" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/KrkrOnlinePatchActivity.kt
-heat=16.1 fan-in=1 fan-out=4 churn=12 sloc=300 fun=2 branch=7</title><rect x="54" y="1062" width="22" height="22" rx="4" fill="#66a6cd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1077" font-size="9" fill="#101010" opacity="0.85">KrkrOnlin</text></g>
+heat=17.0 fan-in=3 fan-out=6 churn=3 sloc=551 fun=31 branch=106</title><rect x="54" y="1062" width="22" height="22" rx="4" fill="#6aa9cf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1077" font-size="9" fill="#101010" opacity="0.85">ONScripte</text></g>
 <text x="24" y="1121" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaMeta.java
 heat=15.9 fan-in=8 fan-out=0 churn=1 sloc=303 fun=21 branch=26</title><rect x="54" y="1104" width="22" height="22" rx="4" fill="#66a6cd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1119" font-size="9" fill="#101010" opacity="0.85">IjkMediaM</text></g>
-<text x="24" y="1163" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+<text x="24" y="1163" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/KrkrOnlinePatchActivity.kt
+heat=15.8 fan-in=1 fan-out=4 churn=12 sloc=300 fun=2 branch=7</title><rect x="54" y="1146" width="22" height="22" rx="4" fill="#65a5cd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1161" font-size="9" fill="#101010" opacity="0.85">KrkrOnlin</text></g>
+<text x="24" y="1205" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/SDLAudioManager.java
-heat=15.7 fan-in=6 fan-out=2 churn=3 sloc=303 fun=14 branch=45</title><rect x="54" y="1146" width="22" height="22" rx="4" fill="#65a5cd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1161" font-size="9" fill="#101010" opacity="0.85">SDLAudioM</text></g>
-<text x="24" y="1205" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=15.7 fan-in=6 fan-out=2 churn=3 sloc=303 fun=14 branch=45</title><rect x="54" y="1188" width="22" height="22" rx="4" fill="#65a5cd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1203" font-size="9" fill="#101010" opacity="0.85">SDLAudioM</text></g>
+<text x="24" y="1247" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxGLSurfaceView.java
-heat=15.2 fan-in=6 fan-out=4 churn=1 sloc=268 fun=25 branch=41</title><rect x="54" y="1188" width="22" height="22" rx="4" fill="#63a4cc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1203" font-size="9" fill="#101010" opacity="0.85">Cocos2dxG</text></g>
-<text x="24" y="1247" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+heat=15.2 fan-in=6 fan-out=4 churn=1 sloc=268 fun=25 branch=41</title><rect x="54" y="1230" width="22" height="22" rx="4" fill="#63a4cc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1245" font-size="9" fill="#101010" opacity="0.85">Cocos2dxG</text></g>
+<text x="24" y="1289" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/scanner/GameSaveManager.kt
-heat=14.3 fan-in=2 fan-out=4 churn=7 sloc=328 fun=6 branch=44</title><rect x="54" y="1230" width="22" height="22" rx="4" fill="#60a1cb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1245" font-size="9" fill="#101010" opacity="0.85">GameSaveM</text></g>
-<text x="24" y="1289" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+heat=14.1 fan-in=2 fan-out=4 churn=7 sloc=328 fun=6 branch=44</title><rect x="54" y="1272" width="22" height="22" rx="4" fill="#5fa1cb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1287" font-size="9" fill="#101010" opacity="0.85">GameSaveM</text></g>
+<text x="24" y="1331" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java
-heat=14.1 fan-in=3 fan-out=5 churn=1 sloc=490 fun=49 branch=55</title><rect x="54" y="1272" width="22" height="22" rx="4" fill="#5fa1cb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1287" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="1331" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
+heat=14.1 fan-in=3 fan-out=5 churn=1 sloc=490 fun=49 branch=55</title><rect x="54" y="1314" width="22" height="22" rx="4" fill="#5fa1cb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1329" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<text x="24" y="1373" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/theme/AppThemeColors.kt
-heat=14.0 fan-in=7 fan-out=1 churn=4 sloc=42 fun=3 branch=3</title><rect x="54" y="1314" width="22" height="22" rx="4" fill="#5fa1ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1329" font-size="9" fill="#101010" opacity="0.85">AppThemeC</text></g>
-<text x="24" y="1373" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+heat=14.0 fan-in=7 fan-out=1 churn=4 sloc=42 fun=3 branch=3</title><rect x="54" y="1356" width="22" height="22" rx="4" fill="#5fa1ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1371" font-size="9" fill="#101010" opacity="0.85">AppThemeC</text></g>
+<text x="24" y="1415" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkMediaFormat.java
-heat=13.8 fan-in=6 fan-out=6 churn=1 sloc=53 fun=3 branch=3</title><rect x="54" y="1356" width="22" height="22" rx="4" fill="#5ea0ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1371" font-size="9" fill="#101010" opacity="0.85">IjkMediaF</text></g>
-<text x="24" y="1415" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
+heat=13.8 fan-in=6 fan-out=6 churn=1 sloc=53 fun=3 branch=3</title><rect x="54" y="1398" width="22" height="22" rx="4" fill="#5ea0ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1413" font-size="9" fill="#101010" opacity="0.85">IjkMediaF</text></g>
+<text x="24" y="1457" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoView.java
-heat=13.8 fan-in=4 fan-out=6 churn=1 sloc=292 fun=26 branch=26</title><rect x="54" y="1398" width="22" height="22" rx="4" fill="#5ea0ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1413" font-size="9" fill="#101010" opacity="0.85">IjkVideoV</text></g>
-<text x="24" y="1457" fill="#8fb4d9" font-size="13">engine · …nativeplugin <tspan fill="#66707a">(1)</tspan></text>
+heat=13.8 fan-in=4 fan-out=6 churn=1 sloc=292 fun=26 branch=26</title><rect x="54" y="1440" width="22" height="22" rx="4" fill="#5ea0ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1455" font-size="9" fill="#101010" opacity="0.85">IjkVideoV</text></g>
+<text x="24" y="1499" fill="#8fb4d9" font-size="13">engine · …nativeplugin <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/nativeplugin/NativePluginConstants.kt
-heat=13.6 fan-in=8 fan-out=1 churn=1 sloc=60 fun=0 branch=1</title><rect x="54" y="1440" width="22" height="22" rx="4" fill="#5da0ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1455" font-size="9" fill="#101010" opacity="0.85">NativePlu</text></g>
-<text x="24" y="1499" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=13.6 fan-in=8 fan-out=1 churn=1 sloc=60 fun=0 branch=1</title><rect x="54" y="1482" width="22" height="22" rx="4" fill="#5da0ca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1497" font-size="9" fill="#101010" opacity="0.85">NativePlu</text></g>
+<text x="24" y="1541" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxActivity.java
-heat=13.5 fan-in=4 fan-out=6 churn=1 sloc=264 fun=26 branch=24</title><rect x="54" y="1482" width="22" height="22" rx="4" fill="#5d9fca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1497" font-size="9" fill="#101010" opacity="0.85">Cocos2dxA</text></g>
-<text x="24" y="1541" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+heat=13.5 fan-in=4 fan-out=6 churn=1 sloc=264 fun=26 branch=24</title><rect x="54" y="1524" width="22" height="22" rx="4" fill="#5d9fca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1539" font-size="9" fill="#101010" opacity="0.85">Cocos2dxA</text></g>
+<text x="24" y="1583" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/SDLSurface.java
-heat=13.5 fan-in=3 fan-out=6 churn=1 sloc=385 fun=20 branch=44</title><rect x="54" y="1524" width="22" height="22" rx="4" fill="#5d9fca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1539" font-size="9" fill="#101010" opacity="0.85">SDLSurfac</text></g>
-<text x="24" y="1583" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/engine/DoubleBackExit.java
-heat=12.2 fan-in=7 fan-out=0 churn=2 sloc=65 fun=7 branch=10</title><rect x="54" y="1566" width="22" height="22" rx="4" fill="#589cc8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1581" font-size="9" fill="#101010" opacity="0.85">DoubleBac</text></g>
+heat=13.5 fan-in=3 fan-out=6 churn=1 sloc=385 fun=20 branch=44</title><rect x="54" y="1566" width="22" height="22" rx="4" fill="#5d9fca" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1581" font-size="9" fill="#101010" opacity="0.85">SDLSurfac</text></g>
 <text x="24" y="1625" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaPlayer.java
 heat=12.2 fan-in=2 fan-out=9 churn=1 sloc=247 fun=37 branch=16</title><rect x="54" y="1608" width="22" height="22" rx="4" fill="#589cc8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1623" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
-<text x="24" y="1667" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+<text x="24" y="1667" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/engine/DoubleBackExit.java
+heat=12.1 fan-in=7 fan-out=0 churn=2 sloc=65 fun=7 branch=10</title><rect x="54" y="1650" width="22" height="22" rx="4" fill="#589bc8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1665" font-size="9" fill="#101010" opacity="0.85">DoubleBac</text></g>
+<text x="24" y="1709" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/HIDDeviceUSB.java
-heat=11.9 fan-in=3 fan-out=5 churn=1 sloc=312 fun=16 branch=49</title><rect x="54" y="1650" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1665" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="1709" fill="#8fb4d9" font-size="13">app · …settings <tspan fill="#66707a">(1)</tspan></text>
+heat=11.9 fan-in=3 fan-out=5 churn=1 sloc=312 fun=16 branch=49</title><rect x="54" y="1692" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1707" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<text x="24" y="1751" fill="#8fb4d9" font-size="13">app · …settings <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/settings/EngineSettingsStore.kt
-heat=11.8 fan-in=4 fan-out=2 churn=4 sloc=177 fun=41 branch=16</title><rect x="54" y="1692" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1707" font-size="9" fill="#101010" opacity="0.85">EngineSet</text></g>
-<text x="24" y="1751" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/SaveManagementActivity.kt
-heat=11.8 fan-in=1 fan-out=3 churn=8 sloc=245 fun=3 branch=7</title><rect x="54" y="1734" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1749" font-size="9" fill="#101010" opacity="0.85">SaveManag</text></g>
+heat=11.8 fan-in=4 fan-out=2 churn=4 sloc=177 fun=41 branch=16</title><rect x="54" y="1734" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1749" font-size="9" fill="#101010" opacity="0.85">EngineSet</text></g>
 <text x="24" y="1793" fill="#8fb4d9" font-size="13">engine · …nativeplugin <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/nativeplugin/NativeLibraryLoader.kt
 heat=11.8 fan-in=6 fan-out=3 churn=1 sloc=54 fun=4 branch=1</title><rect x="54" y="1776" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1791" font-size="9" fill="#101010" opacity="0.85">NativeLib</text></g>
 <text x="24" y="1835" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/package-info.java
 heat=11.8 fan-in=0 fan-out=17 churn=1 sloc=20 fun=0 branch=3</title><rect x="54" y="1818" width="22" height="22" rx="4" fill="#579bc7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1833" font-size="9" fill="#101010" opacity="0.85">package-i</text></g>
-<text x="24" y="1877" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+<text x="24" y="1877" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/SaveManagementActivity.kt
+heat=11.6 fan-in=1 fan-out=3 churn=8 sloc=245 fun=3 branch=7</title><rect x="54" y="1860" width="22" height="22" rx="4" fill="#569ac7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1875" font-size="9" fill="#101010" opacity="0.85">SaveManag</text></g>
+<text x="24" y="1919" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/HIDDevice.java
-heat=11.5 fan-in=7 fan-out=1 churn=1 sloc=20 fun=0 branch=0</title><rect x="54" y="1860" width="22" height="22" rx="4" fill="#569ac7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1875" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="1919" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+heat=11.5 fan-in=7 fan-out=1 churn=1 sloc=20 fun=0 branch=0</title><rect x="54" y="1902" width="22" height="22" rx="4" fill="#569ac7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1917" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<text x="24" y="1961" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/HIDDevice.java
-heat=11.5 fan-in=7 fan-out=1 churn=1 sloc=19 fun=0 branch=0</title><rect x="54" y="1902" width="22" height="22" rx="4" fill="#569ac7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1917" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<text x="24" y="1961" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/scanner/EnginePluginBootstrap.kt
-heat=11.3 fan-in=2 fan-out=6 churn=4 sloc=160 fun=2 branch=15</title><rect x="54" y="1944" width="22" height="22" rx="4" fill="#5599c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1959" font-size="9" fill="#101010" opacity="0.85">EnginePlu</text></g>
-<text x="24" y="2003" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(2)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl3/app/SDLAudioManager.java
-heat=11.1 fan-in=6 fan-out=1 churn=1 sloc=103 fun=9 branch=17</title><rect x="54" y="1986" width="22" height="22" rx="4" fill="#5499c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2001" font-size="9" fill="#101010" opacity="0.85">SDLAudioM</text></g>
-<g><title>engine/src/main/java/org/libsdl3/app/SDLInputConnection.java
-heat=11.1 fan-in=5 fan-out=3 churn=1 sloc=117 fun=6 branch=17</title><rect x="54" y="2012" width="22" height="22" rx="4" fill="#5499c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2027" font-size="9" fill="#101010" opacity="0.85">SDLInputC</text></g>
-<text x="24" y="2045" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/SDLSurface.java
-heat=11.0 fan-in=3 fan-out=5 churn=1 sloc=247 fun=14 branch=37</title><rect x="54" y="2028" width="22" height="22" rx="4" fill="#5499c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2043" font-size="9" fill="#101010" opacity="0.85">SDLSurfac</text></g>
-<text x="24" y="2087" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java
-heat=10.9 fan-in=3 fan-out=5 churn=3 sloc=117 fun=9 branch=9</title><rect x="54" y="2070" width="22" height="22" rx="4" fill="#5498c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2085" font-size="9" fill="#101010" opacity="0.85">ArtemisLa</text></g>
-<text x="24" y="2129" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(2)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/HIDDeviceUSB.java
-heat=10.8 fan-in=3 fan-out=5 churn=1 sloc=231 fun=19 branch=26</title><rect x="54" y="2112" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2127" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
-<g><title>engine/src/main/java/org/libsdl/app/SDLInputConnection.java
-heat=10.8 fan-in=5 fan-out=3 churn=1 sloc=92 fun=7 branch=12</title><rect x="54" y="2138" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2153" font-size="9" fill="#101010" opacity="0.85">SDLInputC</text></g>
-<text x="24" y="2171" fill="#8fb4d9" font-size="13">app · …ui.dialogs <tspan fill="#66707a">(1)</tspan></text>
+heat=11.5 fan-in=7 fan-out=1 churn=1 sloc=19 fun=0 branch=0</title><rect x="54" y="1944" width="22" height="22" rx="4" fill="#569ac7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="1959" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<text x="24" y="2003" fill="#8fb4d9" font-size="13">app · …ui.dialogs <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/dialogs/GameDialogs.kt
-heat=10.7 fan-in=0 fan-out=6 churn=1 sloc=525 fun=2 branch=24</title><rect x="54" y="2154" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2169" font-size="9" fill="#101010" opacity="0.85">GameDialo</text></g>
-<text x="24" y="2213" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+heat=11.4 fan-in=0 fan-out=6 churn=2 sloc=525 fun=2 branch=24</title><rect x="54" y="1986" width="22" height="22" rx="4" fill="#559ac7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2001" font-size="9" fill="#101010" opacity="0.85">GameDialo</text></g>
+<text x="24" y="2045" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/EnginePluginBootstrap.kt
+heat=11.2 fan-in=2 fan-out=6 churn=4 sloc=160 fun=2 branch=15</title><rect x="54" y="2028" width="22" height="22" rx="4" fill="#5599c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2043" font-size="9" fill="#101010" opacity="0.85">EnginePlu</text></g>
+<text x="24" y="2087" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(2)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl3/app/SDLAudioManager.java
+heat=11.1 fan-in=6 fan-out=1 churn=1 sloc=103 fun=9 branch=17</title><rect x="54" y="2070" width="22" height="22" rx="4" fill="#5499c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2085" font-size="9" fill="#101010" opacity="0.85">SDLAudioM</text></g>
+<g><title>engine/src/main/java/org/libsdl3/app/SDLInputConnection.java
+heat=11.1 fan-in=5 fan-out=3 churn=1 sloc=117 fun=6 branch=17</title><rect x="54" y="2096" width="22" height="22" rx="4" fill="#5499c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2111" font-size="9" fill="#101010" opacity="0.85">SDLInputC</text></g>
+<text x="24" y="2129" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/SDLSurface.java
+heat=11.0 fan-in=3 fan-out=5 churn=1 sloc=247 fun=14 branch=37</title><rect x="54" y="2112" width="22" height="22" rx="4" fill="#5499c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2127" font-size="9" fill="#101010" opacity="0.85">SDLSurfac</text></g>
+<text x="24" y="2171" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java
+heat=10.8 fan-in=3 fan-out=5 churn=3 sloc=117 fun=9 branch=9</title><rect x="54" y="2154" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2169" font-size="9" fill="#101010" opacity="0.85">ArtemisLa</text></g>
+<text x="24" y="2213" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(3)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/HIDDeviceUSB.java
+heat=10.8 fan-in=3 fan-out=5 churn=1 sloc=231 fun=19 branch=26</title><rect x="54" y="2196" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2211" font-size="9" fill="#101010" opacity="0.85">HIDDevice</text></g>
+<g><title>engine/src/main/java/org/libsdl/app/SDLInputConnection.java
+heat=10.8 fan-in=5 fan-out=3 churn=1 sloc=92 fun=7 branch=12</title><rect x="54" y="2222" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2237" font-size="9" fill="#101010" opacity="0.85">SDLInputC</text></g>
 <g><title>engine/src/main/java/org/libsdl/app/AudioRouteWatcher.java
-heat=10.7 fan-in=3 fan-out=4 churn=2 sloc=218 fun=12 branch=36</title><rect x="54" y="2196" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2211" font-size="9" fill="#101010" opacity="0.85">AudioRout</text></g>
+heat=10.7 fan-in=3 fan-out=4 churn=2 sloc=218 fun=12 branch=36</title><rect x="54" y="2248" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2263" font-size="9" fill="#101010" opacity="0.85">AudioRout</text></g>
 <text x="24" y="2255" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IMediaDataSource.java
 heat=10.7 fan-in=7 fan-out=0 churn=1 sloc=7 fun=0 branch=0</title><rect x="54" y="2238" width="22" height="22" rx="4" fill="#5398c6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2253" font-size="9" fill="#101010" opacity="0.85">IMediaDat</text></g>
-<text x="24" y="2297" fill="#8fb4d9" font-size="13">engine · bridge <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/bridge/NativeBridge.kt
-heat=10.5 fan-in=3 fan-out=2 churn=2 sloc=311 fun=8 branch=73</title><rect x="54" y="2280" width="22" height="22" rx="4" fill="#5297c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2295" font-size="9" fill="#101010" opacity="0.85">NativeBri</text></g>
-<text x="24" y="2339" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(2)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsScreen.kt
-heat=10.3 fan-in=0 fan-out=3 churn=6 sloc=364 fun=2 branch=27</title><rect x="54" y="2322" width="22" height="22" rx="4" fill="#5197c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2337" font-size="9" fill="#101010" opacity="0.85">PerGameSe</text></g>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsActivity.kt
-heat=10.2 fan-in=2 fan-out=2 churn=8 sloc=56 fun=1 branch=3</title><rect x="54" y="2348" width="22" height="22" rx="4" fill="#5196c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2363" font-size="9" fill="#101010" opacity="0.85">PerGameSe</text></g>
-<text x="24" y="2381" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxHelper.java
-heat=9.8 fan-in=3 fan-out=4 churn=1 sloc=201 fun=68 branch=40</title><rect x="54" y="2364" width="22" height="22" rx="4" fill="#5095c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2379" font-size="9" fill="#101010" opacity="0.85">Cocos2dxH</text></g>
-<text x="24" y="2423" fill="#8fb4d9" font-size="13">engine · bridge <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/bridge/KrPathUtils.kt
-heat=9.6 fan-in=5 fan-out=1 churn=1 sloc=104 fun=5 branch=35</title><rect x="54" y="2406" width="22" height="22" rx="4" fill="#4f95c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2421" font-size="9" fill="#101010" opacity="0.85">KrPathUti</text></g>
-<text x="24" y="2465" fill="#8fb4d9" font-size="13">engine · …krkrsdl3 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/krkrsdl3/Krkrsdl3Activity.kt
-heat=9.6 fan-in=1 fan-out=7 churn=2 sloc=206 fun=0 branch=15</title><rect x="54" y="2448" width="22" height="22" rx="4" fill="#4f95c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2463" font-size="9" fill="#101010" opacity="0.85">Krkrsdl3A</text></g>
-<text x="24" y="2507" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(3)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API26.java
-heat=9.5 fan-in=3 fan-out=6 churn=1 sloc=72 fun=7 branch=10</title><rect x="54" y="2490" width="22" height="22" rx="4" fill="#4e95c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2505" font-size="9" fill="#101010" opacity="0.85">SDLGeneri</text></g>
-<g><title>engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API12.java
-heat=9.3 fan-in=4 fan-out=4 churn=1 sloc=41 fun=6 branch=4</title><rect x="54" y="2516" width="22" height="22" rx="4" fill="#4e94c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2531" font-size="9" fill="#101010" opacity="0.85">SDLGeneri</text></g>
-<g><title>engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API24.java
-heat=9.2 fan-in=4 fan-out=4 churn=1 sloc=37 fun=6 branch=1</title><rect x="54" y="2542" width="22" height="22" rx="4" fill="#4d94c3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2557" font-size="9" fill="#101010" opacity="0.85">SDLGeneri</text></g>
-<text x="24" y="2549" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/engine/EnginePrefs.kt
-heat=8.8 fan-in=5 fan-out=0 churn=2 sloc=44 fun=0 branch=0</title><rect x="54" y="2532" width="22" height="22" rx="4" fill="#4c93c3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2547" font-size="9" fill="#101010" opacity="0.85">EnginePre</text></g>
-<text x="24" y="2591" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/scanner/VndbCoverService.kt
-heat=8.6 fan-in=2 fan-out=0 churn=5 sloc=210 fun=4 branch=29</title><rect x="54" y="2574" width="22" height="22" rx="4" fill="#4b92c3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2589" font-size="9" fill="#101010" opacity="0.85">VndbCover</text></g>
-<text x="24" y="2633" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid134.java
-heat=8.4 fan-in=4 fan-out=2 churn=2 sloc=20 fun=2 branch=2</title><rect x="54" y="2616" width="22" height="22" rx="4" fill="#4a92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2631" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
-<text x="24" y="2675" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/MediaInfo.java
-heat=8.4 fan-in=5 fan-out=1 churn=1 sloc=10 fun=0 branch=0</title><rect x="54" y="2658" width="22" height="22" rx="4" fill="#4a92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2673" font-size="9" fill="#101010" opacity="0.85">MediaInfo</text></g>
-<text x="24" y="2717" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/ITrackInfo.java
-heat=8.4 fan-in=5 fan-out=1 churn=1 sloc=14 fun=0 branch=0</title><rect x="54" y="2700" width="22" height="22" rx="4" fill="#4a92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2715" font-size="9" fill="#101010" opacity="0.85">ITrackInf</text></g>
-<text x="24" y="2759" fill="#8fb4d9" font-size="13">engine · org.tvp.krkrsdl3 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/tvp/krkrsdl3/KRKRCall.java
-heat=8.3 fan-in=1 fan-out=3 churn=1 sloc=378 fun=22 branch=24</title><rect x="54" y="2742" width="22" height="22" rx="4" fill="#4a91c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2757" font-size="9" fill="#101010" opacity="0.85">KRKRCall.</text></g>
-<text x="24" y="2801" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/scanner/ScanGame.kt
-heat=8.1 fan-in=3 fan-out=1 churn=4 sloc=57 fun=2 branch=0</title><rect x="54" y="2784" width="22" height="22" rx="4" fill="#4991c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2799" font-size="9" fill="#101010" opacity="0.85">ScanGame.</text></g>
-<text x="24" y="2843" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/engine/EngineThemeColors.kt
-heat=8.1 fan-in=5 fan-out=0 churn=1 sloc=45 fun=1 branch=5</title><rect x="54" y="2826" width="22" height="22" rx="4" fill="#4991c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2841" font-size="9" fill="#101010" opacity="0.85">EngineThe</text></g>
-<text x="24" y="2885" fill="#8fb4d9" font-size="13">engine · …ons <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/ons/OnsSettings.kt
-heat=7.9 fan-in=4 fan-out=0 churn=1 sloc=146 fun=9 branch=32</title><rect x="54" y="2868" width="22" height="22" rx="4" fill="#4990c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2883" font-size="9" fill="#101010" opacity="0.85">OnsSettin</text></g>
-<text x="24" y="2927" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/tvp/kirikiri2/KrGLSurfaceView.java
-heat=7.9 fan-in=1 fan-out=6 churn=2 sloc=124 fun=2 branch=21</title><rect x="54" y="2910" width="22" height="22" rx="4" fill="#4990c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2925" font-size="9" fill="#101010" opacity="0.85">KrGLSurfa</text></g>
-<text x="24" y="2969" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkTimedText.java
-heat=7.8 fan-in=5 fan-out=0 churn=1 sloc=17 fun=3 branch=0</title><rect x="54" y="2952" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2967" font-size="9" fill="#101010" opacity="0.85">IjkTimedT</text></g>
-<text x="24" y="3011" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/tyrano/TyranoLocalHttpServer.kt
-heat=7.7 fan-in=1 fan-out=1 churn=2 sloc=385 fun=2 branch=113</title><rect x="54" y="2994" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3009" font-size="9" fill="#101010" opacity="0.85">TyranoLoc</text></g>
-<text x="24" y="3053" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IMediaFormat.java
-heat=7.7 fan-in=5 fan-out=0 churn=1 sloc=9 fun=0 branch=0</title><rect x="54" y="3036" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3051" font-size="9" fill="#101010" opacity="0.85">IMediaFor</text></g>
-<text x="24" y="3095" fill="#8fb4d9" font-size="13">engine · moe.artemis.gui <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/moe/artemis/gui/Dialog.kt
-heat=7.5 fan-in=4 fan-out=1 churn=1 sloc=63 fun=2 branch=10</title><rect x="54" y="3078" width="22" height="22" rx="4" fill="#478fc1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3093" font-size="9" fill="#101010" opacity="0.85">Dialog.kt</text></g>
-<text x="24" y="3137" fill="#8fb4d9" font-size="13">app · …settings <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/settings/PerGameSettingsStore.kt
-heat=7.2 fan-in=4 fan-out=0 churn=1 sloc=93 fun=9 branch=13</title><rect x="54" y="3120" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3135" font-size="9" fill="#101010" opacity="0.85">PerGameSe</text></g>
-<text x="24" y="3179" fill="#8fb4d9" font-size="13">engine · com.bytedance.android.bytehook <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/bytedance/android/bytehook/ByteHook.java
-heat=7.2 fan-in=4 fan-out=1 churn=1 sloc=37 fun=6 branch=1</title><rect x="54" y="3162" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3177" font-size="9" fill="#101010" opacity="0.85">ByteHook.</text></g>
-<text x="24" y="3221" fill="#8fb4d9" font-size="13">engine · com.bytedance.shadowhook <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/bytedance/shadowhook/ShadowHook.java
-heat=7.2 fan-in=4 fan-out=1 churn=1 sloc=36 fun=6 branch=2</title><rect x="54" y="3204" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3219" font-size="9" fill="#101010" opacity="0.85">ShadowHoo</text></g>
-<text x="24" y="3263" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/SDLHapticHandler.java
-heat=7.2 fan-in=3 fan-out=2 churn=1 sloc=107 fun=4 branch=20</title><rect x="54" y="3246" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3261" font-size="9" fill="#101010" opacity="0.85">SDLHaptic</text></g>
-<text x="24" y="3305" fill="#8fb4d9" font-size="13">app · …ui.main <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/main/MainScreen.kt
-heat=6.9 fan-in=0 fan-out=1 churn=7 sloc=149 fun=2 branch=6</title><rect x="54" y="3288" width="22" height="22" rx="4" fill="#458ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3303" font-size="9" fill="#101010" opacity="0.85">MainScree</text></g>
-<text x="24" y="3347" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid126.java
-heat=6.9 fan-in=2 fan-out=4 churn=2 sloc=32 fun=2 branch=4</title><rect x="54" y="3330" width="22" height="22" rx="4" fill="#458ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3345" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
-<text x="24" y="3389" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkStringFormatter.java
-heat=6.8 fan-in=4 fan-out=1 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="3372" width="22" height="22" rx="4" fill="#458dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3387" font-size="9" fill="#101010" opacity="0.85">IjkString</text></g>
-<text x="24" y="3431" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV1.java
-heat=6.7 fan-in=3 fan-out=3 churn=1 sloc=13 fun=0 branch=1</title><rect x="54" y="3414" width="22" height="22" rx="4" fill="#448dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3429" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
-<text x="24" y="3473" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/SDLJoystickHandler_API16.java
-heat=6.7 fan-in=2 fan-out=3 churn=1 sloc=135 fun=8 branch=23</title><rect x="54" y="3456" width="22" height="22" rx="4" fill="#448dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3471" font-size="9" fill="#101010" opacity="0.85">SDLJoysti</text></g>
-<text x="24" y="3515" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/EngineSettingsActivity.kt
-heat=6.6 fan-in=1 fan-out=2 churn=5 sloc=64 fun=1 branch=3</title><rect x="54" y="3498" width="22" height="22" rx="4" fill="#448dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3513" font-size="9" fill="#101010" opacity="0.85">EngineSet</text></g>
-<text x="24" y="3557" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/common/LiquidGlassNavigation.kt
-heat=6.5 fan-in=0 fan-out=2 churn=3 sloc=294 fun=5 branch=11</title><rect x="54" y="3540" width="22" height="22" rx="4" fill="#448cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3555" font-size="9" fill="#101010" opacity="0.85">LiquidGla</text></g>
-<text x="24" y="3599" fill="#8fb4d9" font-size="13">engine · com.ies_net.artemis <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt
-heat=6.3 fan-in=2 fan-out=2 churn=1 sloc=154 fun=0 branch=24</title><rect x="54" y="3582" width="22" height="22" rx="4" fill="#438cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3597" font-size="9" fill="#101010" opacity="0.85">VideoView</text></g>
-<text x="24" y="3641" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(2)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/AbstractMediaPlayer.java
-heat=6.3 fan-in=2 fan-out=3 churn=1 sloc=104 fun=18 branch=6</title><rect x="54" y="3624" width="22" height="22" rx="4" fill="#438cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3639" font-size="9" fill="#101010" opacity="0.85">AbstractM</text></g>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayerEventHandler.java
-heat=6.2 fan-in=2 fan-out=3 churn=1 sloc=89 fun=2 branch=16</title><rect x="54" y="3650" width="22" height="22" rx="4" fill="#428cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3665" font-size="9" fill="#101010" opacity="0.85">IjkMediaP</text></g>
-<text x="24" y="3683" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(3)</tspan></text>
-<g><title>engine/src/main/java/org/tvp/kirikiri2/KrDialogModel.kt
-heat=6.0 fan-in=3 fan-out=2 churn=1 sloc=10 fun=0 branch=0</title><rect x="54" y="3666" width="22" height="22" rx="4" fill="#428bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3681" font-size="9" fill="#101010" opacity="0.85">KrDialogM</text></g>
-<g><title>engine/src/main/java/org/tvp/kirikiri2/ShowInputBoxRunnable.java
-heat=6.0 fan-in=2 fan-out=4 churn=1 sloc=23 fun=1 branch=6</title><rect x="54" y="3692" width="22" height="22" rx="4" fill="#428bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3707" font-size="9" fill="#101010" opacity="0.85">ShowInput</text></g>
-<g><title>engine/src/main/java/org/tvp/kirikiri2/ShowMessageBoxRunnable.java
-heat=6.0 fan-in=2 fan-out=4 churn=1 sloc=21 fun=0 branch=6</title><rect x="54" y="3718" width="22" height="22" rx="4" fill="#428bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3733" font-size="9" fill="#101010" opacity="0.85">ShowMessa</text></g>
-<text x="24" y="3725" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/theme/MiuixSettingsTheme.kt
-heat=5.9 fan-in=0 fan-out=1 churn=7 sloc=67 fun=1 branch=1</title><rect x="54" y="3708" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3723" font-size="9" fill="#101010" opacity="0.85">MiuixSett</text></g>
-<text x="24" y="3767" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(2)</tspan></text>
-<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV2.java
-heat=5.9 fan-in=2 fan-out=4 churn=1 sloc=11 fun=0 branch=1</title><rect x="54" y="3750" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3765" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
-<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV3.java
-heat=5.9 fan-in=2 fan-out=4 churn=1 sloc=11 fun=0 branch=1</title><rect x="54" y="3776" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3791" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
-<text x="24" y="3809" fill="#8fb4d9" font-size="13">engine · …ons <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/ons/OnsLibLoader.kt
-heat=5.9 fan-in=2 fan-out=3 churn=1 sloc=66 fun=2 branch=11</title><rect x="54" y="3792" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3807" font-size="9" fill="#101010" opacity="0.85">OnsLibLoa</text></g>
-<text x="24" y="3851" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaPlayerListenerAdapter.java
-heat=5.8 fan-in=2 fan-out=3 churn=1 sloc=63 fun=9 branch=6</title><rect x="54" y="3834" width="22" height="22" rx="4" fill="#418bbe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3849" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
-<text x="24" y="3893" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/EngineScreen.kt
-heat=5.7 fan-in=0 fan-out=3 churn=4 sloc=119 fun=1 branch=1</title><rect x="54" y="3876" width="22" height="22" rx="4" fill="#418abe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3891" font-size="9" fill="#101010" opacity="0.85">EngineScr</text></g>
-<text x="24" y="3935" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java
-heat=5.7 fan-in=2 fan-out=1 churn=1 sloc=163 fun=18 branch=17</title><rect x="54" y="3918" width="22" height="22" rx="4" fill="#418abe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3933" font-size="9" fill="#101010" opacity="0.85">Cocos2dxR</text></g>
-<text x="24" y="3977" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(2)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/scanner/KrkrOnlinePatchService.kt
-heat=5.5 fan-in=1 fan-out=2 churn=2 sloc=153 fun=3 branch=8</title><rect x="54" y="3960" width="22" height="22" rx="4" fill="#408abe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3975" font-size="9" fill="#101010" opacity="0.85">KrkrOnlin</text></g>
-<g><title>app/src/main/java/com/tyranor/next/scanner/PathResolver.kt
-heat=5.3 fan-in=3 fan-out=0 churn=1 sloc=59 fun=3 branch=14</title><rect x="54" y="3986" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4001" font-size="9" fill="#101010" opacity="0.85">PathResol</text></g>
-<text x="24" y="4019" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/SDLJoystickHandler.java
-heat=5.3 fan-in=3 fan-out=1 churn=1 sloc=10 fun=2 branch=0</title><rect x="54" y="4002" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4017" font-size="9" fill="#101010" opacity="0.85">SDLJoysti</text></g>
-<text x="24" y="4061" fill="#8fb4d9" font-size="13">engine · org.tvp.krkrsdl3 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java
-heat=5.3 fan-in=1 fan-out=3 churn=2 sloc=87 fun=8 branch=10</title><rect x="54" y="4044" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4059" font-size="9" fill="#101010" opacity="0.85">KRKRActiv</text></g>
-<text x="24" y="4103" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.pragma <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/pragma/DebugLog.java
-heat=5.3 fan-in=3 fan-out=0 churn=1 sloc=66 fun=17 branch=1</title><rect x="54" y="4086" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4101" font-size="9" fill="#101010" opacity="0.85">DebugLog.</text></g>
-<text x="24" y="4145" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/com/core/tyrano/AsarArchive.kt
-heat=5.2 fan-in=2 fan-out=0 churn=1 sloc=173 fun=4 branch=32</title><rect x="54" y="4128" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4143" font-size="9" fill="#101010" opacity="0.85">AsarArchi</text></g>
-<text x="24" y="4187" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(2)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaCodecInfo.java
-heat=5.2 fan-in=1 fan-out=2 churn=1 sloc=190 fun=6 branch=19</title><rect x="54" y="4170" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4185" font-size="9" fill="#101010" opacity="0.85">IjkMediaC</text></g>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/TimedTextListenerProxy.java
-heat=5.2 fan-in=2 fan-out=3 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4196" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4211" font-size="9" fill="#101010" opacity="0.85">TimedText</text></g>
-<text x="24" y="4229" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/CompositeMediaFormatter.java
-heat=5.1 fan-in=1 fan-out=3 churn=1 sloc=126 fun=2 branch=12</title><rect x="54" y="4212" width="22" height="22" rx="4" fill="#3f89bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4227" font-size="9" fill="#101010" opacity="0.85">Composite</text></g>
-<text x="24" y="4271" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl3/app/SDL.java
-heat=5.0 fan-in=0 fan-out=6 churn=1 sloc=75 fun=6 branch=10</title><rect x="54" y="4254" width="22" height="22" rx="4" fill="#3e88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4269" font-size="9" fill="#101010" opacity="0.85">SDL.java</text></g>
-<text x="24" y="4313" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkTrackInfo.java
-heat=5.0 fan-in=1 fan-out=4 churn=1 sloc=61 fun=8 branch=4</title><rect x="54" y="4296" width="22" height="22" rx="4" fill="#3e88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4311" font-size="9" fill="#101010" opacity="0.85">IjkTrackI</text></g>
-<text x="24" y="4355" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl3/app/SDLDummyEdit.java
-heat=4.9 fan-in=1 fan-out=4 churn=1 sloc=55 fun=4 branch=4</title><rect x="54" y="4338" width="22" height="22" rx="4" fill="#3e88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4353" font-size="9" fill="#101010" opacity="0.85">SDLDummyE</text></g>
-<text x="24" y="4397" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(4)</tspan></text>
-<g><title>engine/src/main/java/org/libsdl/app/SDLClipboardHandler.java
-heat=4.8 fan-in=2 fan-out=2 churn=1 sloc=34 fun=5 branch=1</title><rect x="54" y="4380" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4395" font-size="9" fill="#101010" opacity="0.85">SDLClipbo</text></g>
-<g><title>engine/src/main/java/org/libsdl/app/DummyEdit.java
-heat=4.7 fan-in=1 fan-out=4 churn=1 sloc=41 fun=5 branch=1</title><rect x="54" y="4406" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4421" font-size="9" fill="#101010" opacity="0.85">DummyEdit</text></g>
-<g><title>engine/src/main/java/org/libsdl/app/SDLHapticHandler_API26.java
-heat=4.7 fan-in=2 fan-out=2 churn=1 sloc=31 fun=1 branch=7</title><rect x="54" y="4432" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4447" font-size="9" fill="#101010" opacity="0.85">SDLHaptic</text></g>
-<g><title>engine/src/main/java/org/libsdl/app/SDLMain.java
-heat=4.7 fan-in=2 fan-out=2 churn=1 sloc=26 fun=1 branch=3</title><rect x="54" y="4458" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4473" font-size="9" fill="#101010" opacity="0.85">SDLMain.j</text></g>
-<text x="24" y="4439" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(2)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/scanner/ArtemisPfsUnpacker.kt
-heat=4.5 fan-in=1 fan-out=0 churn=1 sloc=243 fun=2 branch=40</title><rect x="54" y="4422" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4437" font-size="9" fill="#101010" opacity="0.85">ArtemisPf</text></g>
+<text x="24" y="2297" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/scanner/GameStore.kt
-heat=4.5 fan-in=1 fan-out=2 churn=1 sloc=129 fun=12 branch=4</title><rect x="54" y="4448" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4463" font-size="9" fill="#101010" opacity="0.85">GameStore</text></g>
-<text x="24" y="4481" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+heat=10.5 fan-in=5 fan-out=2 churn=1 sloc=129 fun=12 branch=4</title><rect x="54" y="2280" width="22" height="22" rx="4" fill="#5297c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2295" font-size="9" fill="#101010" opacity="0.85">GameStore</text></g>
+<text x="24" y="2339" fill="#8fb4d9" font-size="13">engine · bridge <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/bridge/NativeBridge.kt
+heat=10.5 fan-in=3 fan-out=2 churn=2 sloc=311 fun=8 branch=73</title><rect x="54" y="2322" width="22" height="22" rx="4" fill="#5297c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2337" font-size="9" fill="#101010" opacity="0.85">NativeBri</text></g>
+<text x="24" y="2381" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(2)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsScreen.kt
+heat=10.2 fan-in=0 fan-out=3 churn=6 sloc=364 fun=2 branch=27</title><rect x="54" y="2364" width="22" height="22" rx="4" fill="#5196c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2379" font-size="9" fill="#101010" opacity="0.85">PerGameSe</text></g>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/PerGameSettingsActivity.kt
+heat=10.1 fan-in=2 fan-out=2 churn=8 sloc=56 fun=1 branch=3</title><rect x="54" y="2390" width="22" height="22" rx="4" fill="#5196c5" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2405" font-size="9" fill="#101010" opacity="0.85">PerGameSe</text></g>
+<text x="24" y="2423" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxHelper.java
+heat=9.8 fan-in=3 fan-out=4 churn=1 sloc=201 fun=68 branch=40</title><rect x="54" y="2406" width="22" height="22" rx="4" fill="#5095c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2421" font-size="9" fill="#101010" opacity="0.85">Cocos2dxH</text></g>
+<text x="24" y="2465" fill="#8fb4d9" font-size="13">engine · bridge <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/bridge/KrPathUtils.kt
+heat=9.6 fan-in=5 fan-out=1 churn=1 sloc=104 fun=5 branch=35</title><rect x="54" y="2448" width="22" height="22" rx="4" fill="#4f95c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2463" font-size="9" fill="#101010" opacity="0.85">KrPathUti</text></g>
+<text x="24" y="2507" fill="#8fb4d9" font-size="13">engine · …krkrsdl3 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/krkrsdl3/Krkrsdl3Activity.kt
+heat=9.6 fan-in=1 fan-out=7 churn=2 sloc=206 fun=0 branch=15</title><rect x="54" y="2490" width="22" height="22" rx="4" fill="#4f95c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2505" font-size="9" fill="#101010" opacity="0.85">Krkrsdl3A</text></g>
+<text x="24" y="2549" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(3)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API26.java
+heat=9.5 fan-in=3 fan-out=6 churn=1 sloc=72 fun=7 branch=10</title><rect x="54" y="2532" width="22" height="22" rx="4" fill="#4e95c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2547" font-size="9" fill="#101010" opacity="0.85">SDLGeneri</text></g>
+<g><title>engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API12.java
+heat=9.3 fan-in=4 fan-out=4 churn=1 sloc=41 fun=6 branch=4</title><rect x="54" y="2558" width="22" height="22" rx="4" fill="#4e94c4" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2573" font-size="9" fill="#101010" opacity="0.85">SDLGeneri</text></g>
+<g><title>engine/src/main/java/org/libsdl/app/SDLGenericMotionListener_API24.java
+heat=9.2 fan-in=4 fan-out=4 churn=1 sloc=37 fun=6 branch=1</title><rect x="54" y="2584" width="22" height="22" rx="4" fill="#4d94c3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2599" font-size="9" fill="#101010" opacity="0.85">SDLGeneri</text></g>
+<text x="24" y="2591" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/engine/EnginePrefs.kt
+heat=8.8 fan-in=5 fan-out=0 churn=2 sloc=44 fun=0 branch=0</title><rect x="54" y="2574" width="22" height="22" rx="4" fill="#4c93c3" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2589" font-size="9" fill="#101010" opacity="0.85">EnginePre</text></g>
+<text x="24" y="2633" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/VndbCoverService.kt
+heat=8.5 fan-in=2 fan-out=0 churn=5 sloc=210 fun=4 branch=29</title><rect x="54" y="2616" width="22" height="22" rx="4" fill="#4b92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2631" font-size="9" fill="#101010" opacity="0.85">VndbCover</text></g>
+<text x="24" y="2675" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid134.java
+heat=8.4 fan-in=4 fan-out=2 churn=2 sloc=20 fun=2 branch=2</title><rect x="54" y="2658" width="22" height="22" rx="4" fill="#4a92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2673" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
+<text x="24" y="2717" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/MediaInfo.java
+heat=8.4 fan-in=5 fan-out=1 churn=1 sloc=10 fun=0 branch=0</title><rect x="54" y="2700" width="22" height="22" rx="4" fill="#4a92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2715" font-size="9" fill="#101010" opacity="0.85">MediaInfo</text></g>
+<text x="24" y="2759" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/ITrackInfo.java
+heat=8.4 fan-in=5 fan-out=1 churn=1 sloc=14 fun=0 branch=0</title><rect x="54" y="2742" width="22" height="22" rx="4" fill="#4a92c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2757" font-size="9" fill="#101010" opacity="0.85">ITrackInf</text></g>
+<text x="24" y="2801" fill="#8fb4d9" font-size="13">engine · org.tvp.krkrsdl3 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/tvp/krkrsdl3/KRKRCall.java
+heat=8.3 fan-in=1 fan-out=3 churn=1 sloc=378 fun=22 branch=24</title><rect x="54" y="2784" width="22" height="22" rx="4" fill="#4a91c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2799" font-size="9" fill="#101010" opacity="0.85">KRKRCall.</text></g>
+<text x="24" y="2843" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/ScanGame.kt
+heat=8.1 fan-in=3 fan-out=1 churn=4 sloc=57 fun=2 branch=0</title><rect x="54" y="2826" width="22" height="22" rx="4" fill="#4991c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2841" font-size="9" fill="#101010" opacity="0.85">ScanGame.</text></g>
+<text x="24" y="2885" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/engine/EngineThemeColors.kt
+heat=8.1 fan-in=5 fan-out=0 churn=1 sloc=45 fun=1 branch=5</title><rect x="54" y="2868" width="22" height="22" rx="4" fill="#4991c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2883" font-size="9" fill="#101010" opacity="0.85">EngineThe</text></g>
+<text x="24" y="2927" fill="#8fb4d9" font-size="13">engine · …ons <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/ons/OnsSettings.kt
+heat=7.9 fan-in=4 fan-out=0 churn=1 sloc=146 fun=9 branch=32</title><rect x="54" y="2910" width="22" height="22" rx="4" fill="#4990c2" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2925" font-size="9" fill="#101010" opacity="0.85">OnsSettin</text></g>
+<text x="24" y="2969" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/tvp/kirikiri2/KrGLSurfaceView.java
+heat=7.8 fan-in=1 fan-out=6 churn=2 sloc=124 fun=2 branch=21</title><rect x="54" y="2952" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="2967" font-size="9" fill="#101010" opacity="0.85">KrGLSurfa</text></g>
+<text x="24" y="3011" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkTimedText.java
+heat=7.8 fan-in=5 fan-out=0 churn=1 sloc=17 fun=3 branch=0</title><rect x="54" y="2994" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3009" font-size="9" fill="#101010" opacity="0.85">IjkTimedT</text></g>
+<text x="24" y="3053" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/tyrano/TyranoLocalHttpServer.kt
+heat=7.7 fan-in=1 fan-out=1 churn=2 sloc=385 fun=2 branch=113</title><rect x="54" y="3036" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3051" font-size="9" fill="#101010" opacity="0.85">TyranoLoc</text></g>
+<text x="24" y="3095" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IMediaFormat.java
+heat=7.7 fan-in=5 fan-out=0 churn=1 sloc=9 fun=0 branch=0</title><rect x="54" y="3078" width="22" height="22" rx="4" fill="#4890c1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3093" font-size="9" fill="#101010" opacity="0.85">IMediaFor</text></g>
+<text x="24" y="3137" fill="#8fb4d9" font-size="13">engine · moe.artemis.gui <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/moe/artemis/gui/Dialog.kt
+heat=7.5 fan-in=4 fan-out=1 churn=1 sloc=63 fun=2 branch=10</title><rect x="54" y="3120" width="22" height="22" rx="4" fill="#478fc1" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3135" font-size="9" fill="#101010" opacity="0.85">Dialog.kt</text></g>
+<text x="24" y="3179" fill="#8fb4d9" font-size="13">app · …settings <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/settings/PerGameSettingsStore.kt
+heat=7.2 fan-in=4 fan-out=0 churn=1 sloc=93 fun=9 branch=13</title><rect x="54" y="3162" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3177" font-size="9" fill="#101010" opacity="0.85">PerGameSe</text></g>
+<text x="24" y="3221" fill="#8fb4d9" font-size="13">engine · com.bytedance.android.bytehook <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/bytedance/android/bytehook/ByteHook.java
+heat=7.2 fan-in=4 fan-out=1 churn=1 sloc=37 fun=6 branch=1</title><rect x="54" y="3204" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3219" font-size="9" fill="#101010" opacity="0.85">ByteHook.</text></g>
+<text x="24" y="3263" fill="#8fb4d9" font-size="13">engine · com.bytedance.shadowhook <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/bytedance/shadowhook/ShadowHook.java
+heat=7.2 fan-in=4 fan-out=1 churn=1 sloc=36 fun=6 branch=2</title><rect x="54" y="3246" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3261" font-size="9" fill="#101010" opacity="0.85">ShadowHoo</text></g>
+<text x="24" y="3305" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/SDLHapticHandler.java
+heat=7.2 fan-in=3 fan-out=2 churn=1 sloc=107 fun=4 branch=20</title><rect x="54" y="3288" width="22" height="22" rx="4" fill="#468ec0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3303" font-size="9" fill="#101010" opacity="0.85">SDLHaptic</text></g>
+<text x="24" y="3347" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/PathResolver.kt
+heat=6.8 fan-in=4 fan-out=0 churn=1 sloc=59 fun=3 branch=14</title><rect x="54" y="3330" width="22" height="22" rx="4" fill="#458dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3345" font-size="9" fill="#101010" opacity="0.85">PathResol</text></g>
+<text x="24" y="3389" fill="#8fb4d9" font-size="13">app · …ui.main <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/main/MainScreen.kt
+heat=6.8 fan-in=0 fan-out=1 churn=7 sloc=149 fun=2 branch=6</title><rect x="54" y="3372" width="22" height="22" rx="4" fill="#458dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3387" font-size="9" fill="#101010" opacity="0.85">MainScree</text></g>
+<text x="24" y="3431" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid126.java
+heat=6.8 fan-in=2 fan-out=4 churn=2 sloc=32 fun=2 branch=4</title><rect x="54" y="3414" width="22" height="22" rx="4" fill="#458dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3429" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
+<text x="24" y="3473" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkStringFormatter.java
+heat=6.8 fan-in=4 fan-out=1 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="3456" width="22" height="22" rx="4" fill="#458dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3471" font-size="9" fill="#101010" opacity="0.85">IjkString</text></g>
+<text x="24" y="3515" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV1.java
+heat=6.7 fan-in=3 fan-out=3 churn=1 sloc=13 fun=0 branch=1</title><rect x="54" y="3498" width="22" height="22" rx="4" fill="#448dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3513" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
+<text x="24" y="3557" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/SDLJoystickHandler_API16.java
+heat=6.7 fan-in=2 fan-out=3 churn=1 sloc=135 fun=8 branch=23</title><rect x="54" y="3540" width="22" height="22" rx="4" fill="#448dc0" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3555" font-size="9" fill="#101010" opacity="0.85">SDLJoysti</text></g>
+<text x="24" y="3599" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/EngineSettingsActivity.kt
+heat=6.5 fan-in=1 fan-out=2 churn=5 sloc=64 fun=1 branch=3</title><rect x="54" y="3582" width="22" height="22" rx="4" fill="#448cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3597" font-size="9" fill="#101010" opacity="0.85">EngineSet</text></g>
+<text x="24" y="3641" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/common/LiquidGlassNavigation.kt
+heat=6.4 fan-in=0 fan-out=2 churn=3 sloc=294 fun=5 branch=11</title><rect x="54" y="3624" width="22" height="22" rx="4" fill="#438cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3639" font-size="9" fill="#101010" opacity="0.85">LiquidGla</text></g>
+<text x="24" y="3683" fill="#8fb4d9" font-size="13">engine · com.ies_net.artemis <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt
+heat=6.3 fan-in=2 fan-out=2 churn=1 sloc=154 fun=0 branch=24</title><rect x="54" y="3666" width="22" height="22" rx="4" fill="#438cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3681" font-size="9" fill="#101010" opacity="0.85">VideoView</text></g>
+<text x="24" y="3725" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/AbstractMediaPlayer.java
+heat=6.3 fan-in=2 fan-out=3 churn=1 sloc=104 fun=18 branch=6</title><rect x="54" y="3708" width="22" height="22" rx="4" fill="#438cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3723" font-size="9" fill="#101010" opacity="0.85">AbstractM</text></g>
+<text x="24" y="3767" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/KrkrOnlinePatchService.kt
+heat=6.2 fan-in=1 fan-out=2 churn=3 sloc=153 fun=3 branch=8</title><rect x="54" y="3750" width="22" height="22" rx="4" fill="#428cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3765" font-size="9" fill="#101010" opacity="0.85">KrkrOnlin</text></g>
+<text x="24" y="3809" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayerEventHandler.java
+heat=6.2 fan-in=2 fan-out=3 churn=1 sloc=89 fun=2 branch=16</title><rect x="54" y="3792" width="22" height="22" rx="4" fill="#428cbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3807" font-size="9" fill="#101010" opacity="0.85">IjkMediaP</text></g>
+<text x="24" y="3851" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(3)</tspan></text>
+<g><title>engine/src/main/java/org/tvp/kirikiri2/KrDialogModel.kt
+heat=6.0 fan-in=3 fan-out=2 churn=1 sloc=10 fun=0 branch=0</title><rect x="54" y="3834" width="22" height="22" rx="4" fill="#428bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3849" font-size="9" fill="#101010" opacity="0.85">KrDialogM</text></g>
+<g><title>engine/src/main/java/org/tvp/kirikiri2/ShowInputBoxRunnable.java
+heat=6.0 fan-in=2 fan-out=4 churn=1 sloc=23 fun=1 branch=6</title><rect x="54" y="3860" width="22" height="22" rx="4" fill="#428bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3875" font-size="9" fill="#101010" opacity="0.85">ShowInput</text></g>
+<g><title>engine/src/main/java/org/tvp/kirikiri2/ShowMessageBoxRunnable.java
+heat=6.0 fan-in=2 fan-out=4 churn=1 sloc=21 fun=0 branch=6</title><rect x="54" y="3886" width="22" height="22" rx="4" fill="#428bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3901" font-size="9" fill="#101010" opacity="0.85">ShowMessa</text></g>
+<text x="24" y="3893" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(2)</tspan></text>
+<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV2.java
+heat=5.9 fan-in=2 fan-out=4 churn=1 sloc=11 fun=0 branch=1</title><rect x="54" y="3876" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3891" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
+<g><title>engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV3.java
+heat=5.9 fan-in=2 fan-out=4 churn=1 sloc=11 fun=0 branch=1</title><rect x="54" y="3902" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3917" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
+<text x="24" y="3935" fill="#8fb4d9" font-size="13">engine · …ons <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/ons/OnsLibLoader.kt
+heat=5.9 fan-in=2 fan-out=3 churn=1 sloc=66 fun=2 branch=11</title><rect x="54" y="3918" width="22" height="22" rx="4" fill="#418bbf" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3933" font-size="9" fill="#101010" opacity="0.85">OnsLibLoa</text></g>
+<text x="24" y="3977" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/theme/MiuixSettingsTheme.kt
+heat=5.8 fan-in=0 fan-out=1 churn=7 sloc=67 fun=1 branch=1</title><rect x="54" y="3960" width="22" height="22" rx="4" fill="#418bbe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="3975" font-size="9" fill="#101010" opacity="0.85">MiuixSett</text></g>
+<text x="24" y="4019" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaPlayerListenerAdapter.java
+heat=5.8 fan-in=2 fan-out=3 churn=1 sloc=63 fun=9 branch=6</title><rect x="54" y="4002" width="22" height="22" rx="4" fill="#418bbe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4017" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
+<text x="24" y="4061" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java
+heat=5.7 fan-in=2 fan-out=1 churn=1 sloc=163 fun=18 branch=17</title><rect x="54" y="4044" width="22" height="22" rx="4" fill="#418abe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4059" font-size="9" fill="#101010" opacity="0.85">Cocos2dxR</text></g>
+<text x="24" y="4103" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/EngineScreen.kt
+heat=5.6 fan-in=0 fan-out=3 churn=4 sloc=119 fun=1 branch=1</title><rect x="54" y="4086" width="22" height="22" rx="4" fill="#408abe" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4101" font-size="9" fill="#101010" opacity="0.85">EngineScr</text></g>
+<text x="24" y="4145" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/SDLJoystickHandler.java
+heat=5.3 fan-in=3 fan-out=1 churn=1 sloc=10 fun=2 branch=0</title><rect x="54" y="4128" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4143" font-size="9" fill="#101010" opacity="0.85">SDLJoysti</text></g>
+<text x="24" y="4187" fill="#8fb4d9" font-size="13">engine · org.tvp.krkrsdl3 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java
+heat=5.3 fan-in=1 fan-out=3 churn=2 sloc=87 fun=8 branch=10</title><rect x="54" y="4170" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4185" font-size="9" fill="#101010" opacity="0.85">KRKRActiv</text></g>
+<text x="24" y="4229" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.pragma <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/pragma/DebugLog.java
+heat=5.3 fan-in=3 fan-out=0 churn=1 sloc=66 fun=17 branch=1</title><rect x="54" y="4212" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4227" font-size="9" fill="#101010" opacity="0.85">DebugLog.</text></g>
+<text x="24" y="4271" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/com/core/tyrano/AsarArchive.kt
+heat=5.2 fan-in=2 fan-out=0 churn=1 sloc=173 fun=4 branch=32</title><rect x="54" y="4254" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4269" font-size="9" fill="#101010" opacity="0.85">AsarArchi</text></g>
+<text x="24" y="4313" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(2)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaCodecInfo.java
+heat=5.2 fan-in=1 fan-out=2 churn=1 sloc=190 fun=6 branch=19</title><rect x="54" y="4296" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4311" font-size="9" fill="#101010" opacity="0.85">IjkMediaC</text></g>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/TimedTextListenerProxy.java
+heat=5.2 fan-in=2 fan-out=3 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4322" width="22" height="22" rx="4" fill="#3f89be" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4337" font-size="9" fill="#101010" opacity="0.85">TimedText</text></g>
+<text x="24" y="4355" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/CompositeMediaFormatter.java
+heat=5.1 fan-in=1 fan-out=3 churn=1 sloc=126 fun=2 branch=12</title><rect x="54" y="4338" width="22" height="22" rx="4" fill="#3f89bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4353" font-size="9" fill="#101010" opacity="0.85">Composite</text></g>
+<text x="24" y="4397" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl3/app/SDL.java
+heat=5.0 fan-in=0 fan-out=6 churn=1 sloc=75 fun=6 branch=10</title><rect x="54" y="4380" width="22" height="22" rx="4" fill="#3e88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4395" font-size="9" fill="#101010" opacity="0.85">SDL.java</text></g>
+<text x="24" y="4439" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IjkTrackInfo.java
+heat=5.0 fan-in=1 fan-out=4 churn=1 sloc=61 fun=8 branch=4</title><rect x="54" y="4422" width="22" height="22" rx="4" fill="#3e88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4437" font-size="9" fill="#101010" opacity="0.85">IjkTrackI</text></g>
+<text x="24" y="4481" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl3/app/SDLDummyEdit.java
+heat=4.9 fan-in=1 fan-out=4 churn=1 sloc=55 fun=4 branch=4</title><rect x="54" y="4464" width="22" height="22" rx="4" fill="#3e88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4479" font-size="9" fill="#101010" opacity="0.85">SDLDummyE</text></g>
+<text x="24" y="4523" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(4)</tspan></text>
+<g><title>engine/src/main/java/org/libsdl/app/SDLClipboardHandler.java
+heat=4.8 fan-in=2 fan-out=2 churn=1 sloc=34 fun=5 branch=1</title><rect x="54" y="4506" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4521" font-size="9" fill="#101010" opacity="0.85">SDLClipbo</text></g>
+<g><title>engine/src/main/java/org/libsdl/app/DummyEdit.java
+heat=4.7 fan-in=1 fan-out=4 churn=1 sloc=41 fun=5 branch=1</title><rect x="54" y="4532" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4547" font-size="9" fill="#101010" opacity="0.85">DummyEdit</text></g>
+<g><title>engine/src/main/java/org/libsdl/app/SDLHapticHandler_API26.java
+heat=4.7 fan-in=2 fan-out=2 churn=1 sloc=31 fun=1 branch=7</title><rect x="54" y="4558" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4573" font-size="9" fill="#101010" opacity="0.85">SDLHaptic</text></g>
+<g><title>engine/src/main/java/org/libsdl/app/SDLMain.java
+heat=4.7 fan-in=2 fan-out=2 churn=1 sloc=26 fun=1 branch=3</title><rect x="54" y="4584" width="22" height="22" rx="4" fill="#3d88bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4599" font-size="9" fill="#101010" opacity="0.85">SDLMain.j</text></g>
+<text x="24" y="4565" fill="#8fb4d9" font-size="13">app · …scanner <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/scanner/ArtemisPfsUnpacker.kt
+heat=4.5 fan-in=1 fan-out=0 churn=1 sloc=243 fun=2 branch=40</title><rect x="54" y="4548" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4563" font-size="9" fill="#101010" opacity="0.85">ArtemisPf</text></g>
+<text x="24" y="4607" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/SDL.java
-heat=4.5 fan-in=0 fan-out=6 churn=1 sloc=40 fun=5 branch=3</title><rect x="54" y="4464" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4479" font-size="9" fill="#101010" opacity="0.85">SDL.java</text></g>
-<text x="24" y="4523" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(7)</tspan></text>
+heat=4.5 fan-in=0 fan-out=6 churn=1 sloc=40 fun=5 branch=3</title><rect x="54" y="4590" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4605" font-size="9" fill="#101010" opacity="0.85">SDL.java</text></g>
+<text x="24" y="4649" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(7)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/BufferingUpdateListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4506" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4521" font-size="9" fill="#101010" opacity="0.85">Buffering</text></g>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4632" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4647" font-size="9" fill="#101010" opacity="0.85">Buffering</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/CompletionListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4532" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4547" font-size="9" fill="#101010" opacity="0.85">Completio</text></g>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4658" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4673" font-size="9" fill="#101010" opacity="0.85">Completio</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/ErrorListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4558" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4573" font-size="9" fill="#101010" opacity="0.85">ErrorList</text></g>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4684" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4699" font-size="9" fill="#101010" opacity="0.85">ErrorList</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/InfoListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4584" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4599" font-size="9" fill="#101010" opacity="0.85">InfoListe</text></g>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4710" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4725" font-size="9" fill="#101010" opacity="0.85">InfoListe</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/PreparedListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4610" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4625" font-size="9" fill="#101010" opacity="0.85">PreparedL</text></g>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4736" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4751" font-size="9" fill="#101010" opacity="0.85">PreparedL</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/SeekCompleteListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4636" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4651" font-size="9" fill="#101010" opacity="0.85">SeekCompl</text></g>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4762" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4777" font-size="9" fill="#101010" opacity="0.85">SeekCompl</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/VideoSizeChangedListenerProxy.java
-heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4662" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4677" font-size="9" fill="#101010" opacity="0.85">VideoSize</text></g>
-<text x="24" y="4565" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
+heat=4.5 fan-in=2 fan-out=2 churn=1 sloc=15 fun=2 branch=0</title><rect x="54" y="4788" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4803" font-size="9" fill="#101010" opacity="0.85">VideoSize</text></g>
+<text x="24" y="4691" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoViewSurfaceCallback.java
-heat=4.5 fan-in=1 fan-out=3 churn=1 sloc=79 fun=4 branch=11</title><rect x="54" y="4548" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4563" font-size="9" fill="#101010" opacity="0.85">IjkVideoV</text></g>
-<text x="24" y="4607" fill="#8fb4d9" font-size="13">engine · …nativeplugin <tspan fill="#66707a">(1)</tspan></text>
+heat=4.5 fan-in=1 fan-out=3 churn=1 sloc=79 fun=4 branch=11</title><rect x="54" y="4674" width="22" height="22" rx="4" fill="#3c87bd" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4689" font-size="9" fill="#101010" opacity="0.85">IjkVideoV</text></g>
+<text x="24" y="4733" fill="#8fb4d9" font-size="13">engine · …nativeplugin <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/nativeplugin/NativePluginInstaller.kt
-heat=4.3 fan-in=0 fan-out=2 churn=1 sloc=237 fun=3 branch=39</title><rect x="54" y="4590" width="22" height="22" rx="4" fill="#3c87bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4605" font-size="9" fill="#101010" opacity="0.85">NativePlu</text></g>
-<text x="24" y="4649" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+heat=4.3 fan-in=0 fan-out=2 churn=1 sloc=237 fun=3 branch=39</title><rect x="54" y="4716" width="22" height="22" rx="4" fill="#3c87bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4731" font-size="9" fill="#101010" opacity="0.85">NativePlu</text></g>
+<text x="24" y="4775" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/AndroidTrackInfo.java
-heat=4.3 fan-in=1 fan-out=3 churn=1 sloc=63 fun=8 branch=5</title><rect x="54" y="4632" width="22" height="22" rx="4" fill="#3c87bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4647" font-size="9" fill="#101010" opacity="0.85">AndroidTr</text></g>
-<text x="24" y="4691" fill="#8fb4d9" font-size="13">app · com.tyranor.next <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/MainActivity.kt
-heat=4.2 fan-in=0 fan-out=2 churn=4 sloc=51 fun=0 branch=1</title><rect x="54" y="4674" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4689" font-size="9" fill="#101010" opacity="0.85">MainActiv</text></g>
-<text x="24" y="4733" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/theme/Theme.kt
-heat=4.2 fan-in=0 fan-out=1 churn=5 sloc=49 fun=1 branch=1</title><rect x="54" y="4716" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4731" font-size="9" fill="#101010" opacity="0.85">Theme.kt</text></g>
-<text x="24" y="4775" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=4.3 fan-in=1 fan-out=3 churn=1 sloc=63 fun=8 branch=5</title><rect x="54" y="4758" width="22" height="22" rx="4" fill="#3c87bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4773" font-size="9" fill="#101010" opacity="0.85">AndroidTr</text></g>
+<text x="24" y="4817" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxHttpURLConnection.java
-heat=4.2 fan-in=0 fan-out=1 churn=1 sloc=287 fun=18 branch=53</title><rect x="54" y="4758" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4773" font-size="9" fill="#101010" opacity="0.85">Cocos2dxH</text></g>
-<text x="24" y="4817" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+heat=4.2 fan-in=0 fan-out=1 churn=1 sloc=287 fun=18 branch=53</title><rect x="54" y="4800" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4815" font-size="9" fill="#101010" opacity="0.85">Cocos2dxH</text></g>
+<text x="24" y="4859" fill="#8fb4d9" font-size="13">app · com.tyranor.next <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/MainActivity.kt
+heat=4.1 fan-in=0 fan-out=2 churn=4 sloc=51 fun=0 branch=1</title><rect x="54" y="4842" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4857" font-size="9" fill="#101010" opacity="0.85">MainActiv</text></g>
+<text x="24" y="4901" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/theme/Theme.kt
+heat=4.1 fan-in=0 fan-out=1 churn=5 sloc=49 fun=1 branch=1</title><rect x="54" y="4884" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4899" font-size="9" fill="#101010" opacity="0.85">Theme.kt</text></g>
+<text x="24" y="4943" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/AndroidMediaDataSourceProxy.java
-heat=4.0 fan-in=2 fan-out=1 churn=1 sloc=22 fun=4 branch=0</title><rect x="54" y="4800" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4815" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
-<text x="24" y="4859" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
+heat=4.0 fan-in=2 fan-out=1 churn=1 sloc=22 fun=4 branch=0</title><rect x="54" y="4926" width="22" height="22" rx="4" fill="#3b86bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4941" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
+<text x="24" y="4985" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/tvp/kirikiri2/ShowTextInputRunnable.java
-heat=3.9 fan-in=1 fan-out=3 churn=1 sloc=30 fun=0 branch=1</title><rect x="54" y="4842" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4857" font-size="9" fill="#101010" opacity="0.85">ShowTextI</text></g>
-<text x="24" y="4901" fill="#8fb4d9" font-size="13">app · …ui.components <tspan fill="#66707a">(1)</tspan></text>
+heat=3.9 fan-in=1 fan-out=3 churn=1 sloc=30 fun=0 branch=1</title><rect x="54" y="4968" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4983" font-size="9" fill="#101010" opacity="0.85">ShowTextI</text></g>
+<text x="24" y="5027" fill="#8fb4d9" font-size="13">app · …ui.components <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/components/GameCard.kt
-heat=3.8 fan-in=0 fan-out=3 churn=1 sloc=142 fun=0 branch=6</title><rect x="54" y="4884" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4899" font-size="9" fill="#101010" opacity="0.85">GameCard.</text></g>
-<text x="24" y="4943" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/ui/pages/AppAlertDialog.kt
-heat=3.8 fan-in=0 fan-out=1 churn=3 sloc=131 fun=1 branch=1</title><rect x="54" y="4926" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4941" font-size="9" fill="#101010" opacity="0.85">AppAlertD</text></g>
-<text x="24" y="4985" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
+heat=3.8 fan-in=0 fan-out=3 churn=1 sloc=142 fun=0 branch=6</title><rect x="54" y="5010" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5025" font-size="9" fill="#101010" opacity="0.85">GameCard.</text></g>
+<text x="24" y="5069" fill="#8fb4d9" font-size="13">engine · com.akira.tyranoemu.remote <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid139.java
-heat=3.8 fan-in=1 fan-out=2 churn=2 sloc=20 fun=2 branch=2</title><rect x="54" y="4968" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="4983" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
-<text x="24" y="5027" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
+heat=3.8 fan-in=1 fan-out=2 churn=2 sloc=20 fun=2 branch=2</title><rect x="54" y="5052" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5067" font-size="9" fill="#101010" opacity="0.85">Kirikiroi</text></g>
+<text x="24" y="5111" fill="#8fb4d9" font-size="13">engine · libsdl3 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl3/app/SDLSensorManager.java
-heat=3.8 fan-in=2 fan-out=0 churn=1 sloc=64 fun=4 branch=16</title><rect x="54" y="5010" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5025" font-size="9" fill="#101010" opacity="0.85">SDLSensor</text></g>
-<text x="24" y="5069" fill="#8fb4d9" font-size="13">app · …updater <tspan fill="#66707a">(1)</tspan></text>
+heat=3.8 fan-in=2 fan-out=0 churn=1 sloc=64 fun=4 branch=16</title><rect x="54" y="5094" width="22" height="22" rx="4" fill="#3a85bc" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5109" font-size="9" fill="#101010" opacity="0.85">SDLSensor</text></g>
+<text x="24" y="5153" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/ui/pages/AppAlertDialog.kt
+heat=3.7 fan-in=0 fan-out=1 churn=3 sloc=131 fun=1 branch=1</title><rect x="54" y="5136" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5151" font-size="9" fill="#101010" opacity="0.85">AppAlertD</text></g>
+<text x="24" y="5195" fill="#8fb4d9" font-size="13">app · …updater <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/updater/GitHubUpdateChecker.kt
-heat=3.7 fan-in=1 fan-out=0 churn=2 sloc=122 fun=1 branch=7</title><rect x="54" y="5052" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5067" font-size="9" fill="#101010" opacity="0.85">GitHubUpd</text></g>
-<text x="24" y="5111" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(2)</tspan></text>
+heat=3.7 fan-in=1 fan-out=0 churn=2 sloc=122 fun=1 branch=7</title><rect x="54" y="5178" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5193" font-size="9" fill="#101010" opacity="0.85">GitHubUpd</text></g>
+<text x="24" y="5237" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(2)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/CodecLongNameFormatter.java
-heat=3.7 fan-in=1 fan-out=3 churn=1 sloc=13 fun=2 branch=0</title><rect x="54" y="5094" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5109" font-size="9" fill="#101010" opacity="0.85">CodecLong</text></g>
+heat=3.7 fan-in=1 fan-out=3 churn=1 sloc=13 fun=2 branch=0</title><rect x="54" y="5220" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5235" font-size="9" fill="#101010" opacity="0.85">CodecLong</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/CodecNameFormatter.java
-heat=3.7 fan-in=1 fan-out=3 churn=1 sloc=13 fun=2 branch=0</title><rect x="54" y="5120" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5135" font-size="9" fill="#101010" opacity="0.85">CodecName</text></g>
-<text x="24" y="5153" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
+heat=3.7 fan-in=1 fan-out=3 churn=1 sloc=13 fun=2 branch=0</title><rect x="54" y="5246" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5261" font-size="9" fill="#101010" opacity="0.85">CodecName</text></g>
+<text x="24" y="5279" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoViewListener.java
-heat=3.7 fan-in=1 fan-out=2 churn=1 sloc=69 fun=6 branch=14</title><rect x="54" y="5136" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5151" font-size="9" fill="#101010" opacity="0.85">IjkVideoV</text></g>
-<text x="24" y="5195" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=3.7 fan-in=1 fan-out=2 churn=1 sloc=69 fun=6 branch=14</title><rect x="54" y="5262" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5277" font-size="9" fill="#101010" opacity="0.85">IjkVideoV</text></g>
+<text x="24" y="5321" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxSound.java
-heat=3.6 fan-in=1 fan-out=0 churn=1 sloc=172 fun=23 branch=29</title><rect x="54" y="5178" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5193" font-size="9" fill="#101010" opacity="0.85">Cocos2dxS</text></g>
-<text x="24" y="5237" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+heat=3.6 fan-in=1 fan-out=0 churn=1 sloc=172 fun=23 branch=29</title><rect x="54" y="5304" width="22" height="22" rx="4" fill="#3985bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5319" font-size="9" fill="#101010" opacity="0.85">Cocos2dxS</text></g>
+<text x="24" y="5363" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/TextureMediaPlayer.java
-heat=3.5 fan-in=0 fan-out=4 churn=1 sloc=67 fun=9 branch=6</title><rect x="54" y="5220" width="22" height="22" rx="4" fill="#3984bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5235" font-size="9" fill="#101010" opacity="0.85">TextureMe</text></g>
-<text x="24" y="5279" fill="#8fb4d9" font-size="13">engine · com.ies_net.artemis <tspan fill="#66707a">(1)</tspan></text>
+heat=3.5 fan-in=0 fan-out=4 churn=1 sloc=67 fun=9 branch=6</title><rect x="54" y="5346" width="22" height="22" rx="4" fill="#3984bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5361" font-size="9" fill="#101010" opacity="0.85">TextureMe</text></g>
+<text x="24" y="5405" fill="#8fb4d9" font-size="13">engine · com.ies_net.artemis <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt
-heat=3.4 fan-in=1 fan-out=1 churn=1 sloc=101 fun=4 branch=6</title><rect x="54" y="5262" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5277" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
-<text x="24" y="5321" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
-<g><title>app/src/main/java/com/tyranor/next/theme/Color.kt
-heat=3.3 fan-in=0 fan-out=1 churn=4 sloc=36 fun=0 branch=4</title><rect x="54" y="5304" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5319" font-size="9" fill="#101010" opacity="0.85">Color.kt</text></g>
-<text x="24" y="5363" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(1)</tspan></text>
+heat=3.4 fan-in=1 fan-out=1 churn=1 sloc=101 fun=4 branch=6</title><rect x="54" y="5388" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5403" font-size="9" fill="#101010" opacity="0.85">ArtemisAc</text></g>
+<text x="24" y="5447" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/common/TimeFormats.kt
-heat=3.3 fan-in=2 fan-out=0 churn=1 sloc=21 fun=2 branch=2</title><rect x="54" y="5346" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5361" font-size="9" fill="#101010" opacity="0.85">TimeForma</text></g>
-<text x="24" y="5405" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
+heat=3.3 fan-in=2 fan-out=0 churn=1 sloc=21 fun=2 branch=2</title><rect x="54" y="5430" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5445" font-size="9" fill="#101010" opacity="0.85">TimeForma</text></g>
+<text x="24" y="5489" fill="#8fb4d9" font-size="13">engine · …tyrano <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/tyrano/TyranoStorage.kt
-heat=3.3 fan-in=1 fan-out=0 churn=2 sloc=90 fun=7 branch=18</title><rect x="54" y="5388" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5403" font-size="9" fill="#101010" opacity="0.85">TyranoSto</text></g>
-<text x="24" y="5447" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxMusic.java
-heat=3.3 fan-in=1 fan-out=0 churn=1 sloc=146 fun=15 branch=24</title><rect x="54" y="5430" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5445" font-size="9" fill="#101010" opacity="0.85">Cocos2dxM</text></g>
-<text x="24" y="5489" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/tvp/kirikiri2/KrTextInputView.java
-heat=3.2 fan-in=1 fan-out=2 churn=1 sloc=27 fun=1 branch=3</title><rect x="54" y="5472" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5487" font-size="9" fill="#101010" opacity="0.85">KrTextInp</text></g>
+heat=3.3 fan-in=1 fan-out=0 churn=2 sloc=90 fun=7 branch=18</title><rect x="54" y="5472" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5487" font-size="9" fill="#101010" opacity="0.85">TyranoSto</text></g>
 <text x="24" y="5531" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxMusic.java
+heat=3.3 fan-in=1 fan-out=0 churn=1 sloc=146 fun=15 branch=24</title><rect x="54" y="5514" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5529" font-size="9" fill="#101010" opacity="0.85">Cocos2dxM</text></g>
+<text x="24" y="5573" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
+<g><title>app/src/main/java/com/tyranor/next/theme/Color.kt
+heat=3.2 fan-in=0 fan-out=1 churn=4 sloc=36 fun=0 branch=4</title><rect x="54" y="5556" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5571" font-size="9" fill="#101010" opacity="0.85">Color.kt</text></g>
+<text x="24" y="5615" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/tvp/kirikiri2/KrTextInputView.java
+heat=3.2 fan-in=1 fan-out=2 churn=1 sloc=27 fun=1 branch=3</title><rect x="54" y="5598" width="22" height="22" rx="4" fill="#3884bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5613" font-size="9" fill="#101010" opacity="0.85">KrTextInp</text></g>
+<text x="24" y="5657" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxEditBox.java
-heat=3.1 fan-in=2 fan-out=0 churn=1 sloc=11 fun=3 branch=0</title><rect x="54" y="5514" width="22" height="22" rx="4" fill="#3783bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5529" font-size="9" fill="#101010" opacity="0.85">Cocos2dxE</text></g>
-<text x="24" y="5573" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+heat=3.1 fan-in=2 fan-out=0 churn=1 sloc=11 fun=3 branch=0</title><rect x="54" y="5640" width="22" height="22" rx="4" fill="#3783bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5655" font-size="9" fill="#101010" opacity="0.85">Cocos2dxE</text></g>
+<text x="24" y="5699" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/ISurfaceTextureHost.java
-heat=3.1 fan-in=2 fan-out=0 churn=1 sloc=6 fun=0 branch=0</title><rect x="54" y="5556" width="22" height="22" rx="4" fill="#3783bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5571" font-size="9" fill="#101010" opacity="0.85">ISurfaceT</text></g>
-<text x="24" y="5615" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxHandler.java
-heat=2.7 fan-in=1 fan-out=1 churn=1 sloc=44 fun=5 branch=2</title><rect x="54" y="5598" width="22" height="22" rx="4" fill="#3682ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5613" font-size="9" fill="#101010" opacity="0.85">Cocos2dxH</text></g>
-<text x="24" y="5657" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/org/tvp/kirikiri2/KrInputConnection.java
-heat=2.6 fan-in=1 fan-out=1 churn=1 sloc=33 fun=1 branch=5</title><rect x="54" y="5640" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5655" font-size="9" fill="#101010" opacity="0.85">KrInputCo</text></g>
-<text x="24" y="5699" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
-<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/AndroidMediaFormat.java
-heat=2.6 fan-in=1 fan-out=1 churn=1 sloc=38 fun=4 branch=3</title><rect x="54" y="5682" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5697" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
+heat=3.1 fan-in=2 fan-out=0 churn=1 sloc=6 fun=0 branch=0</title><rect x="54" y="5682" width="22" height="22" rx="4" fill="#3783bb" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5697" font-size="9" fill="#101010" opacity="0.85">ISurfaceT</text></g>
 <text x="24" y="5741" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxHandler.java
+heat=2.7 fan-in=1 fan-out=1 churn=1 sloc=44 fun=5 branch=2</title><rect x="54" y="5724" width="22" height="22" rx="4" fill="#3682ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5739" font-size="9" fill="#101010" opacity="0.85">Cocos2dxH</text></g>
+<text x="24" y="5783" fill="#8fb4d9" font-size="13">engine · org.tvp.kirikiri2 <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/org/tvp/kirikiri2/KrInputConnection.java
+heat=2.6 fan-in=1 fan-out=1 churn=1 sloc=33 fun=1 branch=5</title><rect x="54" y="5766" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5781" font-size="9" fill="#101010" opacity="0.85">KrInputCo</text></g>
+<text x="24" y="5825" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+<g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/AndroidMediaFormat.java
+heat=2.6 fan-in=1 fan-out=1 churn=1 sloc=38 fun=4 branch=3</title><rect x="54" y="5808" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5823" font-size="9" fill="#101010" opacity="0.85">AndroidMe</text></g>
+<text x="24" y="5867" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxTextInputWraper.java
-heat=2.5 fan-in=1 fan-out=1 churn=1 sloc=29 fun=2 branch=3</title><rect x="54" y="5724" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5739" font-size="9" fill="#101010" opacity="0.85">Cocos2dxT</text></g>
-<text x="24" y="5783" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
+heat=2.5 fan-in=1 fan-out=1 churn=1 sloc=29 fun=2 branch=3</title><rect x="54" y="5850" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5865" font-size="9" fill="#101010" opacity="0.85">Cocos2dxT</text></g>
+<text x="24" y="5909" fill="#8fb4d9" font-size="13">engine · libsdl2 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/libsdl/app/SDLJoystickHandler_API19.java
-heat=2.5 fan-in=1 fan-out=1 churn=1 sloc=26 fun=3 branch=2</title><rect x="54" y="5766" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5781" font-size="9" fill="#101010" opacity="0.85">SDLJoysti</text></g>
-<text x="24" y="5825" fill="#8fb4d9" font-size="13">app · …ui.components <tspan fill="#66707a">(1)</tspan></text>
+heat=2.5 fan-in=1 fan-out=1 churn=1 sloc=26 fun=3 branch=2</title><rect x="54" y="5892" width="22" height="22" rx="4" fill="#3582ba" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5907" font-size="9" fill="#101010" opacity="0.85">SDLJoysti</text></g>
+<text x="24" y="5951" fill="#8fb4d9" font-size="13">app · …ui.components <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/components/GameSorter.kt
-heat=2.4 fan-in=1 fan-out=1 churn=1 sloc=23 fun=1 branch=1</title><rect x="54" y="5808" width="22" height="22" rx="4" fill="#3581b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5823" font-size="9" fill="#101010" opacity="0.85">GameSorte</text></g>
-<text x="24" y="5867" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+heat=2.4 fan-in=1 fan-out=1 churn=1 sloc=23 fun=1 branch=1</title><rect x="54" y="5934" width="22" height="22" rx="4" fill="#3581b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5949" font-size="9" fill="#101010" opacity="0.85">GameSorte</text></g>
+<text x="24" y="5993" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/ISurfaceTextureHolder.java
-heat=2.3 fan-in=1 fan-out=1 churn=1 sloc=8 fun=0 branch=0</title><rect x="54" y="5850" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5865" font-size="9" fill="#101010" opacity="0.85">ISurfaceT</text></g>
-<text x="24" y="5909" fill="#8fb4d9" font-size="13">engine · …ons <tspan fill="#66707a">(1)</tspan></text>
+heat=2.3 fan-in=1 fan-out=1 churn=1 sloc=8 fun=0 branch=0</title><rect x="54" y="5976" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5991" font-size="9" fill="#101010" opacity="0.85">ISurfaceT</text></g>
+<text x="24" y="6035" fill="#8fb4d9" font-size="13">engine · …ons <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/ons/OnsVideoActivity.kt
-heat=2.2 fan-in=1 fan-out=0 churn=1 sloc=58 fun=0 branch=4</title><rect x="54" y="5892" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5907" font-size="9" fill="#101010" opacity="0.85">OnsVideoA</text></g>
-<text x="24" y="5951" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.pragma <tspan fill="#66707a">(1)</tspan></text>
+heat=2.2 fan-in=1 fan-out=0 churn=1 sloc=58 fun=0 branch=4</title><rect x="54" y="6018" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6033" font-size="9" fill="#101010" opacity="0.85">OnsVideoA</text></g>
+<text x="24" y="6077" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.pragma <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/pragma/Pragma.java
-heat=2.2 fan-in=1 fan-out=1 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="5934" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5949" font-size="9" fill="#101010" opacity="0.85">Pragma.ja</text></g>
-<text x="24" y="5993" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
+heat=2.2 fan-in=1 fan-out=1 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6060" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6075" font-size="9" fill="#101010" opacity="0.85">Pragma.ja</text></g>
+<text x="24" y="6119" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.widget <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/widget/package-info.java
-heat=2.2 fan-in=0 fan-out=3 churn=1 sloc=14 fun=0 branch=1</title><rect x="54" y="5976" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="5991" font-size="9" fill="#101010" opacity="0.85">package-i</text></g>
-<text x="24" y="6035" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player_arm64 <tspan fill="#66707a">(1)</tspan></text>
+heat=2.2 fan-in=0 fan-out=3 churn=1 sloc=14 fun=0 branch=1</title><rect x="54" y="6102" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6117" font-size="9" fill="#101010" opacity="0.85">package-i</text></g>
+<text x="24" y="6161" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player_arm64 <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player_arm64/Pragma.java
-heat=2.2 fan-in=1 fan-out=1 churn=1 sloc=4 fun=0 branch=0</title><rect x="54" y="6018" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6033" font-size="9" fill="#101010" opacity="0.85">Pragma.ja</text></g>
-<text x="24" y="6077" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
+heat=2.2 fan-in=1 fan-out=1 churn=1 sloc=4 fun=0 branch=0</title><rect x="54" y="6144" width="22" height="22" rx="4" fill="#3481b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6159" font-size="9" fill="#101010" opacity="0.85">Pragma.ja</text></g>
+<text x="24" y="6203" fill="#8fb4d9" font-size="13">engine · …engine <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/com/core/engine/EngineUiText.kt
-heat=2.0 fan-in=1 fan-out=0 churn=1 sloc=45 fun=2 branch=8</title><rect x="54" y="6060" width="22" height="22" rx="4" fill="#3380b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6075" font-size="9" fill="#101010" opacity="0.85">EngineUiT</text></g>
-<text x="24" y="6119" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(2)</tspan></text>
+heat=2.0 fan-in=1 fan-out=0 churn=1 sloc=45 fun=2 branch=8</title><rect x="54" y="6186" width="22" height="22" rx="4" fill="#3380b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6201" font-size="9" fill="#101010" opacity="0.85">EngineUiT</text></g>
+<text x="24" y="6245" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(2)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/ResizeLayout.java
-heat=2.0 fan-in=1 fan-out=0 churn=1 sloc=41 fun=6 branch=1</title><rect x="54" y="6102" width="22" height="22" rx="4" fill="#3380b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6117" font-size="9" fill="#101010" opacity="0.85">ResizeLay</text></g>
+heat=2.0 fan-in=1 fan-out=0 churn=1 sloc=41 fun=6 branch=1</title><rect x="54" y="6228" width="22" height="22" rx="4" fill="#3380b9" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6243" font-size="9" fill="#101010" opacity="0.85">ResizeLay</text></g>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxBitmap.java
-heat=1.6 fan-in=1 fan-out=0 churn=1 sloc=14 fun=2 branch=0</title><rect x="54" y="6128" width="22" height="22" rx="4" fill="#327fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6143" font-size="9" fill="#101010" opacity="0.85">Cocos2dxB</text></g>
-<text x="24" y="6161" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
+heat=1.6 fan-in=1 fan-out=0 churn=1 sloc=14 fun=2 branch=0</title><rect x="54" y="6254" width="22" height="22" rx="4" fill="#327fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6269" font-size="9" fill="#101010" opacity="0.85">Cocos2dxB</text></g>
+<text x="24" y="6287" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.misc <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/misc/IAndroidIO.java
-heat=1.6 fan-in=1 fan-out=0 churn=1 sloc=8 fun=0 branch=0</title><rect x="54" y="6144" width="22" height="22" rx="4" fill="#327fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6159" font-size="9" fill="#101010" opacity="0.85">IAndroidI</text></g>
-<text x="24" y="6203" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=1.6 fan-in=1 fan-out=0 churn=1 sloc=8 fun=0 branch=0</title><rect x="54" y="6270" width="22" height="22" rx="4" fill="#327fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6285" font-size="9" fill="#101010" opacity="0.85">IAndroidI</text></g>
+<text x="24" y="6329" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxAccelerometer.java
-heat=1.5 fan-in=1 fan-out=0 churn=1 sloc=4 fun=0 branch=0</title><rect x="54" y="6186" width="22" height="22" rx="4" fill="#317fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6201" font-size="9" fill="#101010" opacity="0.85">Cocos2dxA</text></g>
-<text x="24" y="6245" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
+heat=1.5 fan-in=1 fan-out=0 churn=1 sloc=4 fun=0 branch=0</title><rect x="54" y="6312" width="22" height="22" rx="4" fill="#317fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6327" font-size="9" fill="#101010" opacity="0.85">Cocos2dxA</text></g>
+<text x="24" y="6371" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/IjkLibLoader.java
-heat=1.5 fan-in=1 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6228" width="22" height="22" rx="4" fill="#317fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6243" font-size="9" fill="#101010" opacity="0.85">IjkLibLoa</text></g>
-<text x="24" y="6287" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(2)</tspan></text>
+heat=1.5 fan-in=1 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6354" width="22" height="22" rx="4" fill="#317fb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6369" font-size="9" fill="#101010" opacity="0.85">IjkLibLoa</text></g>
+<text x="24" y="6413" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(2)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/common/TopBarIcon.kt
-heat=1.2 fan-in=0 fan-out=0 churn=2 sloc=40 fun=1 branch=0</title><rect x="54" y="6270" width="22" height="22" rx="4" fill="#307eb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6285" font-size="9" fill="#101010" opacity="0.85">TopBarIco</text></g>
+heat=1.2 fan-in=0 fan-out=0 churn=2 sloc=40 fun=1 branch=0</title><rect x="54" y="6396" width="22" height="22" rx="4" fill="#307eb8" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6411" font-size="9" fill="#101010" opacity="0.85">TopBarIco</text></g>
 <g><title>app/src/main/java/com/tyranor/next/ui/common/AppSearchField.kt
-heat=0.8 fan-in=0 fan-out=0 churn=1 sloc=70 fun=1 branch=0</title><rect x="54" y="6296" width="22" height="22" rx="4" fill="#2f7db7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6311" font-size="9" fill="#101010" opacity="0.85">AppSearch</text></g>
-<text x="24" y="6329" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
+heat=0.8 fan-in=0 fan-out=0 churn=1 sloc=70 fun=1 branch=0</title><rect x="54" y="6422" width="22" height="22" rx="4" fill="#2f7db7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6437" font-size="9" fill="#101010" opacity="0.85">AppSearch</text></g>
+<text x="24" y="6455" fill="#8fb4d9" font-size="13">app · …ui.pages <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/pages/PlaceholderPage.kt
-heat=0.6 fan-in=0 fan-out=0 churn=1 sloc=55 fun=0 branch=0</title><rect x="54" y="6312" width="22" height="22" rx="4" fill="#2e7db7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6327" font-size="9" fill="#101010" opacity="0.85">Placehold</text></g>
-<text x="24" y="6371" fill="#8fb4d9" font-size="13">app · …ui.components <tspan fill="#66707a">(1)</tspan></text>
+heat=0.6 fan-in=0 fan-out=0 churn=1 sloc=55 fun=0 branch=0</title><rect x="54" y="6438" width="22" height="22" rx="4" fill="#2e7db7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6453" font-size="9" fill="#101010" opacity="0.85">Placehold</text></g>
+<text x="24" y="6497" fill="#8fb4d9" font-size="13">app · …ui.components <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/components/GameGrid.kt
-heat=0.5 fan-in=0 fan-out=0 churn=1 sloc=43 fun=0 branch=1</title><rect x="54" y="6354" width="22" height="22" rx="4" fill="#2e7cb7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6369" font-size="9" fill="#101010" opacity="0.85">GameGrid.</text></g>
-<text x="24" y="6413" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
+heat=0.5 fan-in=0 fan-out=0 churn=1 sloc=43 fun=0 branch=1</title><rect x="54" y="6480" width="22" height="22" rx="4" fill="#2e7cb7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6495" font-size="9" fill="#101010" opacity="0.85">GameGrid.</text></g>
+<text x="24" y="6539" fill="#8fb4d9" font-size="13">app · …theme <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/theme/Type.kt
-heat=0.4 fan-in=0 fan-out=0 churn=1 sloc=34 fun=0 branch=0</title><rect x="54" y="6396" width="22" height="22" rx="4" fill="#2d7cb7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6411" font-size="9" fill="#101010" opacity="0.85">Type.kt</text></g>
-<text x="24" y="6455" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(1)</tspan></text>
+heat=0.4 fan-in=0 fan-out=0 churn=1 sloc=34 fun=0 branch=0</title><rect x="54" y="6522" width="22" height="22" rx="4" fill="#2d7cb7" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6537" font-size="9" fill="#101010" opacity="0.85">Type.kt</text></g>
+<text x="24" y="6581" fill="#8fb4d9" font-size="13">app · …ui.common <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/ui/common/PressIndication.kt
-heat=0.3 fan-in=0 fan-out=0 churn=1 sloc=26 fun=1 branch=0</title><rect x="54" y="6438" width="22" height="22" rx="4" fill="#2d7cb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6453" font-size="9" fill="#101010" opacity="0.85">PressIndi</text></g>
-<text x="24" y="6497" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=0.3 fan-in=0 fan-out=0 churn=1 sloc=26 fun=1 branch=0</title><rect x="54" y="6564" width="22" height="22" rx="4" fill="#2d7cb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6579" font-size="9" fill="#101010" opacity="0.85">PressIndi</text></g>
+<text x="24" y="6623" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxTypefaces.java
-heat=0.2 fan-in=0 fan-out=0 churn=1 sloc=17 fun=1 branch=3</title><rect x="54" y="6480" width="22" height="22" rx="4" fill="#2d7cb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6495" font-size="9" fill="#101010" opacity="0.85">Cocos2dxT</text></g>
-<text x="24" y="6539" fill="#8fb4d9" font-size="13">app · com.tyranor.next <tspan fill="#66707a">(1)</tspan></text>
+heat=0.2 fan-in=0 fan-out=0 churn=1 sloc=17 fun=1 branch=3</title><rect x="54" y="6606" width="22" height="22" rx="4" fill="#2d7cb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6621" font-size="9" fill="#101010" opacity="0.85">Cocos2dxT</text></g>
+<text x="24" y="6665" fill="#8fb4d9" font-size="13">app · com.tyranor.next <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/Navigation.kt
-heat=0.1 fan-in=0 fan-out=0 churn=1 sloc=8 fun=1 branch=0</title><rect x="54" y="6522" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6537" font-size="9" fill="#101010" opacity="0.85">Navigatio</text></g>
-<text x="24" y="6581" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.annotations <tspan fill="#66707a">(2)</tspan></text>
+heat=0.1 fan-in=0 fan-out=0 churn=1 sloc=8 fun=1 branch=0</title><rect x="54" y="6648" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6663" font-size="9" fill="#101010" opacity="0.85">Navigatio</text></g>
+<text x="24" y="6707" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.annotations <tspan fill="#66707a">(2)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/annotations/AccessedByNative.java
-heat=0.1 fan-in=0 fan-out=0 churn=1 sloc=10 fun=0 branch=0</title><rect x="54" y="6564" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6579" font-size="9" fill="#101010" opacity="0.85">AccessedB</text></g>
+heat=0.1 fan-in=0 fan-out=0 churn=1 sloc=10 fun=0 branch=0</title><rect x="54" y="6690" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6705" font-size="9" fill="#101010" opacity="0.85">AccessedB</text></g>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/annotations/CalledByNative.java
-heat=0.1 fan-in=0 fan-out=0 churn=1 sloc=11 fun=0 branch=0</title><rect x="54" y="6590" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6605" font-size="9" fill="#101010" opacity="0.85">CalledByN</text></g>
-<text x="24" y="6623" fill="#8fb4d9" font-size="13">app · com.tyranor.next <tspan fill="#66707a">(1)</tspan></text>
+heat=0.1 fan-in=0 fan-out=0 churn=1 sloc=11 fun=0 branch=0</title><rect x="54" y="6716" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6731" font-size="9" fill="#101010" opacity="0.85">CalledByN</text></g>
+<text x="24" y="6749" fill="#8fb4d9" font-size="13">app · com.tyranor.next <tspan fill="#66707a">(1)</tspan></text>
 <g><title>app/src/main/java/com/tyranor/next/NavigationKeys.kt
-heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=4 fun=0 branch=0</title><rect x="54" y="6606" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6621" font-size="9" fill="#101010" opacity="0.85">Navigatio</text></g>
-<text x="24" y="6665" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
+heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=4 fun=0 branch=0</title><rect x="54" y="6732" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6747" font-size="9" fill="#101010" opacity="0.85">Navigatio</text></g>
+<text x="24" y="6791" fill="#8fb4d9" font-size="13">engine · org.cocos2dx.lib <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/org/cocos2dx/lib/Cocos2dxDownloader.java
-heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6648" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6663" font-size="9" fill="#101010" opacity="0.85">Cocos2dxD</text></g>
-<text x="24" y="6707" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.exceptions <tspan fill="#66707a">(1)</tspan></text>
+heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6774" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6789" font-size="9" fill="#101010" opacity="0.85">Cocos2dxD</text></g>
+<text x="24" y="6833" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.exceptions <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/exceptions/IjkMediaException.java
-heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6690" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6705" font-size="9" fill="#101010" opacity="0.85">IjkMediaE</text></g>
-<text x="24" y="6749" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.ffmpeg <tspan fill="#66707a">(1)</tspan></text>
+heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6816" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6831" font-size="9" fill="#101010" opacity="0.85">IjkMediaE</text></g>
+<text x="24" y="6875" fill="#8fb4d9" font-size="13">engine · tv.danmaku.ijk.media.player.ffmpeg <tspan fill="#66707a">(1)</tspan></text>
 <g><title>engine/src/main/java/tv/danmaku/ijk/media/player/ffmpeg/FFmpegApi.java
-heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6732" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6747" font-size="9" fill="#101010" opacity="0.85">FFmpegApi</text></g>
+heat=0.0 fan-in=0 fan-out=0 churn=1 sloc=5 fun=0 branch=0</title><rect x="54" y="6858" width="22" height="22" rx="4" fill="#2c7bb6" stroke="#000" stroke-opacity="0.35"/><text x="56" y="6873" font-size="9" fill="#101010" opacity="0.85">FFmpegApi</text></g>
 </svg>

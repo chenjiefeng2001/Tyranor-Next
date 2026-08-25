@@ -105,7 +105,8 @@ android {
     // 引擎原生插件先压缩为 assets/nativeplugins/<engine>.zip，首次启动自动安装到 app 私有目录
     sourceSets {
       getByName("main") {
-        assets.setSrcDirs(listOf("src/main/assets", "build/generated/assets"))
+        assets.directories.clear()
+        assets.directories.addAll(listOf("src/main/assets", "build/generated/assets"))
       }
     }
 }

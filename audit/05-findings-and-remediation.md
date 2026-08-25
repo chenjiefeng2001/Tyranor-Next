@@ -7,7 +7,7 @@
 |---|---|---|---|
 | F-01 | High | 已整改 | 测试覆盖薄弱 |
 | F-02 | Low | 已整改 | 文档与注释偏差（AGENT.md 旧包名；krkr_bridge.cpp 注释库名） |
-| F-03 | Medium | 未整改 | usesCleartextTraffic 全局放行 |
+| F-03 | Medium | 已整改 | usesCleartextTraffic 全局放行 |
 | F-04 | High | 已整改 | 备份规则为空模板 + allowBackup=true |
 | F-05 | Medium | 未整改 | APK 体积 88.5 MB，插件 so 双重打包 |
 | F-06 | Medium | 未整改 | app 侧无多语言资源 |
@@ -61,7 +61,12 @@ c) `README.md` 描述 compileSdk 37/minSdk 26/targetSdk 36 与代码一致，但
 **现状**：application 级 `usesCleartextTraffic="true"`（app Manifest）。
 **影响**：所有 http 明文通信被放行，超出实际需要。实际明文需求仅为：Tyrano 本地环回 HTTP 服务（127.0.0.1）、部分游戏资源站可能为 http、KR 补丁站 zeas2.github.io 为 https。
 **建议**：改用 networkSecurityConfig，仅对 `127.0.0.1`/`localhost` 放行 cleartext，其余强制 TLS；若游戏目录内含 http 资源链接确需放行，按域名白名单收敛。
-**整改记录**：（待填）
+
+### 整改记录
+- 日期：2026-08-25
+- 变更内容：新增 `app/src/main/res/xml/network_security_config.xml`（base-config 强制 TLS + domain-config 仅对 `localhost`/`127.0.0.1` 放行明文）；Manifest 移除 `usesCleartextTraffic="true"` 改挂 `android:networkSecurityConfig`。
+- 影响评估：代码内唯一明文调用点为 TyranoActivity 加载 `http://localhost:<port>/index.html`（TyranoLocalHttpServer 绑定 127.0.0.1，见 F-13），已被白名单覆盖；VNDB/GitHub/zeas2.github.io 等远程请求均为 https 不受影响。若个别游戏脚本引用远端 http 资源将加载失败——属预期收紧，如遇用户反馈再评估域名白名单。
+- 验证方式与结果：`gradlew assembleDebug` + 38 项单测 BUILD SUCCESSFUL；合并产物 Manifest 确认 `networkSecurityConfig="@xml/network_security_config"` 且无 `usesCleartextTraffic` 残留。
 
 ## F-04 [High] 备份规则为空模板且 allowBackup=true
 
@@ -163,7 +168,7 @@ c) `README.md` 描述 compileSdk 37/minSdk 26/targetSdk 36 与代码一致，但
 
 1. **立即**（低成本高收益）：F-02 文档修正、F-10 删除无效标志、F-07 CI 工具链显式化。✅ 已完成（2026-08-25）
 2. **本迭代**：~~F-04 备份规则收紧~~ ✅、~~F-13 loopback 核实~~ ✅ 已核实无风险、~~F-09 UNKNOWN 兜底改造~~ ✅ 均已完成（2026-08-25）
-3. **规划中**：~~F-01 测试补齐~~ ✅ 已完成（2026-08-25）、F-03 networkSecurityConfig、F-11/F-12 许可治理。
+3. **规划中**：~~F-01 测试补齐~~ ✅、~~F-03 networkSecurityConfig~~ ✅ 均已完成（2026-08-25）、F-11/F-12 许可治理。
 4. **发布前决策**：F-05 体积方案（PAD/按需下载）、F-06 多语言范围、F-08 渠道合规材料。
 
 ## 维护约定

@@ -92,7 +92,8 @@
 
 | 契约 | 单一来源 | 说明 |
 |---|---|---|
-| Intent extras 键 | engine/.../com/core/engine/EnginePrefs.kt:9 | engine 不反依赖 app 的前提 |
+| Intent extras 键 | engine/.../com/core/engine/EnginePrefs.kt:9 | engine 不反依赖 app 的前提；**冻结契约，变更须同步 08 报告 C/E 节矩阵** |
+| launchMode / launchTarget extras | EngineLauncher 五分支 putExtra | **无运行时消费方**（诊断/向前兼容标记，见 08 报告 N-02），勿误判为断链缺陷 |
 | prefs 文件分工 | app_settings / yukihub_prefs / tyranor_game_overrides / game_scanner(app) ；onsyuri(ONS gameargs)；yukihub_prefs 由 app 写、engine 读 | 见 F 节 |
 | 插件目录协议 | filesDir/engine_plugins/<engine>/current/{manifest.json, arm64-v8a/*.so} | NativePluginManager.kt:39-41 |
 | 引擎进程隔离 | Manifest 每引擎独立进程 + taskAffinity | engine/src/main/AndroidManifest.xml L13-120 |

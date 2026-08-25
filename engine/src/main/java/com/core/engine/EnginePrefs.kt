@@ -5,6 +5,10 @@ package com.core.engine
  * 主源在 app 模块（APP_PREFS → com.apps.LauncherPreferences.APP_PREFS；
  * KEY_TYRANO_EXTERNAL_NETWORK → com.core.launcher.EngineSaveKeys.KEY_TYRANO_EXTERNAL_NETWORK）。
  * engine 不得反向依赖 app，故在 engine 侧镜像常量作为单一来源，避免各引擎类各自持有字面量副本。
+ *
+ * 冻结契约：本对象全部键与引擎 Intent extras 键均为跨模块冻结契约
+ * （extras 契约矩阵见 audit/08-deep-trace-report.md C/E 节），
+ * 变更任一键名必须同步更新该矩阵并核对 app/engine 双侧读写点。
  */
 object EnginePrefs {
     const val APP_PREFS = "yukihub_prefs"

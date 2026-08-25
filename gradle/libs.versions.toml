@@ -16,6 +16,8 @@ lifecycleViewmodelNav3 = "2.10.0"
 androidxDocumentFile = "1.0.1"
 appcompat = "1.7.0"
 miuix = "0.9.2"
+robolectric = "4.16.1"
+json = "20240303"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
@@ -46,6 +48,8 @@ miuix-ui = { module = "top.yukonga.miuix.kmp:miuix-ui-android", version.ref = "m
 miuix-preference = { module = "top.yukonga.miuix.kmp:miuix-preference-android", version.ref = "miuix" }
 backdrop = { module = "io.github.kyant0:backdrop", version = "1.0.2" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+json = { module = "org.json:json", version.ref = "json" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

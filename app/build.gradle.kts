@@ -95,6 +95,13 @@ android {
       }
     }
 
+    testOptions {
+      unitTests {
+        isIncludeAndroidResources = true
+        isReturnDefaultValues = true
+      }
+    }
+
     // 引擎原生插件先压缩为 assets/nativeplugins/<engine>.zip，首次启动自动安装到 app 私有目录
     sourceSets {
       getByName("main") {
@@ -142,6 +149,8 @@ dependencies {
   // Local tests: jUnit, coroutines, Android runner
   testImplementation(libs.junit)
   testImplementation(libs.kotlinx.coroutines.test)
+  testImplementation(libs.robolectric)
+  testImplementation(libs.json)
 
   // Instrumented tests: jUnit rules and runners
   androidTestImplementation(libs.androidx.test.core)

@@ -105,7 +105,7 @@ object EngineLauncher {
     private fun requestAllFilesAccessIfNeeded(context: Context, game: ScanGame, path: String): String? {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return null
         if (Environment.isExternalStorageManager()) return null
-        if (game.engine == EngineType.KIRIKIRI && EngineScanner.isRemovableStoragePath(path)) return null
+        if (game.engine == EngineType.KIRIKIRI && PathResolver.isRemovableStoragePath(path)) return null
         if (!needsAllFilesAccess(path)) return null
 
         val app = context.applicationContext
@@ -135,7 +135,7 @@ object EngineLauncher {
             normalized.startsWith("/sdcard/") ||
             normalized == "/storage/emulated/0" ||
             normalized.startsWith("/storage/emulated/0/") ||
-            EngineScanner.isRemovableStoragePath(normalized)
+            PathResolver.isRemovableStoragePath(normalized)
     }
 
     /** 构建引擎 Intent；path 为真实文件路径。 */
@@ -227,7 +227,7 @@ object EngineLauncher {
     private fun buildKirikiriIntent(context: Context, path: String, game: ScanGame): Intent {
         val gid = game.uri
         fun <T> or(override: T?, global: T): T = override ?: global
-        val needsSafFallback = EngineScanner.isRemovableStoragePath(path)
+        val needsSafFallback = PathResolver.isRemovableStoragePath(path)
         val kernel = effectiveKrKernel(context, gid, path)
         val launchEntry = pickKrActivateEntry(path, game)
         if (kernel == EngineSettingsStore.KERNEL_KRKRSDL3) {
@@ -328,7 +328,7 @@ object EngineLauncher {
     private fun effectiveKrKernel(context: Context, gid: String, path: String): String {
         val requested = PerGameSettingsStore.getStr(context, gid, PerGameSettingsStore.F_ENGINE_KERNEL)
             ?: EngineSettingsStore.getKrKernel(context)
-        return if (EngineScanner.isRemovableStoragePath(path) && requested == EngineSettingsStore.KERNEL_KRKRSDL3) {
+        return if (PathResolver.isRemovableStoragePath(path) && requested == EngineSettingsStore.KERNEL_KRKRSDL3) {
             EngineSettingsStore.KERNEL_KIRIKIRI2
         } else {
             requested
@@ -339,9 +339,9 @@ object EngineLauncher {
         if (!scoped) return File(path, "savedata")
         return if (kernel == EngineSettingsStore.KERNEL_KRKRSDL3) {
             val baseDir = context.getExternalFilesDir(null) ?: context.filesDir
-            File(File(baseDir, "save"), EngineScanner.safeSaveName(path))
+            File(File(baseDir, "save"), PathResolver.safeSaveName(path))
         } else {
-            File(File(File(context.filesDir, "krkr_mirror"), EngineScanner.safeSaveName(path)), "savedata")
+            File(File(File(context.filesDir, "krkr_mirror"), PathResolver.safeSaveName(path)), "savedata")
         }
     }
 
@@ -504,7 +504,7 @@ object EngineLauncher {
             ?: EngineSettingsStore.isTyranoScopedSaveDir(context)
         val scopedSaveRoot = if (scoped) {
             context.getExternalFilesDir(null)?.let { external ->
-                File(File(File(external, "save"), "tyrano"), EngineScanner.safeSaveName(path)).absolutePath
+                File(File(File(external, "save"), "tyrano"), PathResolver.safeSaveName(path)).absolutePath
             }
         } else {
             null
@@ -621,7 +621,7 @@ object EngineLauncher {
         val uriText = game.uri
 
         // 1) 首选 SAF documentId → 文件路径映射（兼容 child 子目录 document uri）
-        EngineScanner.safUriToPath(uriText)?.let { mapped ->
+        PathResolver.safUriToPath(uriText)?.let { mapped ->
             val f = java.io.File(mapped)
             if (f.isDirectory) return f.absolutePath
         }

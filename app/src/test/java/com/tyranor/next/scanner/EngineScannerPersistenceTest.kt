@@ -25,9 +25,9 @@ class EngineScannerPersistenceTest {
     }
 
     private fun resetCaches() {
-        val instance = EngineScanner::class.java.getDeclaredField("INSTANCE").get(null)
+        val instance = GameStore::class.java.getDeclaredField("INSTANCE").get(null)
         for (name in listOf("gamesCache", "recentGamesCache", "quickLaunchCache")) {
-            EngineScanner::class.java.getDeclaredField(name).apply { isAccessible = true }
+            GameStore::class.java.getDeclaredField(name).apply { isAccessible = true }
                 .set(instance, null)
         }
     }

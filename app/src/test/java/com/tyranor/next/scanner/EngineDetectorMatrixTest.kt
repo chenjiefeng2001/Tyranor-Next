@@ -131,4 +131,41 @@ class EngineDetectorMatrixTest {
         assertEquals(Expected(EngineType.UNKNOWN, 0).engine, detect("readme.md").engine)
         assertEquals(0, detect("readme.md").confidence)
     }
+
+    // ---------- DocumentFile 变体（真机 SAF 路径） ----------
+
+    private fun detectViaDocumentFile(vararg layout: String): EngineScanner.Detection {
+        val root = temporaryFolder.newFolder("game-df-${System.nanoTime()}")
+        for (entry in layout) {
+            val target = File(root, entry)
+            if (entry.endsWith("/")) target.mkdirs() else {
+                target.parentFile?.mkdirs()
+                target.writeText("fixture")
+            }
+        }
+        return EngineScanner.detectEngine(androidx.documentfile.provider.DocumentFile.fromFile(root))
+    }
+
+    @Test
+    fun documentFileVariantMatchesFileVariantOnKeyBranches() {
+        assertEquals(EngineType.ARTEMIS, detectViaDocumentFile("root.pfs", "index.html", "tyrano/").engine)
+        assertEquals(95, detectViaDocumentFile("root.pfs", "index.html", "tyrano/").confidence)
+
+        assertEquals(EngineType.TYRANO, detectViaDocumentFile("index.html", "tyrano/data.ks").engine)
+
+        val mv = detectViaDocumentFile("index.html", "www/js/rpg_core.js")
+        assertEquals(EngineType.RPG_MV, mv.engine)
+        assertEquals(95, mv.confidence)
+
+        assertEquals(EngineType.TYRANO, detectViaDocumentFile("app.asar").engine)
+        assertEquals(80, detectViaDocumentFile("app.asar").confidence)
+
+        val kr = detectViaDocumentFile("data.xp3")
+        assertEquals(EngineType.KIRIKIRI, kr.engine)
+        assertEquals("data.xp3", kr.launchTarget)
+
+        val unknown = detectViaDocumentFile("readme.md")
+        assertEquals(EngineType.UNKNOWN, unknown.engine)
+        assertEquals(0, unknown.confidence)
+    }
 }

@@ -61,6 +61,8 @@ import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.theme.NavWhite
 import com.tyranor.next.ui.common.TimeFormats
 import com.tyranor.next.ui.common.glassNavBottomInset
+import com.tyranor.next.ui.components.GameCard
+import com.tyranor.next.ui.dialogs.GameActionsSheet
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

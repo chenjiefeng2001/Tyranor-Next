@@ -1,0 +1,1754 @@
+{
+ "components": [
+  {
+   "manifest": "app/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "ui.pages.SaveManagementActivity",
+   "process": ":main",
+   "exported": "false"
+  },
+  {
+   "manifest": "app/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "ui.pages.KrkrOnlinePatchActivity",
+   "process": ":main",
+   "exported": "false"
+  },
+  {
+   "manifest": "app/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "ui.pages.EngineSettingsActivity",
+   "process": ":main",
+   "exported": "false"
+  },
+  {
+   "manifest": "app/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "ui.pages.PerGameSettingsActivity",
+   "process": ":main",
+   "exported": "false"
+  },
+  {
+   "manifest": "app/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "ui.pages.AppSettingsActivity",
+   "process": ":main",
+   "exported": "false"
+  },
+  {
+   "manifest": "app/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "MainActivity",
+   "process": ":main",
+   "exported": "true"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.akira.tyranoemu.remote.Kirikiroid139",
+   "process": ":kirikiri2",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.akira.tyranoemu.remote.Kirikiroid134",
+   "process": ":kirikiri2",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.akira.tyranoemu.remote.Kirikiroid126",
+   "process": ":kirikiri2",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.core.krkrsdl3.Krkrsdl3Activity",
+   "process": ":krkrsdl3",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.core.tyrano.TyranoActivity",
+   "process": ":tyrano",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.akira.tyranoemu.remote.ArtemisActivityV1",
+   "process": ":artemis",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.akira.tyranoemu.remote.ArtemisActivityV2",
+   "process": ":artemis.compat",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.akira.tyranoemu.remote.ArtemisActivityV3",
+   "process": ":artemis.compat.v2",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.yuri.onscripter.ONScripter",
+   "process": ":ons",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.core.ons.OnsVideoActivity",
+   "process": ":ons",
+   "exported": "false"
+  },
+  {
+   "manifest": "engine/src/main/AndroidManifest.xml",
+   "kind": "activity",
+   "name": "com.ies_net.artemis.VideoViewActivity",
+   "process": ":artemis",
+   "exported": "false"
+  }
+ ],
+ "hidden_deps": {
+  "System.loadLibrary": [
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:720",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid126.java:28",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid134.java:16",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid139.java:16",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/core/ons/OnsLibLoader.kt:28",
+    "module": "engine",
+    "arg": "ONSPatch"
+   },
+   {
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:13",
+    "module": "engine",
+    "arg": "artemis_audio_bridge"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:299",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java:23",
+    "module": "engine",
+    "arg": "SDL3"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java:24",
+    "module": "engine",
+    "arg": "krkrsdl3"
+   }
+  ],
+  "dlsym": [
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:156",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:157",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:158",
+    "module": "engine",
+    "arg": ""
+   }
+  ],
+  "FindClass(jni)": [
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:199",
+    "module": "engine",
+    "arg": "bridge/NativeBridge"
+   },
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:307",
+    "module": "engine",
+    "arg": "bridge/NativeBridge"
+   },
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:337",
+    "module": "engine",
+    "arg": "bridge/NativeBridge"
+   },
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:724",
+    "module": "engine",
+    "arg": "bridge/NativeBridge"
+   },
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:735",
+    "module": "engine",
+    "arg": "bridge/NativeBridge"
+   }
+  ],
+  "loadLibrary(SDL wrapper)": [
+   {
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:720",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid126.java:28",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid134.java:16",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/Kirikiroid139.java:16",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/com/core/ons/OnsLibLoader.kt:28",
+    "module": "engine",
+    "arg": "ONSPatch"
+   },
+   {
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:13",
+    "module": "engine",
+    "arg": "artemis_audio_bridge"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:299",
+    "module": "engine",
+    "arg": "krkr_bridge_v2"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java:23",
+    "module": "engine",
+    "arg": "SDL3"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java:24",
+    "module": "engine",
+    "arg": "krkrsdl3"
+   },
+   {
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:320",
+    "module": "engine",
+    "arg": "ijkffmpeg"
+   },
+   {
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:321",
+    "module": "engine",
+    "arg": "ijksdl"
+   },
+   {
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:322",
+    "module": "engine",
+    "arg": "ijkplayer"
+   }
+  ],
+  "System.load(abs)": [
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV1.java:13",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV2.java:11",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisActivityV3.java:11",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/java/com/core/nativeplugin/NativeLibraryLoader.kt:57",
+    "module": "engine",
+    "arg": ""
+   }
+  ],
+  "Class.forName": [
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:694",
+    "module": "engine",
+    "arg": "com.apps.LauncherActivity"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:719",
+    "module": "engine",
+    "arg": "com.apps.LauncherActivity"
+   },
+   {
+    "where": "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:748",
+    "module": "engine",
+    "arg": "com.apps.LauncherActivity"
+   },
+   {
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:348",
+    "module": "engine",
+    "arg": "org.libsdl.app.SDLAudioManager"
+   }
+  ],
+  "dlopen": [
+   {
+    "where": "engine/src/main/java/com/bytedance/android/bytehook/ByteHook.java:8",
+    "module": "engine",
+    "arg": "libbytehook.so"
+   }
+  ],
+  "getDeclaredMethod": [
+   {
+    "where": "engine/src/main/java/org/libsdl/app/SDL.java:31",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/java/org/libsdl/app/SDL.java:32",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/java/org/libsdl3/app/SDL.java:67",
+    "module": "engine",
+    "arg": ""
+   },
+   {
+    "where": "engine/src/main/java/org/libsdl3/app/SDL.java:72",
+    "module": "engine",
+    "arg": ""
+   }
+  ],
+  "getDeclaredField": [
+   {
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:348",
+    "module": "engine",
+    "arg": ""
+   }
+  ]
+ },
+ "intent_extras": [
+  {
+   "key": "GAME_DIR",
+   "flow": "混合",
+   "producers": [],
+   "consumers": [
+    "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt:60"
+   ]
+  },
+  {
+   "key": "LENGTH",
+   "flow": "engine内部",
+   "producers": [
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:43"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt:62"
+   ]
+  },
+  {
+   "key": "OFFSET",
+   "flow": "engine内部",
+   "producers": [
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:42"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt:61"
+   ]
+  },
+  {
+   "key": "PATH",
+   "flow": "engine内部",
+   "producers": [
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:41"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt:59"
+   ]
+  },
+  {
+   "key": "SKIP",
+   "flow": "engine内部",
+   "producers": [
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:45"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt:64"
+   ]
+  },
+  {
+   "key": "VOLUME",
+   "flow": "engine内部",
+   "producers": [
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:44"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/ies_net/artemis/VideoViewActivity.kt:63"
+   ]
+  },
+  {
+   "key": "artemisAutoFallback",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:497"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:102"
+   ]
+  },
+  {
+   "key": "artemisFallbackStage",
+   "flow": "engine内部",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:498",
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:116"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:104"
+   ]
+  },
+  {
+   "key": "command",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "engine/src/main/java/tv/danmaku/ijk/media/player/widget/IjkVideoView.java:114"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "darkMode",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:213"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:744",
+    "engine/src/main/java/com/core/krkrsdl3/Krkrsdl3Activity.kt:217"
+   ]
+  },
+  {
+   "key": "default_font",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:285"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:223"
+   ]
+  },
+  {
+   "key": "engineLibName",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:496",
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:118"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "focus",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:247",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:277"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:810",
+    "engine/src/main/java/com/core/krkrsdl3/Krkrsdl3Activity.kt:63"
+   ]
+  },
+  {
+   "key": "force_default_font",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:286"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:236"
+   ]
+  },
+  {
+   "key": "gamePath",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:190",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:240",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:264",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:489",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:514"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/KrPathUtils.kt:43",
+    "engine/src/main/java/com/core/tyrano/TyranoActivity.kt:353",
+    "engine/src/main/java/com/yuri/onscripter/ONScripter.java:81"
+   ]
+  },
+  {
+   "key": "gameSaveRoot",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:267"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:472"
+   ]
+  },
+  {
+   "key": "gameargs",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:187",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:238"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "gamedir",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:242",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:266",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:516"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/KrPathUtils.kt:41",
+    "engine/src/main/java/bridge/KrPathUtils.kt:98",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:515",
+    "engine/src/main/java/com/core/tyrano/TyranoActivity.kt:355",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:259",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:477"
+   ]
+  },
+  {
+   "key": "gameuri",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:188"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "ignorecutout",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:194"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "krEngineVersion",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:279"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KrGLSurfaceView.java:20"
+   ]
+  },
+  {
+   "key": "krkr_engine_prefs",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:293"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:261"
+   ]
+  },
+  {
+   "key": "launchMode",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:193",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:245",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:270",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:492",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:527"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "launchTarget",
+   "flow": "仅生产(疑似死键/原生消费)",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:192",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:244",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:269",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:491",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:518"
+   ],
+   "consumers": []
+  },
+  {
+   "key": "orientation",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:246",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:272",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:493",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:528"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:47",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:849",
+    "engine/src/main/java/com/core/krkrsdl3/Krkrsdl3Activity.kt:123"
+   ]
+  },
+  {
+   "key": "originMode",
+   "flow": "混合",
+   "producers": [],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:98",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:109"
+   ]
+  },
+  {
+   "key": "path",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:189",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:239",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:263",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:488",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:513"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:23",
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:40",
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:106",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:178",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:516",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:788",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:789",
+    "engine/src/main/java/com/core/tyrano/TyranoActivity.kt:352",
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:107",
+    "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:108",
+    "engine/src/main/java/com/yuri/onscripter/ONScripter.java:80"
+   ]
+  },
+  {
+   "key": "permission",
+   "flow": "混合",
+   "producers": [],
+   "consumers": [
+    "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:53"
+   ]
+  },
+  {
+   "key": "primaryColor",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:214"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:689"
+   ]
+  },
+  {
+   "key": "projectRoot",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:241",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:265",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:515"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/KrPathUtils.kt:40",
+    "engine/src/main/java/bridge/KrPathUtils.kt:97",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:338",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:514",
+    "engine/src/main/java/com/core/tyrano/TyranoActivity.kt:354",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:258",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:476"
+   ]
+  },
+  {
+   "key": "rootUri",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:191",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:243",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:268",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:490",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:517"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/KrPathUtils.kt:42",
+    "engine/src/main/java/com/core/tyrano/TyranoActivity.kt:356",
+    "engine/src/main/java/com/yuri/onscripter/ONScripter.java:82"
+   ]
+  },
+  {
+   "key": "safFileFallback",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:271"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/NativeBridge.kt:98",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:502",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:246"
+   ]
+  },
+  {
+   "key": "scopedSaveDir",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:273",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:494",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:529"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/KrPathUtils.kt:74",
+    "engine/src/main/java/com/akira/tyranoemu/remote/ArtemisLauncherBaseActivity.java:31",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:501",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:437"
+   ]
+  },
+  {
+   "key": "scopedSaveRoot",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:275",
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:530"
+   ],
+   "consumers": [
+    "engine/src/main/java/bridge/KrPathUtils.kt:88",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:523",
+    "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:254"
+   ]
+  },
+  {
+   "key": "themeColorCard",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:217"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java:203"
+   ]
+  },
+  {
+   "key": "themeColorOnPrimary",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:216"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java:205"
+   ]
+  },
+  {
+   "key": "themeColorPrimary",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:215"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java:204"
+   ]
+  },
+  {
+   "key": "themeColorText",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:218"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java:206"
+   ]
+  },
+  {
+   "key": "themeColorTextMuted",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:219"
+   ],
+   "consumers": [
+    "engine/src/main/java/org/tvp/kirikiri2/KrDialogStyle.java:207"
+   ]
+  },
+  {
+   "key": "type",
+   "flow": "app→engine",
+   "producers": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:526"
+   ],
+   "consumers": [
+    "engine/src/main/java/com/core/tyrano/TyranoActivity.kt:111"
+   ]
+  },
+  {
+   "key": "uiLanguageTag",
+   "flow": "混合",
+   "producers": [],
+   "consumers": [
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:730",
+    "engine/src/main/java/com/core/engine/EngineUiText.kt:18"
+   ]
+  }
+ ],
+ "shared_prefs": [
+  {
+   "file": "app_settings",
+   "expected_owner": "app",
+   "access_points": [
+    "app/src/main/java/com/tyranor/next/settings/AppSettingsStore.kt:64"
+   ]
+  },
+  {
+   "file": "hidapi",
+   "expected_owner": "??",
+   "access_points": [
+    "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:110"
+   ]
+  },
+  {
+   "file": "krkr_bridge_diagnostics",
+   "expected_owner": "??",
+   "access_points": [
+    "engine/src/main/java/bridge/NativeBridge.kt:88",
+    "engine/src/main/java/com/akira/tyranoemu/remote/KirikiroidLauncherBaseActivity.java:567"
+   ]
+  },
+  {
+   "file": "onsyuri",
+   "expected_owner": "app(写)/engine(读)",
+   "access_points": [
+    "app/src/main/java/com/tyranor/next/settings/EngineSettingsStore.kt:73"
+   ]
+  },
+  {
+   "file": "yukihub_prefs",
+   "expected_owner": "app(写)/engine(读)",
+   "access_points": [
+    "app/src/main/java/com/tyranor/next/scanner/EngineLauncher.kt:461",
+    "app/src/main/java/com/tyranor/next/settings/EngineSettingsStore.kt:70"
+   ]
+  }
+ ],
+ "jni": {
+  "kotlin_external": [
+   {
+    "sym": "initialize",
+    "where": "engine/src/main/java/bridge/NativeBridge.kt:21"
+   },
+   {
+    "sym": "isLaunchSceneReady",
+    "where": "engine/src/main/java/bridge/NativeBridge.kt:22"
+   },
+   {
+    "sym": "launch",
+    "where": "engine/src/main/java/bridge/NativeBridge.kt:23"
+   },
+   {
+    "sym": "interceptor",
+    "where": "engine/src/main/java/bridge/NativeBridge.kt:24"
+   },
+   {
+    "sym": "relocate",
+    "where": "engine/src/main/java/bridge/NativeBridge.kt:25"
+   },
+   {
+    "sym": "write",
+    "where": "engine/src/main/java/bridge/NativeBridge.kt:26"
+   },
+   {
+    "sym": "nativePauseAllSound",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:17"
+   },
+   {
+    "sym": "nativeResumeAllSound",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:18"
+   },
+   {
+    "sym": "EmulateKeyEvent",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:24"
+   },
+   {
+    "sym": "ExecuteTag",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:26"
+   },
+   {
+    "sym": "OnFinishPurchase",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:32"
+   },
+   {
+    "sym": "OnFinishVideo",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:34"
+   },
+   {
+    "sym": "OnReadyPlayAssetDelivery",
+    "where": "engine/src/main/java/com/ies_net/artemis/ArtemisActivity.kt:36"
+   },
+   {
+    "sym": "OnClose",
+    "where": "engine/src/main/java/moe/artemis/gui/Dialog.kt:23"
+   }
+  ],
+  "java_native": [
+   {
+    "sym": "nativeInitJavaCallbacks",
+    "where": "engine/src/main/java/com/yuri/onscripter/ONScripter.java:57"
+   },
+   {
+    "sym": "nativeGetWidth",
+    "where": "engine/src/main/java/com/yuri/onscripter/ONScripter.java:58"
+   },
+   {
+    "sym": "nativeGetHeight",
+    "where": "engine/src/main/java/com/yuri/onscripter/ONScripter.java:59"
+   },
+   {
+    "sym": "onSensorChanged",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxAccelerometer.java:4"
+   },
+   {
+    "sym": "getGLContextAttrs",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxActivity.java:36"
+   },
+   {
+    "sym": "nativeInitBitmapDC",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxBitmap.java:18"
+   },
+   {
+    "sym": "nativeOnProgress",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxDownloader.java:4"
+   },
+   {
+    "sym": "nativeOnFinish",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxDownloader.java:5"
+   },
+   {
+    "sym": "nativeSetApkPath",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxHelper.java:226"
+   },
+   {
+    "sym": "nativeSetContext",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxHelper.java:227"
+   },
+   {
+    "sym": "nativeSetEditTextDialogResult",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxHelper.java:228"
+   },
+   {
+    "sym": "nativeInit",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:42"
+   },
+   {
+    "sym": "nativeOnSurfaceChanged",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:43"
+   },
+   {
+    "sym": "nativeRender",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:44"
+   },
+   {
+    "sym": "nativeOnPause",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:45"
+   },
+   {
+    "sym": "nativeOnResume",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:46"
+   },
+   {
+    "sym": "nativeKeyEvent",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:47"
+   },
+   {
+    "sym": "nativeTouchesBegin",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:48"
+   },
+   {
+    "sym": "nativeTouchesMove",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:49"
+   },
+   {
+    "sym": "nativeTouchesEnd",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:50"
+   },
+   {
+    "sym": "nativeTouchesCancel",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:51"
+   },
+   {
+    "sym": "nativeInsertText",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:52"
+   },
+   {
+    "sym": "nativeDeleteBackward",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:53"
+   },
+   {
+    "sym": "nativeGetContentText",
+    "where": "engine/src/main/java/org/cocos2dx/lib/Cocos2dxRenderer.java:54"
+   },
+   {
+    "sym": "HIDDeviceRegisterCallback",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:87"
+   },
+   {
+    "sym": "HIDDeviceReleaseCallback",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:89"
+   },
+   {
+    "sym": "HIDDeviceConnected",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:300"
+   },
+   {
+    "sym": "HIDDeviceDisconnected",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:302"
+   },
+   {
+    "sym": "HIDDeviceFeatureReport",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:304"
+   },
+   {
+    "sym": "HIDDeviceInputReport",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:306"
+   },
+   {
+    "sym": "HIDDeviceOpenPending",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:308"
+   },
+   {
+    "sym": "HIDDeviceOpenResult",
+    "where": "engine/src/main/java/org/libsdl/app/HIDDeviceManager.java:310"
+   },
+   {
+    "sym": "nativeAddTouch",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:513"
+   },
+   {
+    "sym": "nativeFocusChanged",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:515"
+   },
+   {
+    "sym": "nativeGetHint",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:517"
+   },
+   {
+    "sym": "nativeGetHintBoolean",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:519"
+   },
+   {
+    "sym": "nativeGetVersion",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:521"
+   },
+   {
+    "sym": "nativeLowMemory",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:523"
+   },
+   {
+    "sym": "nativePause",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:525"
+   },
+   {
+    "sym": "nativePermissionResult",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:527"
+   },
+   {
+    "sym": "nativeQuit",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:529"
+   },
+   {
+    "sym": "nativeResume",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:531"
+   },
+   {
+    "sym": "nativeRunMain",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:533"
+   },
+   {
+    "sym": "nativeSendQuit",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:535"
+   },
+   {
+    "sym": "nativeSetScreenResolution",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:537"
+   },
+   {
+    "sym": "nativeSetenv",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:539"
+   },
+   {
+    "sym": "nativeSetupJNI",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:541"
+   },
+   {
+    "sym": "onNativeAccel",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:543"
+   },
+   {
+    "sym": "onNativeClipboardChanged",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:545"
+   },
+   {
+    "sym": "onNativeDropFile",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:547"
+   },
+   {
+    "sym": "onNativeKeyDown",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:549"
+   },
+   {
+    "sym": "onNativeKeyUp",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:551"
+   },
+   {
+    "sym": "onNativeKeyboardFocusLost",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:553"
+   },
+   {
+    "sym": "onNativeLocaleChanged",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:555"
+   },
+   {
+    "sym": "onNativeMouse",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:557"
+   },
+   {
+    "sym": "onNativeOrientationChanged",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:559"
+   },
+   {
+    "sym": "onNativeResize",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:561"
+   },
+   {
+    "sym": "onNativeSoftReturnKey",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:563"
+   },
+   {
+    "sym": "onNativeSurfaceChanged",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:565"
+   },
+   {
+    "sym": "onNativeSurfaceCreated",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:567"
+   },
+   {
+    "sym": "onNativeSurfaceDestroyed",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:569"
+   },
+   {
+    "sym": "onNativeTouch",
+    "where": "engine/src/main/java/org/libsdl/app/SDLActivity.java:571"
+   },
+   {
+    "sym": "nativeSetupJNI",
+    "where": "engine/src/main/java/org/libsdl/app/SDLAudioManager.java:148"
+   },
+   {
+    "sym": "nativeAddHaptic",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:43"
+   },
+   {
+    "sym": "nativeAddJoystick",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:45"
+   },
+   {
+    "sym": "nativeRemoveHaptic",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:47"
+   },
+   {
+    "sym": "nativeRemoveJoystick",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:49"
+   },
+   {
+    "sym": "nativeSetupJNI",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:51"
+   },
+   {
+    "sym": "onNativeHat",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:53"
+   },
+   {
+    "sym": "onNativeJoy",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:55"
+   },
+   {
+    "sym": "onNativePadDown",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:57"
+   },
+   {
+    "sym": "onNativePadUp",
+    "where": "engine/src/main/java/org/libsdl/app/SDLControllerManager.java:59"
+   },
+   {
+    "sym": "nativeCommitText",
+    "where": "engine/src/main/java/org/libsdl/app/SDLInputConnection.java:20"
+   },
+   {
+    "sym": "nativeGenerateScancodeForUnichar",
+    "where": "engine/src/main/java/org/libsdl/app/SDLInputConnection.java:22"
+   },
+   {
+    "sym": "HIDDeviceRegisterCallback",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:688"
+   },
+   {
+    "sym": "HIDDeviceReleaseCallback",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:689"
+   },
+   {
+    "sym": "HIDDeviceConnected",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:691"
+   },
+   {
+    "sym": "HIDDeviceOpenPending",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:692"
+   },
+   {
+    "sym": "HIDDeviceOpenResult",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:693"
+   },
+   {
+    "sym": "HIDDeviceDisconnected",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:694"
+   },
+   {
+    "sym": "HIDDeviceInputReport",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:696"
+   },
+   {
+    "sym": "HIDDeviceReportResponse",
+    "where": "engine/src/main/java/org/libsdl3/app/HIDDeviceManager.java:697"
+   },
+   {
+    "sym": "nativeGetVersion",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1092"
+   },
+   {
+    "sym": "nativeSetupJNI",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1093"
+   },
+   {
+    "sym": "nativeInitMainThread",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1094"
+   },
+   {
+    "sym": "nativeCleanupMainThread",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1095"
+   },
+   {
+    "sym": "nativeRunMain",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1096"
+   },
+   {
+    "sym": "nativeLowMemory",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1097"
+   },
+   {
+    "sym": "nativeSendQuit",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1098"
+   },
+   {
+    "sym": "nativeQuit",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1099"
+   },
+   {
+    "sym": "nativePause",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1100"
+   },
+   {
+    "sym": "nativeResume",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1101"
+   },
+   {
+    "sym": "nativeFocusChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1102"
+   },
+   {
+    "sym": "onNativeDropFile",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1103"
+   },
+   {
+    "sym": "nativeSetScreenResolution",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1104"
+   },
+   {
+    "sym": "onNativeResize",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1105"
+   },
+   {
+    "sym": "onNativeKeyDown",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1106"
+   },
+   {
+    "sym": "onNativeKeyUp",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1107"
+   },
+   {
+    "sym": "onNativeSoftReturnKey",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1108"
+   },
+   {
+    "sym": "onNativeKeyboardFocusLost",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1109"
+   },
+   {
+    "sym": "onNativeMouse",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1110"
+   },
+   {
+    "sym": "onNativeTouch",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1111"
+   },
+   {
+    "sym": "onNativePen",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1114"
+   },
+   {
+    "sym": "onNativeAccel",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1115"
+   },
+   {
+    "sym": "onNativeClipboardChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1116"
+   },
+   {
+    "sym": "onNativeSurfaceCreated",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1117"
+   },
+   {
+    "sym": "onNativeSurfaceChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1118"
+   },
+   {
+    "sym": "onNativeSurfaceDestroyed",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1119"
+   },
+   {
+    "sym": "onNativeScreenKeyboardShown",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1120"
+   },
+   {
+    "sym": "onNativeScreenKeyboardHidden",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1121"
+   },
+   {
+    "sym": "nativeGetHint",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1122"
+   },
+   {
+    "sym": "nativeGetHintBoolean",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1123"
+   },
+   {
+    "sym": "nativeSetenv",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1124"
+   },
+   {
+    "sym": "nativeSetNaturalOrientation",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1125"
+   },
+   {
+    "sym": "onNativeRotationChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1126"
+   },
+   {
+    "sym": "onNativeInsetsChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1127"
+   },
+   {
+    "sym": "nativeAddTouch",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1128"
+   },
+   {
+    "sym": "nativePermissionResult",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1129"
+   },
+   {
+    "sym": "onNativeLocaleChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1130"
+   },
+   {
+    "sym": "onNativeDarkModeChanged",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1131"
+   },
+   {
+    "sym": "nativeAllowRecreateActivity",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1132"
+   },
+   {
+    "sym": "nativeCheckSDLThreadCounter",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1133"
+   },
+   {
+    "sym": "onNativeFileDialog",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1134"
+   },
+   {
+    "sym": "onNativePinchStart",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1135"
+   },
+   {
+    "sym": "onNativePinchUpdate",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1136"
+   },
+   {
+    "sym": "onNativePinchEnd",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLActivity.java:1137"
+   },
+   {
+    "sym": "nativeSetupJNI",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLAudioManager.java:120"
+   },
+   {
+    "sym": "nativeRemoveAudioDevice",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLAudioManager.java:122"
+   },
+   {
+    "sym": "nativeAddAudioDevice",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLAudioManager.java:124"
+   },
+   {
+    "sym": "nativeSetupJNI",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:32"
+   },
+   {
+    "sym": "nativeAddJoystick",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:34"
+   },
+   {
+    "sym": "nativeRemoveJoystick",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:39"
+   },
+   {
+    "sym": "nativeAddHaptic",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:40"
+   },
+   {
+    "sym": "nativeRemoveHaptic",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:41"
+   },
+   {
+    "sym": "onNativePadDown",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:42"
+   },
+   {
+    "sym": "onNativePadUp",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:43"
+   },
+   {
+    "sym": "onNativeJoy",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:44"
+   },
+   {
+    "sym": "onNativeHat",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:46"
+   },
+   {
+    "sym": "onNativeJoySensor",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLControllerManager.java:48"
+   },
+   {
+    "sym": "nativeCommitText",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLInputConnection.java:132"
+   },
+   {
+    "sym": "nativeGenerateScancodeForUnichar",
+    "where": "engine/src/main/java/org/libsdl3/app/SDLInputConnection.java:134"
+   },
+   {
+    "sym": "initDump",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:277"
+   },
+   {
+    "sym": "nativeOnLowMemory",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:278"
+   },
+   {
+    "sym": "nativeGetHideSystemButton",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:279"
+   },
+   {
+    "sym": "nativeCharInput",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:280"
+   },
+   {
+    "sym": "nativeCommitText",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:281"
+   },
+   {
+    "sym": "nativeDeleteBackward",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:282"
+   },
+   {
+    "sym": "nativeHoverMoved",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:283"
+   },
+   {
+    "sym": "nativeInsertText",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:284"
+   },
+   {
+    "sym": "nativeKeyAction",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:285"
+   },
+   {
+    "sym": "nativeMouseScrolled",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:286"
+   },
+   {
+    "sym": "nativeTouchesBegin",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:287"
+   },
+   {
+    "sym": "nativeTouchesCancel",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:288"
+   },
+   {
+    "sym": "nativeTouchesEnd",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:289"
+   },
+   {
+    "sym": "nativeTouchesMove",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:290"
+   },
+   {
+    "sym": "onBannerSizeChanged",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:291"
+   },
+   {
+    "sym": "onMessageBoxOK",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:292"
+   },
+   {
+    "sym": "onMessageBoxText",
+    "where": "engine/src/main/java/org/tvp/kirikiri2/KR2Activity.java:293"
+   },
+   {
+    "sym": "setNativeAssetManager",
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRActivity.java:100"
+   },
+   {
+    "sym": "nativeOnMenuItemClick",
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRCall.java:271"
+   },
+   {
+    "sym": "nativeOnMenuDismiss",
+    "where": "engine/src/main/java/org/tvp/krkrsdl3/KRKRCall.java:272"
+   },
+   {
+    "sym": "av_base64_encode",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/ffmpeg/FFmpegApi.java:5"
+   },
+   {
+    "sym": "_getAudioCodecInfo",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:231"
+   },
+   {
+    "sym": "_getColorFormatName",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:233"
+   },
+   {
+    "sym": "_getLoopCount",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:235"
+   },
+   {
+    "sym": "_getMediaMeta",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:237"
+   },
+   {
+    "sym": "_getPropertyFloat",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:239"
+   },
+   {
+    "sym": "_getPropertyLong",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:241"
+   },
+   {
+    "sym": "_getVideoCodecInfo",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:243"
+   },
+   {
+    "sym": "_pause",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:245"
+   },
+   {
+    "sym": "_release",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:247"
+   },
+   {
+    "sym": "_reset",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:249"
+   },
+   {
+    "sym": "_setAndroidIOCallback",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:251"
+   },
+   {
+    "sym": "_setDataSource",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:253"
+   },
+   {
+    "sym": "_setDataSource",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:255"
+   },
+   {
+    "sym": "_setDataSourceFd",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:257"
+   },
+   {
+    "sym": "_setFrameAtTime",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:259"
+   },
+   {
+    "sym": "_setLoopCount",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:261"
+   },
+   {
+    "sym": "_setOption",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:263"
+   },
+   {
+    "sym": "_setOption",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:265"
+   },
+   {
+    "sym": "_setPropertyFloat",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:267"
+   },
+   {
+    "sym": "_setPropertyLong",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:269"
+   },
+   {
+    "sym": "_setStreamSelected",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:271"
+   },
+   {
+    "sym": "_setVideoSurface",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:273"
+   },
+   {
+    "sym": "_start",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:275"
+   },
+   {
+    "sym": "_stop",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:277"
+   },
+   {
+    "sym": "native_finalize",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:331"
+   },
+   {
+    "sym": "native_init",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:333"
+   },
+   {
+    "sym": "native_message_loop",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:335"
+   },
+   {
+    "sym": "native_profileBegin",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:337"
+   },
+   {
+    "sym": "native_profileEnd",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:339"
+   },
+   {
+    "sym": "native_setLogLevel",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:341"
+   },
+   {
+    "sym": "native_setup",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:343"
+   },
+   {
+    "sym": "_prepareAsync",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:422"
+   },
+   {
+    "sym": "getAudioSessionId",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:458"
+   },
+   {
+    "sym": "getCurrentPosition",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:481"
+   },
+   {
+    "sym": "getDuration",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:493"
+   },
+   {
+    "sym": "isPlaying",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:628"
+   },
+   {
+    "sym": "seekTo",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:665"
+   },
+   {
+    "sym": "setVolume",
+    "where": "engine/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java:752"
+   }
+  ],
+  "cpp_exports": [],
+  "register_natives": [
+   {
+    "sym": "initialize",
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:745"
+   },
+   {
+    "sym": "launch",
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:747"
+   },
+   {
+    "sym": "isLaunchSceneReady",
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:749"
+   },
+   {
+    "sym": "interceptor",
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:751"
+   },
+   {
+    "sym": "relocate",
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:753"
+   },
+   {
+    "sym": "write",
+    "where": "engine/src/main/cpp/krkr_bridge.cpp:755"
+   }
+  ]
+ },
+ "assets": [
+  {
+   "path": "$ASSET_PLUGIN_DIR/$engineId.zip",
+   "where": "app/src/main/java/com/tyranor/next/scanner/EnginePluginBootstrap.kt:148"
+  }
+ ]
+}

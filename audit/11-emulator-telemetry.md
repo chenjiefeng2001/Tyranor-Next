@@ -52,7 +52,32 @@ totalPss 118MB（code 74MB 占大头——debug 未压缩 + 多引擎类驻留�
 
 ## 7. 下一步（按序）
 
-1. release-signed 构建同脚本复测 → 分离「debug 构建」因素（R-12 关联：体积方案落地后顺带）。
+1. ~~release-signed 构建同脚本复测~~ → 已完成，见 §8。
 2. AGENT.md 实机流程复测 → 得到代表性绝对值，替换本报告为真机基线。
-3. 引入 Baseline Profile（compose 官方插件）→ 针对 §3.2 验证。
+3. 引入 Baseline Profile（compose 官方插件）→ 在 release 基线（§8）上继续压榨冷启动。
 4. 若真机仍 >2s：以 perfetto-coldstart.pftrace 分析法替代（需 trace_processor），定位主线程自旋的具体编译/绘制段。
+
+---
+
+## 8. 判别实验结果：release 构建复测（2026-08-25 追加）
+
+`assembleRelease`（R8 minify + shrinkResources，本地自动回退 debug 签名）重装同一模拟器，同脚本复测：
+
+| 指标 | debug | **release** | Δ |
+|---|---|---|---|
+| 冷启动 ×5 中位 | ~10.6s（4/5 轮 UNKNOWN 超时） | **~3.9s（5/5 全部 COLD 正常上报）** | **−63%** |
+| 冷启动区间 | 10.4–13.2s | 3.1–4.1s | |
+| 首次启动（含插件 provisioning） | WaitTime 15s 超时 + 3 份 ANR 转储 | **TotalTime 4.5s，COLD** | 超时与 ANR 消失 |
+| 总 PSS | 118MB | **52MB**（code 74MB→5.3MB） | −56% |
+| APK 体积 | 88.5MB | **68.1MB** | −23%（F-05 关联数据点） |
+| UI 掉帧率 | 73%（370 帧） | 79%（174 帧，样本减半+软渲染噪声主导） | 不可比，维持真机复核项 |
+
+### 结论修订
+
+1. **§3 根因排序修订：debug 构建因素（JIT + 可调试 + 全量校验）为冻结主因**——单一变量切换即消除 10s 量级延迟与全部 ANR。EGL 初始化间隙降级为次要/伴生现象（release 下未再观测到可感冻结）。
+2. §2 三项排除结论不变（后台解压 / 经典导航 / 缓存路径）。
+3. 工程含义：
+   - 性能回归测试与 CI 冒烟断言必须基于 **release 构建**（debug 数据无代表性，已在本轮实证）；
+   - F-05 体积讨论新增锚点：R8 对该应用实际削减 20MB APK / 66MB 运行内存；
+   - Baseline Profile（原 §7.3）改为在 release 基线 3.9s 上评估增量收益。
+4. 遗留：UI 掉帧率两轮均 >70% 但互相矛盾（帧总数差一倍），确认为软渲染噪声，判定需真机；`telemetry.json` 的 `apk` 字段固定显示 app-debug.apk 为脚本展示瑕疵，不影响数据。

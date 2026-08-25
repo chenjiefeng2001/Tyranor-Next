@@ -2,44 +2,49 @@
  "serial": "emulator-5554",
  "apk": "app-debug.apk",
  "firstLaunch": {
-  "WaitTime": 15004,
-  "LaunchState": "UNKNOWN"
+  "TotalTime": 4492,
+  "WaitTime": 4537,
+  "LaunchState": "COLD"
  },
  "coldStarts": [
   {
-   "TotalTime": 13191,
-   "WaitTime": 13279,
+   "TotalTime": 4003,
+   "WaitTime": 4010,
    "LaunchState": "COLD"
   },
   {
-   "WaitTime": 10435,
-   "LaunchState": "UNKNOWN"
+   "TotalTime": 3879,
+   "WaitTime": 3934,
+   "LaunchState": "COLD"
   },
   {
-   "WaitTime": 10618,
-   "LaunchState": "UNKNOWN"
+   "TotalTime": 4051,
+   "WaitTime": 4054,
+   "LaunchState": "COLD"
   },
   {
-   "WaitTime": 10688,
-   "LaunchState": "UNKNOWN"
+   "TotalTime": 3125,
+   "WaitTime": 3127,
+   "LaunchState": "COLD"
   },
   {
-   "WaitTime": 10618,
-   "LaunchState": "UNKNOWN"
+   "TotalTime": 3071,
+   "WaitTime": 3077,
+   "LaunchState": "COLD"
   }
  ],
  "coldStartSummary": {
-  "n": 1,
-  "median": 13191,
-  "min": 13191,
-  "max": 13191,
-  "stdev": 0
+  "n": 5,
+  "median": 3879,
+  "min": 3071,
+  "max": 4051,
+  "stdev": 486.3
  },
  "meminfo": {
-  "totalPssKb": 120681,
-  "javaHeapKb": 11192,
-  "nativeHeapKb": 14876,
-  "codeKb": 74972,
+  "totalPssKb": 52081,
+  "javaHeapKb": 6684,
+  "nativeHeapKb": 23292,
+  "codeKb": 5340,
   "graphicsKb": 0
  },
  "perfetto": {
@@ -48,11 +53,11 @@
  },
  "uiTraversal": {
   "rounds": 3,
-  "totalFrames": 370,
-  "jankyFrames": 271,
-  "jankyPct": 73.24,
-  "frameMsP50": 38,
-  "frameMsP90": 65,
-  "frameMsP95": 200
+  "totalFrames": 174,
+  "jankyFrames": 138,
+  "jankyPct": 79.31,
+  "frameMsP50": 53,
+  "frameMsP90": 129,
+  "frameMsP95": 350
  }
 }

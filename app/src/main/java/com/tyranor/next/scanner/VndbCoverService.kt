@@ -160,6 +160,9 @@ object VndbCoverService {
         val target = File(dir, "${prefix}_${stableKey(imageUrl)}.jpg")
         if (target.isFile && target.length() > 0) return Uri.fromFile(target).toString()
 
+        // 写临时文件成功后再原子改名，避免协程取消/进程中断留下半截图片被永久缓存命中
+        val part = File(dir, "${target.name}.part")
+
         var conn: HttpURLConnection? = null
         return try {
             conn = (URL(imageUrl).openConnection() as HttpURLConnection).apply {
@@ -173,7 +176,7 @@ object VndbCoverService {
             if (conn.contentLengthLong > MAX_COVER_BYTES) return null
             var total = 0L
             conn.inputStream.use { input ->
-                FileOutputStream(target).use { output ->
+                FileOutputStream(part).use { output ->
                     val buffer = ByteArray(8192)
                     while (true) {
                         val read = input.read(buffer)
@@ -184,9 +187,13 @@ object VndbCoverService {
                     }
                 }
             }
+            if (!part.renameTo(target)) {
+                part.delete()
+                return null
+            }
             Uri.fromFile(target).toString()
         } catch (_: Exception) {
-            target.delete()
+            part.delete()
             null
         } finally {
             conn?.disconnect()

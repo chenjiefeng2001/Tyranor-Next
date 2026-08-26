@@ -159,4 +159,35 @@ class TyranoLocalHttpServerTest {
 
         assertThrows(IOException::class.java) { get(port, "/index.html") }
     }
+
+    @Test
+    fun concurrentRangeRequestsAreAllServedCorrectly() {
+        val payload = (0 until 200).joinToString("") { (it % 10).toString() } // 200 字节确定性内容
+        val port = start(files = mapOf("bulk.bin" to payload))
+
+        val clients = 8
+        val pool = java.util.concurrent.Executors.newFixedThreadPool(clients)
+        val latch = java.util.concurrent.CountDownLatch(1)
+        try {
+            val tasks = (0 until clients).map { idx ->
+                pool.submit(java.util.concurrent.Callable {
+                    latch.await() // 同时起跑，制造真实并发窗口
+                    val s = idx * 10
+                    val e = s + 9
+                    val (head, body) = get(port, "/bulk.bin", rangeHeader = "bytes=$s-$e")
+                    Triple(head.startsWith("HTTP/1.1 206"), body, s)
+                })
+            }
+            latch.countDown()
+            val results = tasks.map { it.get(30, java.util.concurrent.TimeUnit.SECONDS) }
+
+            assertEquals(clients, results.size)
+            for ((index, r) in results.withIndex()) {
+                assertTrue("client=$index 应返回 206", r.first)
+                assertEquals(payload.substring(index * 10, index * 10 + 10), r.second)
+            }
+        } finally {
+            pool.shutdownNow()
+        }
+    }
 }

@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "app/build.gradle.kts"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -22,6 +23,7 @@ jobs:
       changed: ${{ steps.version.outputs.changed }}
       version_name: ${{ steps.version.outputs.version_name }}
       version_code: ${{ steps.version.outputs.version_code }}
+      can_sign: ${{ steps.version.outputs.can_sign }}
 
     steps:
       - name: Checkout
@@ -31,6 +33,11 @@ jobs:
 
       - name: Detect app version change
         id: version
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           before="${{ github.event.before }}"
           after="${{ github.sha }}"
@@ -53,10 +60,33 @@ jobs:
           echo "version_name=${version_name}" >> "${GITHUB_OUTPUT}"
           echo "version_code=${version_code}" >> "${GITHUB_OUTPUT}"
 
+          can_sign=true
+          for name in ANDROID_KEYSTORE_BASE64 ANDROID_KEYSTORE_PASSWORD ANDROID_KEY_ALIAS ANDROID_KEY_PASSWORD; do
+            if [[ -z "${!name}" ]]; then
+              can_sign=false
+            fi
+          done
+          echo "can_sign=${can_sign}" >> "${GITHUB_OUTPUT}"
+
+  skip-beta-no-signing:
+    name: Beta release skipped (signing secrets not configured)
+    needs: detect-version-change
+    if: needs.detect-version-change.outputs.changed == 'true' && needs.detect-version-change.outputs.can_sign != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Explain
+        run: |
+          echo "::notice::Version changed but signing secrets (ANDROID_KEYSTORE_BASE64 /" 
+          echo "::notice::ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD)"
+          echo "::notice::are not configured on this repository — skipping beta release."
+          echo "::notice::Configure them under Settings → Secrets and variables → Actions to enable releases."
+
   release-beta:
     name: Release Beta APK
     needs: detect-version-change
-    if: needs.detect-version-change.outputs.changed == 'true'
+    if: needs.detect-version-change.outputs.changed == 'true' && needs.detect-version-change.outputs.can_sign == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 60
 

@@ -44,6 +44,46 @@ object EngineLauncher {
         EngineType.ARTEMIS,
     ).sortedByDescending { it.displayName.length }
 
+    /**
+     * 外部显式跳转（upstream#28）：`tyranor://launch?path=<游戏目录>&engine=<可选>&launchFile=<可选>`
+     * 供第三方前端一键拉起游戏。path 接受绝对路径或 file:// URL；engine 省略时按目录特征自动识别。
+     */
+    internal data class ExternalLaunch(val path: String, val engine: EngineType?, val launchFile: String?)
+
+    internal fun parseExternalLaunchLink(link: Uri): ExternalLaunch? {
+        if (link.host != "launch") return null
+        val rawPath = link.getQueryParameter("path")?.trim().takeUnless { it.isNullOrEmpty() }
+            ?: return null
+        val path = rawPath!!.removePrefix("file://").removePrefix("file:")
+        if (path.isBlank()) return null
+        val engine = link.getQueryParameter("engine")?.trim()
+            ?.takeIf { it.isNotBlank() }
+            ?.let { name -> runCatching { EngineType.valueOf(name.uppercase()).takeIf { e -> e != EngineType.UNKNOWN } }.getOrNull() }
+        val launchFile = link.getQueryParameter("launchFile")?.trim()?.takeIf { it.isNotBlank() }
+        return ExternalLaunch(path, engine, launchFile)
+    }
+
+    /** 处理外部跳转链接。返回错误文案；null 表示成功发起（与 [launch] 一致）。 */
+    fun launchFromExternalLink(context: Context, link: Uri): String? {
+        val parsed = parseExternalLaunchLink(link)
+            ?: return "链接格式无效：应为 tyranor://launch?path=<游戏目录>"
+        val dir = java.io.File(parsed.path)
+        if (!dir.isDirectory) return "游戏目录不存在：${parsed.path}"
+        val engine = parsed.engine
+            ?: EngineScanner.detectEngine(dir).engine.takeIf { it != EngineType.UNKNOWN }
+            ?: return "未能识别该游戏的引擎类型，暂不支持启动"
+        return launch(
+            context,
+            ScanGame(
+                title = dir.name,
+                uri = dir.absolutePath,
+                engine = engine,
+                launchTarget = "",
+                launchFile = parsed.launchFile,
+            ),
+        )
+    }
+
     /** Artemis 补丁确认弹窗的用户选择：
      *  本次 = 仅当次应用；总是 = 记住为全局 auto；不再 = 记住为全局 off。 */
     enum class ArtemisPatchChoice { ONCE, ALWAYS, NEVER }

@@ -12,6 +12,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import com.tyranor.next.scanner.EngineLauncher
 import com.tyranor.next.scanner.EnginePluginBootstrap
 import com.tyranor.next.theme.AppThemeColors
 import com.tyranor.next.theme.TyranorNextTheme
@@ -20,7 +21,9 @@ class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    // 首启自动安装引擎原生插件（幂等，放在后台线程避免首次复制阻塞 UI）
+    handleExternalLaunch(intent)
+
+    // 插件自动安装与原始数据等，在后台线程避免首次进入卡 UI。
     Thread {
       EnginePluginBootstrap.provisionIfNeeded(applicationContext)
     }.apply { isDaemon = true }.start()
@@ -52,6 +55,20 @@ class MainActivity : ComponentActivity() {
         }
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) { MainNavigation() }
       }
+    }
+  }
+
+  override fun onNewIntent(intent: android.content.Intent) {
+    super.onNewIntent(intent)
+    // 已存活的实例再次被外部拉起时同样分发（launchMode 为 standard，冷启走 onCreate）
+    handleExternalLaunch(intent)
+  }
+
+  private fun handleExternalLaunch(intent: android.content.Intent?) {
+    val data = intent?.data ?: return
+    if (intent.action != android.content.Intent.ACTION_VIEW || data.host != "launch") return
+    EngineLauncher.launchFromExternalLink(this, data)?.let { error ->
+      android.widget.Toast.makeText(this, error, android.widget.Toast.LENGTH_LONG).show()
     }
   }
 }

@@ -36,6 +36,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- 外部显式跳转（upstream#28）：tyranor://launch?path=<游戏目录>&engine=<可选>&launchFile=<可选> -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tyranor" android:host="launch" />
+            </intent-filter>
         </activity>
     </application>
 

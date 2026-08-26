@@ -117,18 +117,30 @@ private fun decodeCoverThumbnail(context: android.content.Context, uriText: Stri
     context.contentResolver.openInputStream(uri)?.use { BitmapFactory.decodeStream(it, null, bounds) }
     if (bounds.outWidth <= 0 || bounds.outHeight <= 0) return@runCatching null
 
-    var sampleSize = 1
-    while (bounds.outWidth / (sampleSize * 2) >= CoverDecodeMaxWidthPx &&
-        bounds.outHeight / (sampleSize * 2) >= CoverDecodeMaxHeightPx
-    ) {
-        sampleSize *= 2
-    }
     val options = BitmapFactory.Options().apply {
-        inSampleSize = sampleSize
+        inSampleSize = computeCoverInSampleSize(bounds.outWidth, bounds.outHeight)
         inPreferredConfig = Bitmap.Config.ARGB_8888
     }
     context.contentResolver.openInputStream(uri)?.use { BitmapFactory.decodeStream(it, null, options) }
 }.getOrNull()
+
+/**
+ * 计算 2 的幂采样步长：逐步翻倍直到任一边界不再满足「减半后仍 ≥ 目标尺寸」。
+ * 纯函数，独立于 Android 解码器，便于边界测试。
+ */
+internal fun computeCoverInSampleSize(
+    width: Int,
+    height: Int,
+    maxWidthPx: Int = CoverDecodeMaxWidthPx,
+    maxHeightPx: Int = CoverDecodeMaxHeightPx,
+): Int {
+    var sampleSize = 1
+    if (width <= 0 || height <= 0) return sampleSize
+    while (width / (sampleSize * 2) >= maxWidthPx && height / (sampleSize * 2) >= maxHeightPx) {
+        sampleSize *= 2
+    }
+    return sampleSize
+}
 
 private const val CoverDecodeMaxWidthPx = 512
 private const val CoverDecodeMaxHeightPx = 683

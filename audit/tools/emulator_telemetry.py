@@ -69,8 +69,8 @@ def start_w(serial: str) -> dict:
     return fields
 
 
-def phase_install(serial: str) -> None:
-    print(adb(serial, "install", "-r", str(APK)).strip().splitlines()[-1])
+def phase_install(serial: str, apk: str) -> None:
+    print(adb(serial, "install", "-r", apk).strip().splitlines()[-1])
     print("pm clear:", adb(serial, "shell", "pm", "clear", PKG).strip())
 
 
@@ -200,16 +200,20 @@ def main() -> None:
                     choices=["install", "firstlaunch", "cold", "mem", "ui", "perfetto", "all"])
     ap.add_argument("--cold-n", type=int, default=5)
     ap.add_argument("--ui-rounds", type=int, default=3)
+    ap.add_argument("--apk", default=str(APK), help="APK path to install (phase install)")
+    ap.add_argument("--assert-cold-ms", type=int, default=0,
+                    help="when >0 and phase includes cold: fail (exit 2) if any cold start "
+                         "exceeds the threshold or reports a non-COLD LaunchState")
     args = ap.parse_args()
 
-    results: dict = {"serial": args.serial, "apk": str(APK.name)}
+    results: dict = {"serial": args.serial, "apk": Path(args.apk).name}
     todo = [args.phase] if args.phase != "all" else [
         "install", "firstlaunch", "cold", "mem", "ui", "perfetto",
     ]
     for ph in todo:
         print(f"== phase {ph} ==")
         if ph == "install":
-            phase_install(args.serial)
+            phase_install(args.serial, args.apk)
         elif ph == "firstlaunch":
             phase_firstlaunch(args.serial, results)
         elif ph == "cold":
@@ -229,6 +233,18 @@ def main() -> None:
     existing.update(results)
     out.write_text(json.dumps(existing, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(existing, ensure_ascii=False, indent=1))
+
+    if args.assert_cold_ms > 0 and "coldStarts" in results:
+        bad = [
+            s for s in results["coldStarts"]
+            if s.get("LaunchState") != "COLD" or s.get("TotalTime", 10**9) > args.assert_cold_ms
+        ]
+        if bad:
+            print(f"ASSERT FAILED: {len(bad)}/{len(results['coldStarts'])} cold starts "
+                  f"violated LaunchState==COLD && TotalTime<={args.assert_cold_ms}ms")
+            raise SystemExit(2)
+        med = results.get("coldStartSummary", {}).get("median")
+        print(f"ASSERT OK: all cold starts COLD and <= {args.assert_cold_ms}ms (median={med}ms)")
 
 
 if __name__ == "__main__":

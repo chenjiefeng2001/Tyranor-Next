@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items as lazyItems
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -51,7 +50,7 @@ import com.tyranor.next.scanner.EngineLauncher
 import com.tyranor.next.scanner.EngineType
 import com.tyranor.next.scanner.GameStore
 import com.tyranor.next.scanner.ScanGame
-import com.tyranor.next.scanner.VndbCandidate
+import com.tyranor.next.scanner.ScanGameIntents
 import com.tyranor.next.scanner.VndbCoverService
 import com.tyranor.next.theme.NavWhite
 import com.tyranor.next.ui.common.AppSearchField
@@ -77,7 +76,6 @@ internal fun GameActionsSheet(
     val context = androidx.compose.ui.platform.LocalContext.current
     val scope = rememberCoroutineScope()
     var launchError by remember { mutableStateOf<String?>(null) }
-    var showVndbSearch by remember { mutableStateOf(false) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
     var showLaunchFilePicker by remember { mutableStateOf(false) }
     var showRenameDialog by remember { mutableStateOf(false) }
@@ -104,6 +102,15 @@ internal fun GameActionsSheet(
             } else {
                 launchError = "封面设置失败"
             }
+        }
+    }
+
+    // VNDB 封面搜索独立页（upstream#5）：绑定成功经 setResult 回传更新后的条目
+    val vndbSearchLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        val updated = result.data?.let { ScanGameIntents.getGame(it) }
+        if (updated != null) {
+            onGameUpdated(updated)
+            onDismiss()
         }
     }
 
@@ -163,7 +170,7 @@ internal fun GameActionsSheet(
                     }
                 }
             }
-            item { GameActionRow(R.drawable.ic_sheet_search_cover, "搜索封面") { showVndbSearch = true } }
+            item { GameActionRow(R.drawable.ic_sheet_search_cover, "搜索封面") { vndbSearchLauncher.launch(com.tyranor.next.ui.pages.VndbCoverActivity.createIntent(context, game)) } }
             item { GameActionRow(R.drawable.ic_sheet_edit_cover, "修改封面") { imagePicker.launch("image/*") } }
             item { GameActionRow(R.drawable.ic_sheet_rename, "名称修改") { showRenameDialog = true } }
             item {
@@ -233,29 +240,6 @@ internal fun GameActionsSheet(
                             startLaunch(EngineLauncher.ArtemisPatchChoice.ONCE)
                         },
                     ) { Text("本次") }
-                }
-            },
-        )
-    }
-
-    if (showVndbSearch) {
-        VndbSearchDialog(
-            game = game,
-            onDismiss = { showVndbSearch = false },
-            onBind = { candidate ->
-                scope.launch {
-                    launchError = "正在绑定封面…"
-                    val updated = withContext(Dispatchers.IO) {
-                        runCatching { VndbCoverService.bindCandidate(context, game, candidate) }.getOrNull()
-                    }
-                    if (updated != null) {
-                        onGameUpdated(updated)
-                        launchError = null
-                        showVndbSearch = false
-                        onDismiss()
-                    } else {
-                        launchError = "封面下载失败"
-                    }
                 }
             },
         )
@@ -341,93 +325,6 @@ private fun RenameGameDialog(
     )
 }
 
-@Composable
-private fun VndbSearchDialog(
-    game: ScanGame,
-    onDismiss: () -> Unit,
-    onBind: (VndbCandidate) -> Unit,
-) {
-    var keyword by remember { mutableStateOf(game.title) }
-    var searching by remember { mutableStateOf(false) }
-    var error by remember { mutableStateOf<String?>(null) }
-    var candidates by remember { mutableStateOf<List<VndbCandidate>>(emptyList()) }
-    val scope = rememberCoroutineScope()
-
-    fun search() {
-        val query = keyword.trim()
-        if (query.isEmpty() || searching) return
-        scope.launch {
-            searching = true
-            error = null
-            val result = withContext(Dispatchers.IO) {
-                runCatching { VndbCoverService.searchCandidates(query, 8) }
-            }
-            candidates = result.getOrDefault(emptyList())
-            result.exceptionOrNull()?.let { error = it.message ?: "VNDB 搜索失败" }
-            if (candidates.isEmpty() && error == null) error = "未找到匹配结果"
-            searching = false
-        }
-    }
-
-    AppAlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text("搜索 VNDB 封面", style = MaterialTheme.typography.titleMedium) },
-        text = {
-            Column {
-                AppSearchField(
-                    query = keyword,
-                    onQueryChange = { keyword = it },
-                    onSearch = { search() },
-                )
-                Button(
-                    onClick = { search() },
-                    enabled = !searching,
-                    modifier = Modifier.fillMaxWidth().padding(top = 10.dp),
-                ) {
-                    Text(if (searching) "搜索中…" else "搜索", style = MaterialTheme.typography.bodyMedium)
-                }
-                error?.let {
-                    Text(
-                        it,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(top = 8.dp),
-                    )
-                }
-                if (candidates.isNotEmpty()) {
-                    LazyColumn(
-                        modifier = Modifier.fillMaxWidth().height(220.dp).padding(top = 8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        lazyItems(candidates, key = { it.id }) { candidate ->
-                            Column(
-                                Modifier
-                                    .fillMaxWidth()
-                                    .clip(RoundedCornerShape(8.dp))
-                                    .background(NavWhite)
-                                    .clickable { onBind(candidate) }
-                                    .padding(10.dp),
-                            ) {
-                                Text(candidate.title.ifBlank { candidate.originalTitle }, style = MaterialTheme.typography.bodyMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                                if (candidate.originalTitle.isNotBlank()) {
-                                    Text(candidate.originalTitle, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                                }
-                                Text(
-                                    listOf(candidate.id, candidate.released, candidate.developer).filter { it.isNotBlank() }.joinToString(" · "),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis,
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        confirmButton = { TextButton(onClick = onDismiss) { Text("关闭") } },
-    )
-}
 
 /** KRKR 专属：选择游戏启动入口文件（目录内 xp3 / exe）。 */
 @Composable

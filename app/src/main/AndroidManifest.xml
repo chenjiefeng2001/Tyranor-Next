@@ -15,6 +15,9 @@
         android:windowSoftInputMode="adjustResize"
         android:theme="@style/Theme.TyranorNext">
         <activity
+            android:name=".ui.pages.VndbCoverActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.pages.SaveManagementActivity"
             android:exported="false" />
         <activity

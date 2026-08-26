@@ -54,7 +54,6 @@ import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.scanner.VndbCandidate
 import com.tyranor.next.scanner.VndbCoverService
 import com.tyranor.next.theme.NavWhite
-import com.tyranor.next.theme.PageGrey
 import com.tyranor.next.ui.common.AppSearchField
 import com.tyranor.next.ui.pages.AppAlertDialog
 import com.tyranor.next.ui.pages.KrkrOnlinePatchActivity
@@ -112,6 +111,7 @@ internal fun GameActionsSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
         containerColor = MaterialTheme.colorScheme.background,
+        shape = RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp),
     ) {
         LazyColumn(
             modifier = Modifier
@@ -404,7 +404,7 @@ private fun VndbSearchDialog(
                                 Modifier
                                     .fillMaxWidth()
                                     .clip(RoundedCornerShape(8.dp))
-                                    .background(PageGrey)
+                                    .background(NavWhite)
                                     .clickable { onBind(candidate) }
                                     .padding(10.dp),
                             ) {
@@ -474,6 +474,7 @@ private fun LaunchFileDialog(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(8.dp))
+                                .background(NavWhite)
                                 .clickable { selected = name }
                                 .padding(horizontal = 8.dp, vertical = 4.dp),
                             verticalAlignment = Alignment.CenterVertically,

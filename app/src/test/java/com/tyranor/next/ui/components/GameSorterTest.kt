@@ -52,4 +52,30 @@ class GameSorterTest {
         val sorted = GameSorter.sort(listOf(game("b"), game("a")), "whatever")
         assertEquals(listOf("a", "b"), sorted.map { it.title })
     }
+
+    @Test
+    fun largeLibraryScaleSmoke() {
+        // 复杂度回归哨兵：万级条目两种模式都应在宽松时限内完成（CI 友好阈值，非精确基准）
+        val titles = (0 until 10_000).map { idx ->
+            if (idx % 3 == 0) "【组${idx % 97}】title-$idx" else "game-$idx"
+        }
+        val games = titles.map(::game)
+
+        val startAlpha = System.nanoTime()
+        val alpha = GameSorter.sort(games, AppSettingsStore.GAME_SORT_ALPHA)
+        val alphaMs = (System.nanoTime() - startAlpha) / 1_000_000
+
+        val startBracket = System.nanoTime()
+        val bracket = GameSorter.sort(games, AppSettingsStore.GAME_SORT_BRACKET_TAG)
+        val bracketMs = (System.nanoTime() - startBracket) / 1_000_000
+
+        assertEquals(10_000, alpha.size)
+        assertEquals(titles.sortedBy { it.lowercase() }, alpha.map { it.title })
+        assertEquals(10_000, bracket.size)
+        // 括号分组模式必须保持稳定序：同输入两次排序结果一致
+        assertEquals(bracket, GameSorter.sort(games, AppSettingsStore.GAME_SORT_BRACKET_TAG))
+
+        org.junit.Assert.assertTrue("alpha sort took ${alphaMs}ms", alphaMs < 2_000)
+        org.junit.Assert.assertTrue("bracket sort took ${bracketMs}ms", bracketMs < 2_000)
+    }
 }

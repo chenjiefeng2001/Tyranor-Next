@@ -52,8 +52,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.tyranor.next.R
+import com.tyranor.next.scanner.EngineLauncher
 import com.tyranor.next.scanner.KrkrOnlinePatchService
 import com.tyranor.next.scanner.KrkrPatchEntry
+import com.tyranor.next.scanner.PathResolver
 import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.scanner.ScanGameIntents
 import com.tyranor.next.settings.AppSettingsStore
@@ -81,6 +83,18 @@ class KrkrOnlinePatchActivity : ComponentActivity() {
         if (game == null) {
             finish()
             return
+        }
+
+        // 写路径门禁（upstream 分诊补充）：krkr2 启动读可走 SAF 豁免，但补丁落盘是 java.io 直写，
+        // 位于外置存储时需要「管理所有文件」；缺失则以提示结束，避免下载后静默写入失败。
+        val writePath = PathResolver.safUriToPath(game.uri)
+        if (writePath != null) {
+            val gateMessage = EngineLauncher.requestManageAllFilesForWrite(this, writePath)
+            if (gateMessage != null) {
+                Toast.makeText(this, gateMessage, Toast.LENGTH_LONG).show()
+                finish()
+                return
+            }
         }
 
         setContent {

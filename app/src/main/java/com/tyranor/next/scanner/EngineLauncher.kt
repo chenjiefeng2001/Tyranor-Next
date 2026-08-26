@@ -169,6 +169,34 @@ object EngineLauncher {
         }
     }
 
+    /**
+     * 存档管理 / 在线补丁等**写入型页面**的统一门禁：目标位于可移动存储或主存储直读区时
+     * 需要「管理所有文件」。krkr2 启动链路的 SAF 读豁免不适用于这些页面（其落盘走 java.io）。
+     * 返回提示文案；null 表示已具备权限。
+     */
+    internal fun requestManageAllFilesForWrite(context: Context, path: String): String? {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return null
+        if (Environment.isExternalStorageManager()) return null
+        if (!needsAllFilesAccess(path)) return null
+        val opened = runCatching {
+            context.startActivity(
+                Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION,
+                    Uri.parse("package:${context.packageName}"))
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+            )
+        }.recoverCatching {
+            context.startActivity(
+                Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+            )
+        }.isSuccess
+        return if (opened) {
+            "访问外置存储需要“管理所有文件”权限，请在系统页面允许后返回重试"
+        } else {
+            "缺少“管理所有文件”权限，无法写入该目录"
+        }
+    }
+
     private fun needsAllFilesAccess(path: String): Boolean {
         val normalized = path.replace('\\', '/')
         return normalized == "/sdcard" ||

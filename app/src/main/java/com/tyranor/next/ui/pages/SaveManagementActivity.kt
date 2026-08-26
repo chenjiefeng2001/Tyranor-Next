@@ -28,6 +28,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -48,6 +49,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.tyranor.next.R
+import com.tyranor.next.scanner.EngineLauncher
 import com.tyranor.next.scanner.GameSaveManager
 import com.tyranor.next.scanner.ScanGame
 import com.tyranor.next.scanner.ScanGameIntents
@@ -109,6 +111,14 @@ private fun SaveManagementScreen(game: ScanGame) {
     var fileCount by remember { mutableStateOf(manager.listSaveFiles(game).size) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
+    // 写路径权限门禁（upstream 分诊补充）：可移动存储/主存储直读需要「管理所有文件」，
+    // krkr2 启动的 SAF 读豁免不覆盖本页的导出/导入/删除落盘。
+    var storageGate by remember {
+        mutableStateOf(
+            location.directory?.absolutePath?.let { EngineLauncher.requestManageAllFilesForWrite(context, it) },
+        )
+    }
+
     fun refresh() {
         location = manager.resolveSaveLocation(game)
         fileCount = manager.listSaveFiles(game).size
@@ -122,6 +132,25 @@ private fun SaveManagementScreen(game: ScanGame) {
             refresh()
             Toast.makeText(context, message, Toast.LENGTH_LONG).show()
         }
+    }
+
+    if (storageGate != null) {
+        Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+            Text(
+                storageGate!!,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.error,
+            )
+            Button(
+                onClick = {
+                    val path = location.directory?.absolutePath ?: return@Button
+                    storageGate = EngineLauncher.requestManageAllFilesForWrite(context, path)
+                    if (storageGate == null) refresh()
+                },
+                modifier = Modifier.padding(top = 12.dp),
+            ) { Text("去授权", style = MaterialTheme.typography.bodyMedium) }
+        }
+        return
     }
 
     val exportLauncher = rememberLauncherForActivityResult(

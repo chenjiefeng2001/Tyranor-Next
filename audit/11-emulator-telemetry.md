@@ -57,6 +57,8 @@ totalPss 118MB（code 74MB 占大头——debug 未压缩 + 多引擎类驻留�
 3. 引入 Baseline Profile（compose 官方插件）→ 在 release 基线（§8）上继续压榨冷启动。
 4. 若真机仍 >2s：以 perfetto-coldstart.pftrace 分析法替代（需 trace_processor），定位主线程自旋的具体编译/绘制段。
 
+> CI 化进展（2026-08-25）：`.github/workflows/emulator-smoke.yml` 已落地——每周日 UTC20:00 + 手动触发，KVM 模拟器跑 release 构建，遥测脚本以 `--assert-cold-ms 8000` 作为门禁（任一轮非 COLD 或超阈值即失败），telemetry.json/pftrace 归档为 workflow artifact。§3.2 的 Baseline Profile 实验可在该工作流基础上低成本迭代。
+
 ---
 
 ## 8. 判别实验结果：release 构建复测（2026-08-25 追加）

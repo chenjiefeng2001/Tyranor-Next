@@ -29,6 +29,7 @@
 > 执行记录：2026-08-25 完成 R-06（GameStore/PathResolver 抽离 + 后端调用方迁移）与 R-05 三步（GameSorter+5 例单测；弹窗→ui/dialogs；网格卡片→ui/components，GameScreen 998→347 行）。全仓库单测总数 85 例。
 > 执行记录：2026-08-25 R-06 完全收尾：UI 层直连 GameStore/PathResolver、EngineScanner 门面委托全部裁撤（700→463 行，仅存扫描/识别/根目录/封面），持久化测试更名 GameStorePersistenceTest 直测；新增 PathResolver 直测 13 例与 detectEngine(DocumentFile) 变体矩阵。全仓库单测总数 99 例。
 > 执行记录：2026-08-25 完成 §5 性能测试 P1/P2/P3：增量剪枝·删除保留·重建合并 4 例（顺带修复 fromTreeUri 未捕获异常与 File 回退失效两个健壮性缺陷）、封面采样纯函数边界 5 例、HTTP 并发冒烟 1 例。全仓库单测总数 **109 例**；模拟器遥测判别实验完成（release 冷启动 3.9s vs debug 10.6s，见 11 号报告 §8）。
+> 执行记录：2026-08-25 性能测试清单全部收官（P4 GameSorter 万级冒烟，总数 **110 例**）；新增 `emulator-smoke.yml` 每周定时门禁——GitHub Actions KVM 模拟器跑 release 构建 + 遥测断言（LaunchState==COLD 且 TotalTime≤8s），遥测产物按轮次归档。
 > 剩余：R-09 已改判「冻结+定向补丁」（见 10 报告），无待办工程动作；R-12/13/14 待产品决策。
 
 ---

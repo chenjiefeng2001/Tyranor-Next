@@ -58,6 +58,17 @@ object EngineScanner {
             ?.filter { it.isNotBlank() }
             ?: emptyList()
 
+    /**
+     * 扫描根目录 → 本地文件路径：优先 SAF 映射；非 content 的纯路径（含反斜杠/盘符形态）
+     * 归一化后直接使用，保证损坏或手工写入的根目录条目走 File 回退而非静默丢弃。
+     */
+    private fun resolveRootFilePath(root: String): String? {
+        PathResolver.safUriToPath(root)?.let { return it }
+        if (root.startsWith("content://", ignoreCase = true)) return null
+        val normalized = root.replace('\\', '/')
+        return normalized.takeIf { it.isNotBlank() }
+    }
+
     private fun isGameUnderRoot(rootUriText: String, gameUriText: String): Boolean {
         val rootPath = normalizePath(PathResolver.safUriToPath(rootUriText))
         val gamePath = normalizePath(PathResolver.safUriToPath(gameUriText) ?: uriFilePath(gameUriText))
@@ -134,11 +145,11 @@ object EngineScanner {
         loadRoots(context).forEach { root ->
             val beforeCount = found.size
             val rootUri = Uri.parse(root)
-            val rootDir = DocumentFile.fromTreeUri(context.applicationContext, rootUri)
+            val rootDir = runCatching { DocumentFile.fromTreeUri(context.applicationContext, rootUri) }.getOrNull()
             if (rootDir != null) {
                 scanRootIncremental(context.applicationContext, rootDir, 0, maxDepth, known, found)
             }
-            if (found.size == beforeCount) PathResolver.safUriToPath(root)?.let { path ->
+            if (found.size == beforeCount) resolveRootFilePath(root)?.let { path ->
                 scanRootIncrementalFile(File(path), 0, maxDepth, known, found)
             }
         }
@@ -181,13 +192,13 @@ object EngineScanner {
 
     suspend fun scanRoot(context: Context, rootUriStr: String, maxDepth: Int = 3): List<ScanGame> = withContext(Dispatchers.IO) {
         val rootUri = Uri.parse(rootUriStr)
-        val root = DocumentFile.fromTreeUri(context.applicationContext, rootUri)
+        val root = runCatching { DocumentFile.fromTreeUri(context.applicationContext, rootUri) }.getOrNull()
         val results = mutableListOf<ScanGame>()
         if (root != null && root.isDirectory) {
             // 深度优先遍历子目录，识别每个候选游戏目录（深度由应用设置「扫描深度」控制）
             traverseDirectories(context.applicationContext, root, 0, maxDepth, results)
         }
-        if (results.isEmpty()) PathResolver.safUriToPath(rootUriStr)?.let { path ->
+        if (results.isEmpty()) resolveRootFilePath(rootUriStr)?.let { path ->
             traverseFileDirectories(File(path), 0, maxDepth, results)
         }
         val seen = HashSet<String>()
@@ -231,7 +242,7 @@ object EngineScanner {
 
     fun applyLocalCover(context: Context, game: ScanGame): ScanGame {
         if (!game.coverUri.isNullOrBlank()) return game
-        val dir = DocumentFile.fromTreeUri(context.applicationContext, Uri.parse(game.uri)) ?: return game
+        val dir = runCatching { DocumentFile.fromTreeUri(context.applicationContext, Uri.parse(game.uri)) }.getOrNull() ?: return game
         val coverUri = findLocalCoverUri(dir.listFiles())
         return if (coverUri.isNullOrBlank()) game else game.copy(coverUri = coverUri)
     }

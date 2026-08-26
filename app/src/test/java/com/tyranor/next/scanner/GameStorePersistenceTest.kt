@@ -25,11 +25,7 @@ class GameStorePersistenceTest {
     }
 
     private fun resetCaches() {
-        val instance = GameStore::class.java.getDeclaredField("INSTANCE").get(null)
-        for (name in listOf("gamesCache", "recentGamesCache", "quickLaunchCache")) {
-            GameStore::class.java.getDeclaredField(name).apply { isAccessible = true }
-                .set(instance, null)
-        }
+        GameStoreTestUtil.resetCaches()
     }
 
     private fun prefs(): SharedPreferences =

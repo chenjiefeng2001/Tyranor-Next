@@ -2,7 +2,9 @@ package com.tyranor.next.scanner
 
 import com.tyranor.next.settings.EngineSettingsStore
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TemporaryFolder
@@ -93,7 +95,10 @@ class EngineLauncherPureTest {
         val root = temporaryFolder.newFolder("kr-${System.nanoTime()}")
         for (entry in entries) {
             val target = File(root, entry)
-            if (entry.endsWith("/") || entry.endsWith("\\")) target.mkdirs() else target.writeText("x")
+            if (entry.endsWith("/") || entry.endsWith("\\")) target.mkdirs() else {
+                target.parentFile?.mkdirs()
+                target.writeText("x")
+            }
         }
         return root
     }
@@ -141,5 +146,26 @@ class EngineLauncherPureTest {
             root.absolutePath,
             EngineLauncher.pickKrActivateEntry(root.absolutePath, game(launchTarget = "bgmovie.xp3")),
         )
+    }
+
+    // ---------- resolveEntryIgnoreCase（上游 issue #34） ----------
+
+    @Test
+    fun resolvesEntryWhenCasingDiffersFromDiskIncludingSubdirectories() {
+        val root = newDir("Patch/Scene.xp3")
+
+        val resolved = EngineLauncher.resolveEntryIgnoreCase(root, "patch/scene.xp3")
+
+        assertNotNull(resolved)
+        assertTrue(resolved!!.isFile)
+        // 返回磁盘上的真实条目（真实大小写），而非输入串
+        assertEquals(File(root, "Patch/Scene.xp3").canonicalFile, resolved.canonicalFile)
+    }
+
+    @Test
+    fun resolverReturnsNullForMissingSegmentOrFile() {
+        val root = newDir("real.xp3")
+        assertNull(EngineLauncher.resolveEntryIgnoreCase(root, "missing/scene.xp3"))
+        assertNull(EngineLauncher.resolveEntryIgnoreCase(root, "nope.xp3"))
     }
 }

@@ -355,13 +355,16 @@ object EngineScanner {
         var hasOnsArchive = false
 
         fun collect(f: DocumentFile, rel: String) {
-            val lower = (f.name ?: "").lowercase(Locale.ROOT)
+            val raw = f.name ?: ""
+            val lower = raw.lowercase(Locale.ROOT)
             if (lower.isEmpty()) return
-            val childRel = if (rel.isEmpty()) lower else "$rel/$lower"
+            // 保留真实大小写的相对路径（上游 issue #34：小写化会导致大小写敏感设备无法回配启动文件）
+            val childRel = if (rel.isEmpty()) raw else "$rel/$raw"
+            val childRelLower = childRel.lowercase(Locale.ROOT)
             names.add(lower)
             if (f.isDirectory) {
                 if (lower == "tyrano") hasTyranoDir = true
-                if (lower == "app.asar" || childRel.endsWith("/app.asar")) hasAppAsar = true
+                if (lower == "app.asar" || childRelLower.endsWith("/app.asar")) hasAppAsar = true
                 // resources/app.asar 可能是文件，也可能是已解包目录，需继续下钻识别父级游戏目录。
                 if (lower == "data" || lower == "tyrano" || lower == "scenario" ||
                     lower == "system" || lower == "app" || lower == "game" ||
@@ -374,14 +377,14 @@ object EngineScanner {
             }
             when {
                 lower == "index.html" || lower == "index.htm" -> hasIndex = true
-                childRel == "js/rpg_core.js" || childRel.endsWith("/js/rpg_core.js") -> hasRpgMvCore = true
-                childRel == "js/rmmz_core.js" || childRel.endsWith("/js/rmmz_core.js") -> hasRpgMzCore = true
+                childRelLower == "js/rpg_core.js" || childRelLower.endsWith("/js/rpg_core.js") -> hasRpgMvCore = true
+                childRelLower == "js/rmmz_core.js" || childRelLower.endsWith("/js/rmmz_core.js") -> hasRpgMzCore = true
                 lower == "globaldata.vndata" -> hasVnData = true
-                lower == "app.asar" || childRel.endsWith("/app.asar") -> hasAppAsar = true
+                lower == "app.asar" || childRelLower.endsWith("/app.asar") -> hasAppAsar = true
                 lower == "startup.tjs" -> hasStartupTjs = true
                 lower == "config.tjs" -> hasConfigTjs = true
                 lower == "system.ini" -> hasSystemIni = true
-                childRel == "system/first.iet" || childRel.endsWith("/system/first.iet") -> hasFirstIet = true
+                childRelLower == "system/first.iet" || childRelLower.endsWith("/system/first.iet") -> hasFirstIet = true
                 lower == "root.pfs" -> hasRootPfs = true
                 lower.endsWith(".pfs") -> hasAnyPfs = true
                 lower == "0.txt" || lower == "00.txt" || lower == "nscript.dat" ||
@@ -450,12 +453,15 @@ object EngineScanner {
         var hasOnsArchive = false
 
         fun collect(f: File, rel: String) {
-            val lower = f.name.lowercase(Locale.ROOT)
+            val raw = f.name
+            val lower = raw.lowercase(Locale.ROOT)
             if (lower.isEmpty()) return
-            val childRel = if (rel.isEmpty()) lower else "$rel/$lower"
+            // 保留真实大小写（上游 issue #34）
+            val childRel = if (rel.isEmpty()) raw else "$rel/$raw"
+            val childRelLower = childRel.lowercase(Locale.ROOT)
             if (f.isDirectory) {
                 if (lower == "tyrano") hasTyranoDir = true
-                if (lower == "app.asar" || childRel.endsWith("/app.asar")) hasAppAsar = true
+                if (lower == "app.asar" || childRelLower.endsWith("/app.asar")) hasAppAsar = true
                 if (lower == "data" || lower == "tyrano" || lower == "scenario" ||
                     lower == "system" || lower == "app" || lower == "game" ||
                     lower == "resources" || lower == "app.asar" || lower == "www" || lower == "js"
@@ -466,14 +472,14 @@ object EngineScanner {
             }
             when {
                 lower == "index.html" || lower == "index.htm" -> hasIndex = true
-                childRel == "js/rpg_core.js" || childRel.endsWith("/js/rpg_core.js") -> hasRpgMvCore = true
-                childRel == "js/rmmz_core.js" || childRel.endsWith("/js/rmmz_core.js") -> hasRpgMzCore = true
+                childRelLower == "js/rpg_core.js" || childRelLower.endsWith("/js/rpg_core.js") -> hasRpgMvCore = true
+                childRelLower == "js/rmmz_core.js" || childRelLower.endsWith("/js/rmmz_core.js") -> hasRpgMzCore = true
                 lower == "globaldata.vndata" -> hasVnData = true
-                lower == "app.asar" || childRel.endsWith("/app.asar") -> hasAppAsar = true
+                lower == "app.asar" || childRelLower.endsWith("/app.asar") -> hasAppAsar = true
                 lower == "startup.tjs" -> hasStartupTjs = true
                 lower == "config.tjs" -> hasConfigTjs = true
                 lower == "system.ini" -> hasSystemIni = true
-                childRel == "system/first.iet" || childRel.endsWith("/system/first.iet") -> hasFirstIet = true
+                childRelLower == "system/first.iet" || childRelLower.endsWith("/system/first.iet") -> hasFirstIet = true
                 lower == "root.pfs" -> hasRootPfs = true
                 lower.endsWith(".pfs") -> hasAnyPfs = true
                 lower == "0.txt" || lower == "00.txt" || lower == "nscript.dat" ||

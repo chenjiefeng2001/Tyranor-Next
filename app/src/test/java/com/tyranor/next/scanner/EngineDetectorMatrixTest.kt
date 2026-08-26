@@ -98,6 +98,18 @@ class EngineDetectorMatrixTest {
     }
 
     @Test
+    fun kirikiriPreservesRealCaseLaunchTargetForCaseSensitiveStorage() {
+        // 上游 issue #34：大写目录/文件名曾被小写化存储，导致大小写敏感设备无法回配启动文件
+        val d = detect("DATA.XP3")
+        assertEquals(EngineType.KIRIKIRI, d.engine)
+        assertEquals("DATA.XP3", d.launchTarget)
+
+        val nested = detect("data/SCENE.XP3")
+        assertEquals(EngineType.KIRIKIRI, nested.engine)
+        assertEquals("data/SCENE.XP3", nested.launchTarget)
+    }
+
+    @Test
     fun kirikiriViaStartupTjsOnlyGetsLowerConfidence() {
         assertDetects(EngineType.KIRIKIRI, 80, "startup.tjs")
     }

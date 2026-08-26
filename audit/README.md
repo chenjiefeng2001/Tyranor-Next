@@ -25,6 +25,7 @@
 | [09-improvement-recommendations.md](./09-improvement-recommendations.md) | 改进建议报告：R-01~R-14 分级行动方案、量化决策输入与负空间声明 |
 | [10-sdl2-resync-prep.md](./10-sdl2-resync-prep.md) | R-09 前置研究：内嵌 SDL2 版本测定与 Java↔so JNI 契约双向核验（策略改判为冻结+定向补丁） |
 | [11-emulator-telemetry.md](./11-emulator-telemetry.md) | 模拟器遥测基线：冷启动/掉帧/内存实测，首帧延迟根因候选与排除清单 |
+| [12-upstream-issue-triage.md](./12-upstream-issue-triage.md) | 上游 13 个开放 issue 分诊：#34 已修、#16 已修待回提、可开工项与延后项 |
 | [07-hotspot-map.svg](./07-hotspot-map.svg) | 代码热点图（文件级热力网格，悬停查看度量；重构后已刷新） |
 | [tools/hotspot_trace.py](./tools/hotspot_trace.py) | 热点度量与 SVG 生成脚本（可复现，含 hotspot-data.json 数据） |
 | [tools/deep_trace.py](./tools/deep_trace.py) | 契约/隐藏依赖/JNI 证据提取脚本（可复现，含 deep-trace-data.json 数据） |

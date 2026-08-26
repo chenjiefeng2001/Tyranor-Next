@@ -532,6 +532,20 @@ object EngineLauncher {
     }
 
     /**
+     * 按路径段对实际目录做大小写不敏感解析（上游 issue #34：部分设备存储大小写敏感，
+     * 扫描期小写化的 launchTarget / 用户手输的启动文件需回配到真实条目）。
+     * 返回解析到的真实文件/目录；任一段无匹配返回 null。
+     */
+    internal fun resolveEntryIgnoreCase(dir: java.io.File, relPath: String): java.io.File? {
+        var current = dir
+        for (segment in relPath.split('/').filter { it.isNotBlank() }) {
+            val children = current.listFiles() ?: return null
+            current = children.firstOrNull { it.name.equals(segment, ignoreCase = true) } ?: return null
+        }
+        return current
+    }
+
+    /**
      * RinneMobile 的 Artemis 启动链路会在启动前补齐部分 PFS 打包游戏所需的基础文件。
      * “启动时询问”策略已由 UI 层弹窗确认（needsArtemisPatchConfirm），到达这里时
      * ask 已按弹窗结果改写为 auto/off：auto（含 ask 遗留路径）幂等自动补丁，off 跳过。
@@ -553,8 +567,9 @@ object EngineLauncher {
 
         // 用户通过“启动文件”手动指定的入口优先（文件不存在时回退自动逻辑）
         game.launchFile?.takeIf { it.isNotBlank() }?.let { manual ->
-            val f = java.io.File(path, manual)
-            if (f.isFile) return f.absolutePath
+            resolveEntryIgnoreCase(java.io.File(path), manual)
+                ?.takeIf { it.isFile }
+                ?.let { return it.absolutePath }
         }
 
         // 脚本/主启动归档优先（此类 xp3 内含 start.ks / FirstConductor 等启动脚本），
@@ -571,8 +586,9 @@ object EngineLauncher {
         val target = game.launchTarget
             .takeIf { !it.isNullOrBlank() && it != "[游戏目录]" && it != "DIR" }
         if (target != null && !target.lowercase().startsWith("bg")) {
-            val f = java.io.File(path, target)
-            if (f.isFile) return f.absolutePath
+            resolveEntryIgnoreCase(java.io.File(path), target)
+                ?.takeIf { it.isFile }
+                ?.let { return it.absolutePath }
         }
 
         // 兜底：任意非 bg* 的 xp3
